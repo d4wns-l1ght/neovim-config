@@ -12,7 +12,9 @@ return {
 	{ "mfussenegger/nvim-jdtls" },
 	{ 
 		"myusuf3/numbers.vim",
-		numbers_exclude = {"Neotree", "filesystem","neo-tree", "Neotree.neo-tree"}
+		config = function()
+			vim.g.numbers_exclude = {"neo-tree"}
+		end,
 	},
 	{ "farmergreg/vim-lastplace" },
 	{ "mfussenegger/nvim-dap" },
