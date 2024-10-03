@@ -10,5 +10,7 @@ return {
 	},
 	{ "navarasu/onedark.nvim" },
 	{ "mfussenegger/nvim-jdtls" },
-	{ "myusuf3/numbers.vim" }
+	{ "myusuf3/numbers.vim" },
+	{ "farmergreg/vim-lastplace" },
+	{ "mfussenegger/nvim-dap" }
 }
