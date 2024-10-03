@@ -9,5 +9,6 @@ return {
 		end,
 	},
 	{ "navarasu/onedark.nvim" },
-	{ "mfussenegger/nvim-jdtls" }
+	{ "mfussenegger/nvim-jdtls" },
+	{ "myusuf3/numbers.vim" }
 }
