@@ -10,7 +10,13 @@ return {
 		end,
 	},
 	{ "mfussenegger/nvim-dap" },
+	-- languages
 	{ "mfussenegger/nvim-jdtls" },
+	{
+		'mrcjkb/rustaceanvim',
+		version = '^5',
+		lazy = false -- it's already lazy
+	},
 	-- theme	
 	{ "navarasu/onedark.nvim" },
 	-- file system stuff
@@ -39,7 +45,7 @@ return {
 	{ 
 		"myusuf3/numbers.vim",
 		config = function()
-			vim.g.numbers_exclude = {"neo-tree","lazy"}
+			vim.g.numbers_exclude = {"neo-tree","lazy","term://*"}
 		end,
 	},
 	{ "farmergreg/vim-lastplace" },
