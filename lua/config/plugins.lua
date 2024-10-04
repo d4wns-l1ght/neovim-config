@@ -41,6 +41,16 @@ return {
 			require "config.settings.neotree"
 		end,
 	},
+	-- git
+	{ 
+		'NeogitOrg/neogit',
+		dependencies = {
+			'nvim-lua/plenary.nvim',
+			'sindrets/diffview.nvim',
+			'nvim-telescope/telescope.nvim'
+		},
+		config = true
+	},
 	-- UI/qol
 	{ 
 		"myusuf3/numbers.vim",
