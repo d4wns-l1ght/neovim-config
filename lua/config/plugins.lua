@@ -1,4 +1,5 @@
 return {
+	-- programming basics
 	{ "neovim/nvim-lspconfig" },
 	{ 
 		"nvim-treesitter/nvim-treesitter",
@@ -8,6 +9,11 @@ return {
 			require "config.settings.treesitter"
 		end,
 	},
+	{ "mfussenegger/nvim-dap" },
+	{ "mfussenegger/nvim-jdtls" },
+	-- theme	
+	{ "navarasu/onedark.nvim" },
+	-- file system stuff
 	{
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
@@ -16,16 +22,6 @@ return {
 			{ 'nvim-telescope/telescope-fzf-native.nvim', build = "make" } 
 		}
 	},
-	{ "navarasu/onedark.nvim" },
-	{ "mfussenegger/nvim-jdtls" },
-	{ 
-		"myusuf3/numbers.vim",
-		config = function()
-			vim.g.numbers_exclude = {"neo-tree","lazy"}
-		end,
-	},
-	{ "farmergreg/vim-lastplace" },
-	{ "mfussenegger/nvim-dap" },
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
@@ -38,5 +34,13 @@ return {
 		config = function()
 			require "config.settings.neotree"
 		end,
-	}
+	},
+	-- UI/qol
+	{ 
+		"myusuf3/numbers.vim",
+		config = function()
+			vim.g.numbers_exclude = {"neo-tree","lazy"}
+		end,
+	},
+	{ "farmergreg/vim-lastplace" },
 }
