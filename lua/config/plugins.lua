@@ -5,7 +5,7 @@ return {
 		event = "VeryLazy",
 		build = ":TSUpdate",
 		config = function()
-			require "config.extra.treesitter"
+			require "config.settings.treesitter"
 		end,
 	},
 	{ "navarasu/onedark.nvim" },
@@ -28,7 +28,7 @@ return {
 			-- "3rd/image.nvim",
 		},
 		config = function()
-			require "config.extra.neotree"
+			require "config.settings.neotree"
 		end,
 	}
 }
