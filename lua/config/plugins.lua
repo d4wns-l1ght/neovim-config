@@ -8,12 +8,20 @@ return {
 			require "config.settings.treesitter"
 		end,
 	},
+	{
+		"nvim-telescope/telescope.nvim",
+		branch = "0.1.x",
+		dependencies = { 
+			"nvim-lua/plenary.nvim",
+			{ 'nvim-telescope/telescope-fzf-native.nvim', build = "make" } 
+		}
+	},
 	{ "navarasu/onedark.nvim" },
 	{ "mfussenegger/nvim-jdtls" },
 	{ 
 		"myusuf3/numbers.vim",
 		config = function()
-			vim.g.numbers_exclude = {"neo-tree"}
+			vim.g.numbers_exclude = {"neo-tree","lazy"}
 		end,
 	},
 	{ "farmergreg/vim-lastplace" },
@@ -24,7 +32,7 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-tree/nvim-web-devicons",
-			"MunifTagim/nui.nvim",
+			"MunifTanjim/nui.nvim",
 			-- "3rd/image.nvim",
 		},
 		config = function()
