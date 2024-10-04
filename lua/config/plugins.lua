@@ -55,7 +55,7 @@ return {
 	{ 
 		"myusuf3/numbers.vim",
 		config = function()
-			vim.g.numbers_exclude = {"neo-tree","lazy","term://*"}
+			vim.g.numbers_exclude = {"neo-tree","lazy"}
 		end,
 	},
 	{ "farmergreg/vim-lastplace" },
