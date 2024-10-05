@@ -29,6 +29,10 @@ return {
 		}
 	},
 	{
+		"nvim-telescope/telescope-ui-select.nvim",
+		dependencies = { "nvim-telescope/telescope.nvim" }
+	},
+	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
 		dependencies = {
@@ -52,6 +56,19 @@ return {
 		config = true
 	},
 	-- UI/qol
+	{
+		"anuvyklack/windows.nvim",
+		dependencies = {
+			"anuvyklack/middleclass",
+			"anuvyklack/animation.nvim"
+		},
+		config = function()
+			vim.o.winwidth = 10
+			vim.o.winminwidth = 10
+			vim.o.equalalways = false
+			require('windows').setup()
+		end,
+	},
 	{ 
 		"myusuf3/numbers.vim",
 		config = function()
