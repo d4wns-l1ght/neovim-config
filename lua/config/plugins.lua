@@ -18,7 +18,16 @@ return {
 		lazy = false -- it's already lazy
 	},
 	-- theme	
-	{ "navarasu/onedark.nvim" },
+	{ 
+		"navarasu/onedark.nvim",
+		config = function()
+			require('onedark').setup {
+				style = 'darker',
+				term_colors = false,
+			}
+			require('onedark').load()
+		end,
+	},
 	-- file system stuff
 	{
 		"nvim-neo-tree/neo-tree.nvim",
