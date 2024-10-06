@@ -48,6 +48,13 @@ return {
 	-- git
 	{ "tpope/vim-fugitive", cmd = "Git" },
 	-- UI/qol
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require "config.settings.lualine"
+		end,
+	},	
 	{ 
 		"myusuf3/numbers.vim",
 		config = function()

@@ -1,7 +1,6 @@
 {
-  "animation.nvim": { "branch": "main", "commit": "fb77091ab72ec9971aee0562e7081182527aaa6a" },
   "lazy.nvim": { "branch": "main", "commit": "1159bdccd8910a0fd0914b24d6c3d186689023d9" },
-  "middleclass": { "branch": "master", "commit": "9fab4d5bca67262614960960ca35c4740eb2be2c" },
+  "lualine.nvim": { "branch": "master", "commit": "b431d228b7bbcdaea818bdc3e25b8cdbe861f056" },
   "neo-tree.nvim": { "branch": "v3.x", "commit": "a77af2e764c5ed4038d27d1c463fa49cd4794e07" },
   "nui.nvim": { "branch": "main", "commit": "b58e2bfda5cea347c9d58b7f11cf3012c7b3953f" },
   "numbers.vim": { "branch": "master", "commit": "1867e76e819db182a4fb71f48f4bd36a5e2c6b6e" },
@@ -17,6 +16,5 @@
   "telescope-ui-select.nvim": { "branch": "master", "commit": "6e51d7da30bd139a6950adf2a47fda6df9fa06d2" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "vim-fugitive": { "branch": "master", "commit": "d4877e54cef67f5af4f950935b1ade19ed6b7370" },
-  "vim-lastplace": { "branch": "master", "commit": "e58cb0df716d3c88605ae49db5c4741db8b48aa9" },
-  "windows.nvim": { "branch": "main", "commit": "c7492552b23d0ab30325e90b56066ec51242adc8" }
+  "vim-lastplace": { "branch": "master", "commit": "e58cb0df716d3c88605ae49db5c4741db8b48aa9" }
 }

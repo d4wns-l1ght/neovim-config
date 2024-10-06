@@ -13,3 +13,5 @@ vim.o.splitbelow = true
 -- Pretty cursor line :3
 vim.o.cursorline = true
 vim.o.cursorlineopt = "both"
+-- Don't need to show mode with lualine :)
+vim.o.showmode = false
