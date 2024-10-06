@@ -9,9 +9,15 @@ return {
 			require "config.settings.treesitter"
 		end,
 	},
-	{ "mfussenegger/nvim-dap" },
+	{ 
+		"mfussenegger/nvim-dap",
+		event = "VeryLazy",
+	},
 	-- languages
-	{ "mfussenegger/nvim-jdtls" },
+	{
+		"mfussenegger/nvim-jdtls",
+		event = "VeryLazy",
+	},
 	{
 		'mrcjkb/rustaceanvim',
 		version = '^5',
@@ -44,6 +50,7 @@ return {
 	},
 	{
 		"nvim-telescope/telescope.nvim",
+		event = "VeryLazy",
 		branch = "0.1.x",
 		dependencies = { 
 			"nvim-lua/plenary.nvim",
@@ -52,6 +59,7 @@ return {
 	},
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
+		event = "VeryLazy",
 		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
 	},
 	{
