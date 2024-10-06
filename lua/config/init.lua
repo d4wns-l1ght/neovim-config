@@ -1,5 +1,4 @@
-require "config.lazy"
-require "config.plugins"
-require "config.options"
 require "config.autocmds"
-require "config.defaults"
+require "config.lazy"
+require "config.options"
+require "config.plugins"
