@@ -10,6 +10,7 @@ vim.keymap.set(
 		"<space>fb",
 		"<cmd>Telescope file_browser<CR>",
 		{ noremap = true })
+vim.keymap.set({"n","i"}, "<C-l>", "<esc>:Oil --float<CR>", { noremap = true, silent = true })
 -- Make mousescrolling work properly with fugitive-vim blame
 vim.o.mouse="a"
 -- Split settings

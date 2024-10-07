@@ -49,6 +49,14 @@ return {
 		end,
 	},
 	{
+		"stevearc/oil.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		lazy = true,
+		config = function()
+			require "config.settings.oil"
+		end,
+	},
+	{
 		"nvim-telescope/telescope.nvim",
 		event = "VeryLazy",
 		branch = "0.1.x",
@@ -80,7 +88,7 @@ return {
 	{ 
 		"myusuf3/numbers.vim",
 		config = function()
-			vim.g.numbers_exclude = {"neo-tree","lazy"}
+			vim.g.numbers_exclude = {"neo-tree","lazy", "oil"}
 		end,
 	},
 	-- QoL
