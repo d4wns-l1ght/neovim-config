@@ -13,7 +13,12 @@ return {
 	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		lazy = true
+		opts = {
+			highlight = {
+				keyword = "fg"
+			}
+		},
+		event = "VeryLazy"
 	},
 	{ 
 		"mfussenegger/nvim-dap",
