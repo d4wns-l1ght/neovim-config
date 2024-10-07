@@ -68,7 +68,22 @@ return {
 	},
 	-- git wrapper
 	{ "tpope/vim-fugitive", cmd = "Git" },
-	-- UI/qol
+	-- UI
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require "config.settings.lualine"
+		end,
+	},
+	{ "famiu/bufdelete.nvim" },
+	{ 
+		"myusuf3/numbers.vim",
+		config = function()
+			vim.g.numbers_exclude = {"neo-tree","lazy"}
+		end,
+	},
+	-- QoL
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
@@ -82,19 +97,6 @@ return {
 				desc = "Buffer local keymaps (which-key)",
 			},
 		},
-	},
-	{
-		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require "config.settings.lualine"
-		end,
-	},	
-	{ 
-		"myusuf3/numbers.vim",
-		config = function()
-			vim.g.numbers_exclude = {"neo-tree","lazy"}
-		end,
 	},
 	{ "farmergreg/vim-lastplace" },
 }
