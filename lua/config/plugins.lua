@@ -97,9 +97,15 @@ return {
 	},
 	{ "famiu/bufdelete.nvim" },
 	{ 
-		"myusuf3/numbers.vim",
+		"akho/numbers.vim",
 		config = function()
-			vim.g.numbers_exclude = {"neo-tree","lazy", "oil"}
+			vim.g.numbers_exclude = {
+				'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', --superset
+				"neo-tree","lazy", "oil"
+			}
+			vim.g.numbers_exclude_buffers = {
+				'acwrite', 'help', 'nofile', 'nowrite', 'quickfix', 'terminal'
+			}
 		end,
 	},
 	-- QoL
