@@ -1,6 +1,7 @@
 return {
-	-- programming basics
+	-- programming stuff
 	{ "neovim/nvim-lspconfig" },
+	-- highlighting
 	{ 
 		"nvim-treesitter/nvim-treesitter",
 		event = "VeryLazy",
@@ -8,6 +9,11 @@ return {
 		config = function()
 			require "config.settings.treesitter"
 		end,
+	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		lazy = true
 	},
 	{ 
 		"mfussenegger/nvim-dap",
