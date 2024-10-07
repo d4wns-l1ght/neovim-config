@@ -2,7 +2,7 @@
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
--- Telescope keybinds
+-- File system keybinds
 vim.keymap.set({"n","i"}, "<C-o>", "<esc>:Telescope fd<CR>", { noremap = true, silent = true})
 vim.keymap.set({"n","i"}, "<C-f>", "<esc>:Telescope live_grep<CR>", { noremap = true, silent = true})
 vim.keymap.set(
@@ -11,6 +11,8 @@ vim.keymap.set(
 		"<cmd>Telescope file_browser<CR>",
 		{ noremap = true })
 vim.keymap.set({"n","i"}, "<C-l>", "<esc>:Oil --float<CR>", { noremap = true, silent = true })
+-- Buffer closing keybinds
+vim.keymap.set("n", "q", ":Bdelete", { noremap = true, silent = true })
 -- Make mousescrolling work properly with fugitive-vim blame
 vim.o.mouse="a"
 -- Split settings
