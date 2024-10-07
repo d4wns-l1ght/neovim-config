@@ -106,5 +106,10 @@ return {
 			},
 		},
 	},
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true,
+	},
 	{ "farmergreg/vim-lastplace" },
 }
