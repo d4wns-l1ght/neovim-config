@@ -63,6 +63,7 @@ return {
 		"stevearc/oil.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		lazy = true,
+		cmd = "Oil",
 		config = function()
 			require "config.settings.oil"
 		end,
