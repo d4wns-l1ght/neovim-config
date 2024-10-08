@@ -124,6 +124,7 @@ return {
 			},
 		},
 	},
+	{ "mbbill/undotree", event = "VeryLazy" },
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
