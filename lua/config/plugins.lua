@@ -1,5 +1,6 @@
 return {
 	-- programming stuff
+	-- TODO
 	{ "neovim/nvim-lspconfig" },
 	-- highlighting
 	{ 
@@ -25,10 +26,12 @@ return {
 		event = "VeryLazy",
 	},
 	-- languages
+	-- TODO
 	{
 		"mfussenegger/nvim-jdtls",
 		event = "VeryLazy",
 	},
+	-- TODO
 	{
 		'mrcjkb/rustaceanvim',
 		version = '^5',
