@@ -135,4 +135,7 @@ return {
 		config = true,
 	},
 	{ "farmergreg/vim-lastplace" },
+	{
+		"HiPhish/rainbow-delimiters.nvim"
+	},
 }
