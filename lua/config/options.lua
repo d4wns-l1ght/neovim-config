@@ -12,7 +12,8 @@ vim.keymap.set("n", "<leader>o", "<cmd>Oil --float<CR>", { noremap = true, silen
 vim.keymap.set("n", "<leader>q", "<cmd>Bdelete<CR>", { noremap = true, silent = true })
 -- Neotree keybind
 vim.keymap.set("n", "<leader>nt", "<cmd>Neotree<CR>", { noremap = true, silent = true })
-
+-- floating window
+vim.keymap.set("n", "<leader>fl", "<cmd>Oil --float<CR><cmd>Bdelete<CR>", { noremap = true, silent = true })
 -- Make mousescrolling work properly with fugitive-vim blame
 vim.o.mouse="a"
 -- Split settings

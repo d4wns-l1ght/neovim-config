@@ -35,11 +35,13 @@ return {
 	{
 		'mrcjkb/rustaceanvim',
 		version = '^5',
-		lazy = false -- it's already lazy
+		--lazy = false -- it's already lazy
 	},
 	-- theme	
 	{ 
 		"navarasu/onedark.nvim",
+		lazy = false,
+		priority = 1000,
 		config = function()
 			require('onedark').setup {
 				style = 'darker',
