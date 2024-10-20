@@ -14,6 +14,12 @@ return {
 			}
 		end,
 	},
+	{
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+		config = function()
+			require("lsp_lines").setup()
+		end,
+	},
 	-- highlighting
 	{ 
 		"nvim-treesitter/nvim-treesitter",
@@ -43,11 +49,18 @@ return {
 		"mfussenegger/nvim-jdtls",
 		event = "VeryLazy",
 	},
-	-- TODO
+	-- Rust
 	{
 		'mrcjkb/rustaceanvim',
 		version = '^5',
 		lazy = false -- it's already lazy
+	},
+	{
+		'saecki/crates.nvim',
+		event = { "BufRead Cargo.toml" },
+		config = function()
+			require('crates').setup()
+		end,
 	},
 	-- theme	
 	{ 

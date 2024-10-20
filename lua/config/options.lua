@@ -2,8 +2,11 @@
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
--- File system keybinds
+-- Leader
 vim.g.mapleader = " ";
+-- TODO: Code actions
+
+-- File system keybinds
 vim.keymap.set({"n","i"}, "<C-o>", "<esc>:Telescope fd<CR>", { noremap = true, silent = true})
 vim.keymap.set({"n","i"}, "<C-f>", "<esc>:Telescope live_grep<CR>", { noremap = true, silent = true})
 vim.keymap.set("n", "<leader>tf", "<cmd>Telescope file_browser<CR>", { noremap = true })
@@ -24,3 +27,7 @@ vim.o.cursorline = true
 vim.o.cursorlineopt = "both"
 -- Don't need to show mode with lualine :)
 vim.o.showmode = false
+-- hide virtual text re lsp_lines
+vim.diagnostic.config({
+  virtual_text = false,
+})
