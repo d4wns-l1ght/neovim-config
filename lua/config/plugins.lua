@@ -47,7 +47,7 @@ return {
 	{
 		'mrcjkb/rustaceanvim',
 		version = '^5',
-		--lazy = false -- it's already lazy
+		lazy = false -- it's already lazy
 	},
 	-- theme	
 	{ 
@@ -65,6 +65,8 @@ return {
 	-- file system stuff
 	{
 		"nvim-neo-tree/neo-tree.nvim",
+		lazy = true,
+		cmd = "Neotree",
 		branch = "v3.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -87,7 +89,8 @@ return {
 	},
 	{
 		"nvim-telescope/telescope.nvim",
-		event = "VeryLazy",
+		lazy = true,
+		cmd = "Telescope",
 		branch = "0.1.x",
 		dependencies = { 
 			"nvim-lua/plenary.nvim",
@@ -96,14 +99,18 @@ return {
 	},
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
-		event = "VeryLazy",
-		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+		lazy = true,
+		dependencies = { "nvim-lua/plenary.nvim" }
 	},
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
 	},
 	-- git wrapper
-	{ "tpope/vim-fugitive", cmd = "Git" },
+	{ 
+		"tpope/vim-fugitive", 
+		lazy = true,
+		cmd = "G" 
+	},
 	-- UI
 	{
 		"nvim-lualine/lualine.nvim",
@@ -111,6 +118,7 @@ return {
 		config = function()
 			require "config.settings.lualine"
 		end,
+		lazy = false,
 	},
 	{ "famiu/bufdelete.nvim" },
 	{ 
@@ -128,6 +136,7 @@ return {
 	-- QoL
 	{
 		"folke/which-key.nvim",
+		lazy = true,
 		event = "VeryLazy",
 		opts = {},
 		keys = {
@@ -140,14 +149,27 @@ return {
 			},
 		},
 	},
-	{ "mbbill/undotree", event = "VeryLazy" },
+	{ 
+		"mbbill/undotree",
+		lazy = true,
+		event = "VeryLazy" 
+	},
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
+		lazy = true,
 		config = true,
 	},
-	{ "farmergreg/vim-lastplace" },
-	{ "HiPhish/rainbow-delimiters.nvim" },
+	{ 
+		"farmergreg/vim-lastplace",
+		lazy = true,
+		event = "VeryLazy"
+	},
+	{ 
+		"HiPhish/rainbow-delimiters.nvim",
+		lazy = true,
+		event = "VeryLazy"
+	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
