@@ -1,7 +1,19 @@
 return {
 	-- programming stuff
 	-- TODO
-	{ "neovim/nvim-lspconfig" },
+	{ 
+		"neovim/nvim-lspconfig",
+		lazy = false,
+		dependencies = {
+			{ "ms-jpq/coq_nvim", branch = "coq" },
+			{ "ms-jpq/coq.artifacts", branch = "artifacts" },
+		},
+		init = function()
+			vim.g.coq_settings = {
+				auto_start = 'shut-up',
+			}
+		end,
+	},
 	-- highlighting
 	{ 
 		"nvim-treesitter/nvim-treesitter",
@@ -10,20 +22,6 @@ return {
 		config = function()
 			require "config.settings.treesitter"
 		end,
-	},
-	  {
-		"hrsh7th/nvim-cmp",
-		dependencies = {
-		  "hrsh7th/cmp-nvim-lsp",
-		  "hrsh7th/cmp-buffer",
-		  "hrsh7th/cmp-path",
-		  "hrsh7th/cmp-cmdline",
-		  "onsails/lspkind.nvim",
-		},
-		config = function()
-		  require "config.settings.cmp"
-		end,
-		event = "InsertEnter",
 	},
 	{
 		"folke/todo-comments.nvim",
