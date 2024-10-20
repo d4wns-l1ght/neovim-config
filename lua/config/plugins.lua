@@ -135,7 +135,12 @@ return {
 		config = true,
 	},
 	{ "farmergreg/vim-lastplace" },
+	{ "HiPhish/rainbow-delimiters.nvim" },
 	{
-		"HiPhish/rainbow-delimiters.nvim"
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		---@module "ibl"
+		---@type ibl.config
+		opts = {}
 	},
 }
