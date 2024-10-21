@@ -140,7 +140,7 @@ return {
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
-			require "config.settings.lualine"
+			require "config.settings.lualine" -- TODO: customise lualine
 		end,
 		lazy = false,
 	},
@@ -157,7 +157,8 @@ return {
 			}
 		end,
 	},
-	-- QoL
+	-- QoL {{{
+	-- Informative
 	{
 		"folke/which-key.nvim",
 		lazy = true,
@@ -173,6 +174,7 @@ return {
 			},
 		},
 	},
+	-- Functional
 	{
 		"mbbill/undotree",
 		lazy = true,
@@ -182,13 +184,24 @@ return {
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		lazy = true,
-		config = true,
+		opts = {
+			fast_wrap = {},
+		},
 	},
 	{
 		"farmergreg/vim-lastplace",
 		lazy = true,
 		event = "VeryLazy"
 	},
+	{
+		"ggandor/leap.nvim",
+		dependencies = { "tpope/vim-repeat"},
+		config = function()
+			require("leap").add_default_mappings()
+		end,
+		event = "VeryLazy"
+	},
+	-- Visual
 	{
 		"HiPhish/rainbow-delimiters.nvim",
 		lazy = true,
@@ -199,4 +212,5 @@ return {
 		main = "ibl",
 		opts = {}
 	},
+	-- }}}
 }
