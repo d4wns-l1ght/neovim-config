@@ -121,11 +121,19 @@ return {
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
 	},
-	-- git wrapper
+	-- git stuff
 	{
 		"tpope/vim-fugitive",
 		lazy = true,
 		cmd = "G"
+	},
+	{
+		"lewis6991/gitsigns.nvim",
+		lazy = false,
+		opts = {
+			signcolumn = true,
+			current_line_blame = true
+		}
 	},
 	-- UI
 	{
