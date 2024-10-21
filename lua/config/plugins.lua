@@ -47,7 +47,7 @@ return {
 		"mfussenegger/nvim-dap",
 		event = "VeryLazy"
 	},
-	-- languages
+	-- languages {{{
 	-- TODO: JDTLS
 	{
 		"mfussenegger/nvim-jdtls",
@@ -65,6 +65,9 @@ return {
 			require('crates').setup()
 		end,
 	},
+	-- Elixir
+	{ "elixir-editors/vim-elixir", event = "VeryLazy" },
+	-- }}}
 	-- theme	
 	{
 		"navarasu/onedark.nvim",
@@ -135,28 +138,6 @@ return {
 			current_line_blame = true
 		}
 	},
-	-- UI
-	{
-		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require "config.settings.lualine" -- TODO: customise lualine
-		end,
-		lazy = false,
-	},
-	{ "famiu/bufdelete.nvim" },
-	{
-		"akho/numbers.vim",
-		config = function()
-			vim.g.numbers_exclude = {
-				'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', --superset
-				"neo-tree","lazy", "oil"
-			}
-			vim.g.numbers_exclude_buffers = {
-				'acwrite', 'help', 'nofile', 'nowrite', 'quickfix', 'terminal'
-			}
-		end,
-	},
 	-- QoL {{{
 	-- Informative
 	{
@@ -188,6 +169,7 @@ return {
 			fast_wrap = {},
 		},
 	},
+	{ "danymat/neogen", opts = {}, keys = "<leader>ng" },
 	{
 		"farmergreg/vim-lastplace",
 		lazy = true,
@@ -212,5 +194,27 @@ return {
 		main = "ibl",
 		opts = {}
 	},
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require "config.settings.lualine" -- TODO: customise lualine
+		end,
+		lazy = false,
+	},
+	{ "famiu/bufdelete.nvim" },
+	{
+		"akho/numbers.vim",
+		config = function()
+			vim.g.numbers_exclude = {
+				'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', --superset
+				"neo-tree","lazy", "oil"
+			}
+			vim.g.numbers_exclude_buffers = {
+				'acwrite', 'help', 'nofile', 'nowrite', 'quickfix', 'terminal'
+			}
+		end,
+	},
+	{ "eandrju/cellular-automaton.nvim", cmd = "CellularAutomaton" },
 	-- }}}
 }
