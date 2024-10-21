@@ -13,6 +13,9 @@ return {
 				auto_start = 'shut-up',
 			}
 		end,
+		config = function()
+			require "config.settings.lsp"
+		end,
 	},
 	{
 		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
