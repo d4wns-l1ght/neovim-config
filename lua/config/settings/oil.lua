@@ -1,4 +1,4 @@
-require('oil').setup {
+return {
 	default_file_explorer = false,
 	watch_for_changes = true,
 	view_options = { show_hidden = true },

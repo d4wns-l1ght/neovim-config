@@ -29,9 +29,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		event = "VeryLazy",
 		build = ":TSUpdate",
-		config = function()
-			require "config.settings.treesitter"
-		end,
+		opts = require "config.settings.treesitter",
 	},
 	{
 		"folke/todo-comments.nvim",
@@ -93,18 +91,14 @@ return {
 			"MunifTanjim/nui.nvim",
 			-- "3rd/image.nvim",
 		},
-		config = function()
-			require "config.settings.neotree"
-		end,
+		opts = require "config.settings.neotree",
 	},
 	{
 		"stevearc/oil.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		lazy = true,
 		cmd = "Oil",
-		config = function()
-			require "config.settings.oil"
-		end,
+		opts = require "config.settings.oil",
 	},
 	{
 		"nvim-telescope/telescope.nvim",
@@ -197,9 +191,7 @@ return {
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require "config.settings.lualine" -- TODO: customise lualine
-		end,
+		opts = require "config.settings.lualine", -- TODO: customise lualine
 		lazy = false,
 	},
 	{ "famiu/bufdelete.nvim" },

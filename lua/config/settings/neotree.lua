@@ -1,4 +1,4 @@
-require('neo-tree').setup {
+return {
 	filesystem = {
 		filtered_items = {
 			visible = true,
