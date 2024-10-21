@@ -1,7 +1,7 @@
 return {
 	-- programming stuff
 	-- TODO
-	{ 
+	{
 		"neovim/nvim-lspconfig",
 		lazy = false,
 		dependencies = {
@@ -22,7 +22,7 @@ return {
 		end,
 	},
 	-- highlighting
-	{ 
+	{
 		"nvim-treesitter/nvim-treesitter",
 		event = "VeryLazy",
 		build = ":TSUpdate",
@@ -40,7 +40,7 @@ return {
 		},
 		event = "VeryLazy"
 	},
-	{ 
+	{
 		"mfussenegger/nvim-dap",
 		event = "VeryLazy"
 	},
@@ -63,7 +63,7 @@ return {
 		end,
 	},
 	-- theme	
-	{ 
+	{
 		"navarasu/onedark.nvim",
 		lazy = false,
 		priority = 1000,
@@ -105,9 +105,9 @@ return {
 		lazy = true,
 		cmd = "Telescope",
 		branch = "0.1.x",
-		dependencies = { 
+		dependencies = {
 			"nvim-lua/plenary.nvim",
-			{ 'nvim-telescope/telescope-fzf-native.nvim', build = "make" } 
+			{ 'nvim-telescope/telescope-fzf-native.nvim', build = "make" }
 		}
 	},
 	{
@@ -119,10 +119,10 @@ return {
 		"nvim-telescope/telescope-ui-select.nvim",
 	},
 	-- git wrapper
-	{ 
-		"tpope/vim-fugitive", 
+	{
+		"tpope/vim-fugitive",
 		lazy = true,
-		cmd = "G" 
+		cmd = "G"
 	},
 	-- UI
 	{
@@ -134,7 +134,7 @@ return {
 		lazy = false,
 	},
 	{ "famiu/bufdelete.nvim" },
-	{ 
+	{
 		"akho/numbers.vim",
 		config = function()
 			vim.g.numbers_exclude = {
@@ -162,10 +162,10 @@ return {
 			},
 		},
 	},
-	{ 
+	{
 		"mbbill/undotree",
 		lazy = true,
-		event = "VeryLazy" 
+		event = "VeryLazy"
 	},
 	{
 		"windwp/nvim-autopairs",
@@ -173,12 +173,12 @@ return {
 		lazy = true,
 		config = true,
 	},
-	{ 
+	{
 		"farmergreg/vim-lastplace",
 		lazy = true,
 		event = "VeryLazy"
 	},
-	{ 
+	{
 		"HiPhish/rainbow-delimiters.nvim",
 		lazy = true,
 		event = "VeryLazy"
