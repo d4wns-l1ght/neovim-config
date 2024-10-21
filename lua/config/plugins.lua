@@ -41,13 +41,12 @@ return {
 	},
 	{ 
 		"mfussenegger/nvim-dap",
-		event = "VeryLazy",
+		event = "VeryLazy"
 	},
 	-- languages
-	-- TODO
+	-- TODO: JDTLS
 	{
 		"mfussenegger/nvim-jdtls",
-		event = "VeryLazy",
 	},
 	-- Rust
 	{
