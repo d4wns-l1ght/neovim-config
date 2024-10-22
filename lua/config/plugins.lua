@@ -27,9 +27,12 @@ return {
 	-- highlighting
 	{
 		"nvim-treesitter/nvim-treesitter",
+		lazy = true,
 		event = "VeryLazy",
 		build = ":TSUpdate",
-		opts = require "config.settings.treesitter",
+		config = function()
+			require("config.settings.treesitter")
+		end,
 	},
 	{
 		"folke/todo-comments.nvim",
