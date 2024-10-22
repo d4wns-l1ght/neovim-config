@@ -78,6 +78,10 @@ return {
 			require('onedark').setup {
 				style = 'darker',
 				term_colors = false,
+				highlights = {
+					["@variable.member"] = {fg = "$red" },
+					["@variable.parameter"] = { fg = "$cyan" },
+				},
 			}
 			require('onedark').load()
 		end,
