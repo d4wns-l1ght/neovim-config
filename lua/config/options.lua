@@ -24,6 +24,8 @@ function ToggleLspLines()
 	vim.diagnostic.config({ virtual_text = not vim.diagnostic.config().virtual_text})
 end
 vim.keymap.set("n", "<leader>l", ":lua ToggleLspLines()<CR>", { noremap = true, silent = true, desc = "Toggle lsp_lines" })
+-- redo remap
+vim.keymap.set('n', '<leader>u', '<C-r>', { noremap = true, silent = true})
 -- hide virtual text re lsp_lines
 vim.diagnostic.config({
   virtual_text = true,
