@@ -185,6 +185,15 @@ return {
 	},
 	-- Visual
 	{
+		'MeanderingProgrammer/render-markdown.nvim',
+		lazy = true,
+		ft = { "markdown", "quarto", "org" },
+		dependencies = {
+			'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons'
+		},
+		opts = {},
+	},
+	{
 		"HiPhish/rainbow-delimiters.nvim",
 		lazy = true,
 		event = "VeryLazy"
