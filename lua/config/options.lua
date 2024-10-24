@@ -16,10 +16,6 @@ vim.keymap.set("n", "<leader>ff", "<cmd>Telescope live_grep<CR>", { noremap = tr
 vim.keymap.set("n", "<leader>o", "<cmd>Oil --float<CR>", { noremap = true, silent = true, desc = "Floating Oil" })
 -- Buffer closing keybinds
 vim.keymap.set("n", "<leader>q", "<cmd>Bdelete<CR>", { noremap = true, silent = true })
--- Neotree keybind
-vim.keymap.set("n", "<leader>nt", "<cmd>Neotree toggle focus<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>gt", "<cmd>Neotree float git_status<CR>", { noremap = true, silent = true } )
-vim.keymap.set("n", "<leader>bt", "<cmd>Neotree toggle buffers focus right<CR>", { noremap = true, silent = true } )
 -- floating window
 vim.keymap.set("n", "<leader>fl", "<cmd>Oil --float<CR><cmd>Bdelete<CR>", { noremap = true, silent = true })
 -- lsp_lines toggle
