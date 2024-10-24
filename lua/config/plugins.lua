@@ -1,4 +1,17 @@
 return {
+	-- theme	
+	{
+		"navarasu/onedark.nvim",
+		lazy = true,
+		priority = 1000,
+		config = function()
+			require('onedark').setup {
+				style = 'darker',
+				term_colors = true,
+			}
+			require('onedark').load()
+		end,
+	},
 	-- programming stuff
 	-- TODO
 	{
