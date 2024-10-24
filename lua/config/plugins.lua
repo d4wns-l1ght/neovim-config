@@ -105,7 +105,7 @@ return {
 		"elixir-tools/elixir-tools.nvim",
 		version = "*",
 		lazy = true,
-		event = { "BufReadPre", "BufNewFile" },
+		ft = "elixir",
 		config = function()
 			require "config.settings.elixir-tools"
 		end,
