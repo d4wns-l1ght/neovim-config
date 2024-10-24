@@ -89,8 +89,7 @@ return {
 	-- file system stuff
 	{
 		"nvim-neo-tree/neo-tree.nvim",
-		lazy = true,
-		cmd = "Neotree",
+		lazy = false,
 		branch = "v3.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
