@@ -67,7 +67,11 @@ return {
 		end,
 	},
 	-- Elixir
-	{ "elixir-editors/vim-elixir", event = "VeryLazy" },
+	{
+		"elixir-editors/vim-elixir",
+		lazy = true,
+		ft = { "elixir" }
+	},
 	-- }}}
 	-- theme	
 	{
