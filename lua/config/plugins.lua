@@ -120,6 +120,11 @@ return {
 		"nvim-telescope/telescope.nvim",
 		lazy = true,
 		cmd = "Telescope",
+		keys = {
+			{ "<C-o>", "<esc>:Telescope fd<CR>", mode = {"n","i"}, noremap = true, silent = true, desc = "Fzf files" },
+			{ "<C-f>", "<esc>:Telescope current_buffer_fuzzy_find<CR>", mode = {"n","i"}, noremap = true, silent = true, desc = "Buffer fzf" },
+			{ "<leader>ff", "<cmd>Telescope live_grep<CR>", mode = "n", noremap = true, silent = true },
+		},
 		branch = "0.1.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -219,7 +224,14 @@ return {
 		opts = require "config.settings.lualine", -- TODO: customise lualine
 		lazy = false,
 	},
-	{ "famiu/bufdelete.nvim" },
+	{
+		"famiu/bufdelete.nvim",
+		lazy = true,
+		cmd = { "Bdelete", "Bwipeout" },
+		keys = {
+			{ "<leader>q", "<cmd>Bdelete<CR>", mode = "n", noremap = true, silent = true, desc = "Clear buffer" },
+		},
+	},
 	{
 		"akho/numbers.vim",
 		config = function()

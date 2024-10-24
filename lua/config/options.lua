@@ -9,13 +9,7 @@ vim.opt.termguicolors = true
 -- TODO: Code actions
 
 -- File system keybinds
-vim.keymap.set({"n","i"}, "<C-o>", "<esc>:Telescope fd<CR>", { noremap = true, silent = true})
-vim.keymap.set({"n","i"}, "<C-f>", "<esc>:Telescope current_buffer_fuzzy_find<CR>", { noremap = true, silent = true})
-vim.keymap.set("n", "<leader>tf", "<cmd>Telescope file_browser<CR>", { noremap = true, silent = true, desc = "Telescope browser" })
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope live_grep<CR>", { noremap = true, silent = true, desc = "Grep files" })
 vim.keymap.set("n", "<leader>o", "<cmd>Oil --float<CR>", { noremap = true, silent = true, desc = "Floating Oil" })
--- Buffer closing keybinds
-vim.keymap.set("n", "<leader>q", "<cmd>Bdelete<CR>", { noremap = true, silent = true })
 -- floating window
 vim.keymap.set("n", "<leader>fl", "<cmd>Oil --float<CR><cmd>Bdelete<CR>", { noremap = true, silent = true })
 -- lsp_lines toggle
