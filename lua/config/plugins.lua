@@ -102,9 +102,16 @@ return {
 	},
 	-- Elixir
 	{
-		"elixir-editors/vim-elixir",
+		"elixir-tools/elixir-tools.nvim",
+		version = "*",
 		lazy = true,
-		ft = { "elixir" }
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require "config.settings.elixir-tools"
+		end,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
 	},
 	-- }}}
 	-- theme	
