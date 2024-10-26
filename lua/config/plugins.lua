@@ -171,16 +171,17 @@ return {
 			{ "<C-o>", "<esc>:Telescope fd<CR>", mode = {"n","i"}, noremap = true, silent = true, desc = "Fzf files" },
 			{ "<C-f>", "<esc>:Telescope current_buffer_fuzzy_find<CR>", mode = {"n","i"}, noremap = true, silent = true, desc = "Buffer fzf" },
 			{ "<leader>ff", "<cmd>Telescope live_grep<CR>", mode = "n", noremap = true, silent = true },
+			{ "<M-CR>", "<cmd>lua vim.lsp.buf.code_action()<CR>", mode = {'n','i'}, noremap = true, silent = true },
 		},
+		config = function()
+			require "config.settings.telescope"
+		end,
 		branch = "0.1.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			{ 'nvim-telescope/telescope-fzf-native.nvim', build = "make" }
-
+			{ 'nvim-telescope/telescope-fzf-native.nvim', build = "make" },
+			{ "nvim-telescope/telescope-ui-select.nvim", },
 		}
-	},
-	{
-		"nvim-telescope/telescope-ui-select.nvim",
 	},
 	-- git stuff
 	{
