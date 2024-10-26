@@ -249,7 +249,11 @@ return {
 		dependencies = {
 			'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons'
 		},
-		opts = {},
+		opts = {
+			render_modes = true,
+			heading = {	backgrounds = {} },
+			latex = { enabled = false },
+		},
 	},
 	{
 		"HiPhish/rainbow-delimiters.nvim",
