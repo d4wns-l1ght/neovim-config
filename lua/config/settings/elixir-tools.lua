@@ -4,7 +4,7 @@ local elixirls = require("elixir.elixirls")
 elixir.setup {
 	nextls = { enable = false, },
 	elixirls = {
-		cmd = "elixirls",
+		cmd = "elixir-ls",
 		enable = true,
 		settings = {
 			dialyzerEnabled = false,

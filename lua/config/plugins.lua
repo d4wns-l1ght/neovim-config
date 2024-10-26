@@ -33,17 +33,12 @@ return {
 			require('onedark').load()
 		end,
 	},
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-	},
 	-- programming stuff
 	-- TODO
 	{
 		"neovim/nvim-lspconfig",
-		lazy = false,
+		lazy = true,
+		event = "BufRead",
 		dependencies = {
 			{ "ms-jpq/coq_nvim", branch = "coq" },
 			{ "ms-jpq/coq.artifacts", branch = "artifacts" },
@@ -68,7 +63,7 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		lazy = true,
-		event = "VeryLazy",
+		event = "BufRead",
 		build = ":TSUpdate",
 		config = function()
 			require("config.settings.treesitter")
@@ -76,13 +71,14 @@ return {
 	},
 	{
 		"folke/todo-comments.nvim",
+		lazy = true,
+		event = "BufRead",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {
 			highlight = {
 				keyword = "fg"
 			}
 		},
-		event = "VeryLazy"
 	},
 	{
 		"mfussenegger/nvim-dap",
@@ -92,6 +88,8 @@ return {
 	-- TODO: JDTLS
 	{
 		"mfussenegger/nvim-jdtls",
+		lazy = true,
+		ft = "java",
 	},
 	-- Rust
 	{
@@ -112,6 +110,7 @@ return {
 		version = "*",
 		lazy = true,
 		ft = "elixir",
+		cmd = { "Mix" },
 		config = function()
 			require "config.settings.elixir-tools"
 		end,
@@ -191,7 +190,8 @@ return {
 	},
 	{
 		"lewis6991/gitsigns.nvim",
-		lazy = false,
+		lazy = true,
+		event = "BufRead",
 		opts = {
 			signcolumn = true,
 			current_line_blame = true
@@ -259,10 +259,12 @@ return {
 	{
 		"HiPhish/rainbow-delimiters.nvim",
 		lazy = true,
-		event = "VeryLazy"
+		event = "BufRead"
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
+		lazy = true,
+		event = "InsertEnter",
 		main = "ibl",
 		opts = {}
 	},
@@ -282,6 +284,8 @@ return {
 	},
 	{
 		"akho/numbers.vim",
+		lazy = true,
+		event = "BufRead",
 		config = function()
 			vim.g.numbers_exclude = {
 				'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', --superset

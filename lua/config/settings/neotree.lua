@@ -8,4 +8,5 @@ return {
 		follow_current_file = { enabled = true },
 	},
 	close_if_last_window = true,
+	use_libuv_file_watcher = true,
 }
