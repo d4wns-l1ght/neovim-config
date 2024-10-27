@@ -17,6 +17,11 @@ return {
 		},
 	},
 	-- Functional
+	{ -- TODO: Add some more customisation
+		'folke/trouble.nvim',
+		cmd = "Trouble",
+		opts = {},
+	},
 	{
 		"mbbill/undotree",
 		lazy = true,
@@ -31,6 +36,7 @@ return {
 		},
 	},
 	{ "danymat/neogen", opts = {}, keys = "<leader>ng" },
+	-- Navigation
 	{
 		"farmergreg/vim-lastplace",
 		lazy = true,

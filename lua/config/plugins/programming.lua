@@ -1,6 +1,5 @@
 return {
 	-- programming stuff
-	-- TODO
 	{
 		"neovim/nvim-lspconfig",
 		lazy = true,
