@@ -42,6 +42,12 @@ return {
 		dependencies = {
 			{ "ms-jpq/coq_nvim", branch = "coq" },
 			{ "ms-jpq/coq.artifacts", branch = "artifacts" },
+			{
+				"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+				config = function()
+					require("lsp_lines").setup()
+				end,
+			},
 		},
 		init = function()
 			vim.g.coq_settings = {
@@ -50,13 +56,6 @@ return {
 		end,
 		config = function()
 			require "config.settings.lsp"
-		end,
-	},
-	{
-		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-		lazy = true,
-		config = function()
-			require("lsp_lines").setup()
 		end,
 	},
 	-- highlighting
