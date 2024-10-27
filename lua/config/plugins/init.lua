@@ -55,7 +55,7 @@ return {
 			}
 		end,
 		config = function()
-			require "config.settings.lsp"
+			require "config.plugins.settings.lsp"
 		end,
 	},
 	-- highlighting
@@ -65,7 +65,7 @@ return {
 		event = "BufRead",
 		build = ":TSUpdate",
 		config = function()
-			require("config.settings.treesitter")
+			require("config.plugins.settings.treesitter")
 		end,
 	},
 	{
@@ -111,7 +111,7 @@ return {
 		ft = "elixir",
 		cmd = { "Mix" },
 		config = function()
-			require "config.settings.elixir-tools"
+			require "config.plugins.settings.elixir-tools"
 		end,
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -152,14 +152,14 @@ return {
 			"MunifTanjim/nui.nvim",
 			-- "3rd/image.nvim",
 		},
-		opts = require "config.settings.neotree",
+		opts = require "config.plugins.settings.neotree",
 	},
 	{
 		"stevearc/oil.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		lazy = true,
 		cmd = "Oil",
-		opts = require "config.settings.oil",
+		opts = require "config.plugins.settings.oil",
 	},
 	{
 		"nvim-telescope/telescope.nvim",
@@ -172,7 +172,7 @@ return {
 			{ "<M-CR>", "<cmd>lua vim.lsp.buf.code_action()<CR>", mode = {'n','i'}, noremap = true, silent = true },
 		},
 		config = function()
-			require "config.settings.telescope"
+			require "config.plugins.settings.telescope"
 		end,
 		branch = "0.1.x",
 		dependencies = {
@@ -270,7 +270,7 @@ return {
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		opts = require "config.settings.lualine", -- TODO: customise lualine
+		opts = require "config.plugins.settings.lualine", -- TODO: customise lualine
 		lazy = false,
 	},
 	{
