@@ -60,4 +60,10 @@ return {
 			current_line_blame = true
 		}
 	},
+	{
+		'sindrets/diffview.nvim',
+		lazy = true,
+		cmd = { 'DiffviewOpen', 'DiffviewFileHistory' },
+
+	},
 }

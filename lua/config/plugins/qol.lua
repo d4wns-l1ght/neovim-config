@@ -20,7 +20,7 @@ return {
 	{
 		"mbbill/undotree",
 		lazy = true,
-		event = "VeryLazy"
+		event = "BufRead"
 	},
 	{
 		"windwp/nvim-autopairs",
@@ -38,11 +38,12 @@ return {
 	},
 	{
 		"ggandor/leap.nvim",
+		lazy = true,
+		event = "BufRead",
 		dependencies = { "tpope/vim-repeat"},
 		config = function()
 			require("leap").add_default_mappings()
 		end,
-		event = "VeryLazy"
 	},
 	-- Visual
 	{
