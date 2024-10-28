@@ -25,7 +25,7 @@ return {
 			{ "<leader>q", "<cmd>Bdelete<CR>", mode = "n", noremap = true, silent = true, desc = "Clear buffer" },
 		},
 	},
-	{ -- TODO: Add some more customisation
+	{
 		'folke/trouble.nvim',
 		cmd = "Trouble",
 		opts = {},

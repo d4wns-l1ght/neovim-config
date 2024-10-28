@@ -78,6 +78,10 @@ return {
 		},
 	},
 	-- HTTP
-	{ 'rest-nvim/rest.nvim' },
+	{
+		'rest-nvim/rest.nvim',
+		lazy = true,
+		cmd = 'Rest'
+	},
 	-- }}}
 }
