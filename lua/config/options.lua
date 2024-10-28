@@ -4,8 +4,6 @@ vim.o.tabstop = 4
 vim.o.softtabstop = 4
 -- Leader
 vim.g.mapleader = " ";
--- colors
-vim.opt.termguicolors = true
 -- TODO: Code actions
 
 -- File system keybinds
@@ -17,9 +15,12 @@ function ToggleLspLines()
 	require("lsp_lines").toggle()
 	vim.diagnostic.config({ virtual_text = not vim.diagnostic.config().virtual_text})
 end
-vim.keymap.set("n", "<leader>tl", ":lua ToggleLspLines()<CR>", { noremap = true, silent = true, desc = "Toggle lsp_lines" })
+vim.keymap.set("n", "<leader>l", ":lua ToggleLspLines()<CR>", { noremap = true, silent = true, desc = "Toggle lsp_lines" })
 -- redo remap
 vim.keymap.set('n', '<leader>u', '<C-r>', { noremap = true, silent = true, desc = "Redo" })
+-- buf navigation
+vim.keymap.set('n', '<leader>bp', '<cmd>BufferLinePick<CR>', { noremap = false, silent = true, desc = "Pick buffer"})
+vim.keymap.set('n', '<leader>bd', '<cmd>BufferLinePickClose<CR>', { noremap = false, silent = true, desc = "Close buffer"})
 -- hide virtual text re lsp_lines
 vim.diagnostic.config({
   virtual_text = true,
@@ -35,4 +36,3 @@ vim.o.cursorline = true
 vim.o.cursorlineopt = "both"
 -- Don't need to show mode with lualine :)
 vim.o.showmode = false
-vim.diagnostic.config({update_in_insert = true})

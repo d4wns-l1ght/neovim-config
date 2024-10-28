@@ -1,6 +1,13 @@
 return {
 	-- main interface stuff
 	{
+		'akinsho/bufferline.nvim',
+		dependencies = 'nvim-tree/nvim-web-devicons',
+		config = function()
+			require("config.plugins.settings.bufferline")
+		end,
+	},
+	{
 		"nvim-telescope/telescope.nvim",
 		lazy = true,
 		cmd = "Telescope",
