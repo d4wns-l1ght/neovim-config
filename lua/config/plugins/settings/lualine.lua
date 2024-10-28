@@ -16,6 +16,10 @@ return {
 		theme = 'onedark',
 		global_status = true,
 	},
+	extensions = {
+		'neo-tree', 'fugitive', 'lazy', 'oil', 'trouble',
+	},
+	-- Statusline
 	sections = {
 		lualine_a = { 'mode' },
 		lualine_b = {
@@ -28,9 +32,6 @@ return {
 		lualine_y = { {'datetime', style="%H:%M %d"}, 'progress' },
 		lualine_z = {'location'},
 	},
-	extensions = {
-		'neo-tree', 'fugitive', 'lazy', 'oil', 'trouble',
-	},
 	inactive_sections = {
 		lualine_a = { "filename" },
 		lualine_b = { { "diff", source = diff_source } },
@@ -38,5 +39,5 @@ return {
 		lualine_x = { { "filetype", icons_enabled = false } },
 		lualine_y = { "progress" },
 		lualine_z = { "location" },
-	}
+	},
 }

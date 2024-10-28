@@ -5,10 +5,10 @@ return {
 		lazy = true,
 		cmd = "Telescope",
 		keys = {
-			{ "<C-o>", "<esc>:Telescope fd<CR>", mode = {"n","i"}, noremap = true, silent = true, desc = "Fzf files" },
+			{ "<C-o>", "<esc>:Telescope fd<CR>", mode = {"n","i"}, noremap = true, silent = true, desc = "Fzf filenames" },
 			{ "<C-f>", "<esc>:Telescope current_buffer_fuzzy_find<CR>", mode = {"n","i"}, noremap = true, silent = true, desc = "Buffer fzf" },
-			{ "<leader>ff", "<cmd>Telescope live_grep<CR>", mode = "n", noremap = true, silent = true },
-			{ "<M-CR>", "<cmd>lua vim.lsp.buf.code_action()<CR>", mode = {'n','i'}, noremap = true, silent = true },
+			{ "<leader>ff", "<cmd>Telescope live_grep<CR>", mode = "n", noremap = true, silent = true, desc = "All files grep"},
+			{ "<M-CR>", "<cmd>lua vim.lsp.buf.code_action()<CR>", mode = {'n','i'}, noremap = true, silent = true, desc = "Code action" },
 		},
 		config = function()
 			require "config.plugins.settings.telescope"
@@ -37,6 +37,7 @@ return {
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		lazy = true,
+		cmd = 'Neotree',
 		keys = {
 			{ "<leader>nt", "<cmd>Neotree toggle focus<CR>", mode = "n", noremap = true, silent = true, desc = "Toggle Neotree" },
 			{ "<leader>gt", "<cmd>Neotree float git_status<CR>", mode = "n", noremap = true, silent = true, desc = "Neotree git view" },
