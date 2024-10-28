@@ -67,6 +67,16 @@ return {
 		lazy = false,
 	},
 	{
+		'nvim-zh/colorful-winsep.nvim',
+		lazy = true,
+		event = 'WinLeave',
+		opts = {
+			no_exec_files = { "packer", "TelescopePrompt", "mason", "CompetiTest", "NvimTree", --superset
+				"neo-tree", "lazy", "oil" },
+			only_line_seq = false,
+		},
+	},
+	{
 		"akho/numbers.vim",
 		lazy = true,
 		event = "BufRead",
