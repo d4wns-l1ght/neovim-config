@@ -77,5 +77,7 @@ return {
 			"nvim-lua/plenary.nvim",
 		},
 	},
+	-- HTTP
+	{ 'rest-nvim/rest.nvim' },
 	-- }}}
 }
