@@ -30,6 +30,6 @@ require("lazy").setup({
   -- colorscheme that will be used when installing plugins.
   install = { colorscheme = { "onedark" } },
   -- automatically check for plugin updates
-  checker = { enabled = false },
+  checker = { enabled = true },
 })
 vim.cmd("colorscheme onedark")
