@@ -56,8 +56,10 @@ return {
 	},
 	{
 		'saecki/crates.nvim',
+		lazy = true,
+		tag = "stable",
 		event = { "BufRead Cargo.toml" },
-		opts = {}
+		opts = require "config.plugins.settings.crates",
 	},
 	-- Elixir
 	{
