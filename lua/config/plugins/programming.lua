@@ -9,9 +9,7 @@ return {
 			{ "ms-jpq/coq.artifacts", branch = "artifacts" },
 			{
 				"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-				config = function()
-					require("lsp_lines").setup()
-				end,
+				opts = {},
 			},
 		},
 		init = function()
@@ -59,9 +57,7 @@ return {
 	{
 		'saecki/crates.nvim',
 		event = { "BufRead Cargo.toml" },
-		config = function()
-			require('crates').setup()
-		end,
+		opts = {}
 	},
 	-- Elixir
 	{

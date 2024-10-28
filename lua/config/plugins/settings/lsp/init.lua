@@ -9,6 +9,3 @@ lspconfig.lua_ls.setup{
 		}
 	}
 }
-lspconfig.elixirls.setup{
-	cmd = { "elixir-ls"}
-}
