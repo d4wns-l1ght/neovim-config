@@ -5,21 +5,28 @@ return {
 		lazy = true,
 		event = "BufRead",
 		dependencies = {
-			{ "ms-jpq/coq_nvim", branch = "coq" },
-			{ "ms-jpq/coq.artifacts", branch = "artifacts" },
-			{
-				"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-				opts = {},
-			},
 		},
+		config = function()
+			require "config.plugins.settings.lsp"
+		end,
+	},
+	{
+		"ms-jpq/coq_nvim",
+		lazy = true,
+		event = "InsertEnter",
+		branch = "coq",
+		dependencies = { "ms-jpq/coq.artifacts", branch = "artifacts" },
 		init = function()
 			vim.g.coq_settings = {
 				auto_start = 'shut-up',
 			}
 		end,
-		config = function()
-			require "config.plugins.settings.lsp"
-		end,
+	},
+	{
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+		lazy = true,
+		event = "BufRead",
+		opts = {},
 	},
 	-- Treesitter stuff 
 	{
