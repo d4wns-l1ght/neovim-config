@@ -1,4 +1,38 @@
 return {
+	-- main interface stuff
+	{
+		"nvim-telescope/telescope.nvim",
+		lazy = true,
+		cmd = "Telescope",
+		keys = {
+			{ "<C-o>", "<esc>:Telescope fd<CR>", mode = {"n","i"}, noremap = true, silent = true, desc = "Fzf files" },
+			{ "<C-f>", "<esc>:Telescope current_buffer_fuzzy_find<CR>", mode = {"n","i"}, noremap = true, silent = true, desc = "Buffer fzf" },
+			{ "<leader>ff", "<cmd>Telescope live_grep<CR>", mode = "n", noremap = true, silent = true },
+			{ "<M-CR>", "<cmd>lua vim.lsp.buf.code_action()<CR>", mode = {'n','i'}, noremap = true, silent = true },
+		},
+		config = function()
+			require "config.plugins.settings.telescope"
+		end,
+		branch = "0.1.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			{ 'nvim-telescope/telescope-fzf-native.nvim', build = "make" },
+			{ "nvim-telescope/telescope-ui-select.nvim", },
+		}
+	},
+	{
+		'stevearc/overseer.nvim',
+		lazy = true,
+		cmd = 'OverseerRun',
+		keys = {
+			{ "<leader>or", "<cmd>OverseerRun<CR>", mode = "n", noremap = true, silent = true, desc = "Open Overseer menu" },
+			{ "<leader>ot", "<cmd>OverseerToggle right<CR>", mode = "n", noremap = true, silent = true, desc = "Show Overseer reports" },
+		},
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+		},
+		opts = {},
+	},
 	-- file system stuff
 	{
 		"nvim-neo-tree/neo-tree.nvim",
@@ -24,26 +58,6 @@ return {
 		lazy = true,
 		cmd = "Oil",
 		opts = require "config.plugins.settings.oil",
-	},
-	{
-		"nvim-telescope/telescope.nvim",
-		lazy = true,
-		cmd = "Telescope",
-		keys = {
-			{ "<C-o>", "<esc>:Telescope fd<CR>", mode = {"n","i"}, noremap = true, silent = true, desc = "Fzf files" },
-			{ "<C-f>", "<esc>:Telescope current_buffer_fuzzy_find<CR>", mode = {"n","i"}, noremap = true, silent = true, desc = "Buffer fzf" },
-			{ "<leader>ff", "<cmd>Telescope live_grep<CR>", mode = "n", noremap = true, silent = true },
-			{ "<M-CR>", "<cmd>lua vim.lsp.buf.code_action()<CR>", mode = {'n','i'}, noremap = true, silent = true },
-		},
-		config = function()
-			require "config.plugins.settings.telescope"
-		end,
-		branch = "0.1.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			{ 'nvim-telescope/telescope-fzf-native.nvim', build = "make" },
-			{ "nvim-telescope/telescope-ui-select.nvim", },
-		}
 	},
 	-- git stuff
 	{

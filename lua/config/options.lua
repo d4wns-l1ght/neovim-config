@@ -9,7 +9,7 @@ vim.opt.termguicolors = true
 -- TODO: Code actions
 
 -- File system keybinds
-vim.keymap.set("n", "<leader>o", "<cmd>Oil --float<CR>", { noremap = true, silent = true, desc = "Floating Oil" })
+vim.keymap.set("n", "<leader>ol", "<cmd>Oil --float<CR>", { noremap = true, silent = true, desc = "Floating Oil" })
 -- floating window
 vim.keymap.set("n", "<leader>fl", "<cmd>Oil --float<CR><cmd>Bdelete<CR>", { noremap = true, silent = true })
 -- lsp_lines toggle

@@ -29,6 +29,6 @@ return {
 		lualine_z = {'location'},
 	},
 	extensions = {
-		'neo-tree', 'fugitive', 'lazy', 'oil', 'trouble', 'overseer'
+		'neo-tree', 'fugitive', 'lazy', 'oil', 'trouble',
 	},
 }
