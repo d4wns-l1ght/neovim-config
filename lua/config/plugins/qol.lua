@@ -17,6 +17,14 @@ return {
 		},
 	},
 	-- Functional
+	{
+		"famiu/bufdelete.nvim",
+		lazy = true,
+		cmd = { "Bdelete", "Bwipeout" },
+		keys = {
+			{ "<leader>q", "<cmd>Bdelete<CR>", mode = "n", noremap = true, silent = true, desc = "Clear buffer" },
+		},
+	},
 	{ -- TODO: Add some more customisation
 		'folke/trouble.nvim',
 		cmd = "Trouble",
@@ -53,6 +61,26 @@ return {
 	},
 	-- Visual
 	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = require "config.plugins.settings.lualine", -- TODO: customise lualine
+		lazy = false,
+	},
+	{
+		"akho/numbers.vim",
+		lazy = true,
+		event = "BufRead",
+		config = function()
+			vim.g.numbers_exclude = {
+				'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', --superset
+				"neo-tree","lazy", "oil"
+			}
+			vim.g.numbers_exclude_buffers = {
+				'acwrite', 'help', 'nofile', 'nowrite', 'quickfix', 'terminal'
+			}
+		end,
+	},
+	{
 		'MeanderingProgrammer/render-markdown.nvim',
 		lazy = true,
 		ft = { "markdown", "quarto", "org" },
@@ -76,34 +104,6 @@ return {
 		event = "InsertEnter",
 		main = "ibl",
 		opts = {}
-	},
-	{
-		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		opts = require "config.plugins.settings.lualine", -- TODO: customise lualine
-		lazy = false,
-	},
-	{
-		"famiu/bufdelete.nvim",
-		lazy = true,
-		cmd = { "Bdelete", "Bwipeout" },
-		keys = {
-			{ "<leader>q", "<cmd>Bdelete<CR>", mode = "n", noremap = true, silent = true, desc = "Clear buffer" },
-		},
-	},
-	{
-		"akho/numbers.vim",
-		lazy = true,
-		event = "BufRead",
-		config = function()
-			vim.g.numbers_exclude = {
-				'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', --superset
-				"neo-tree","lazy", "oil"
-			}
-			vim.g.numbers_exclude_buffers = {
-				'acwrite', 'help', 'nofile', 'nowrite', 'quickfix', 'terminal'
-			}
-		end,
 	},
 	{ "eandrju/cellular-automaton.nvim", cmd = "CellularAutomaton" },
 	-- }}}
