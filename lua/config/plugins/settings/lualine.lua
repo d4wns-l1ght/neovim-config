@@ -13,7 +13,6 @@ end
 
 return {
   options = {
-    theme = 'onedark',
     global_status = true,
   },
   extensions = {
