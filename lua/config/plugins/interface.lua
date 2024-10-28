@@ -2,11 +2,14 @@ return {
 	-- main interface stuff
 	{
 		'akinsho/bufferline.nvim',
+		lazy = true,
+		event = "UiEnter",
 		dependencies = 'nvim-tree/nvim-web-devicons',
 		config = function()
 			require("config.plugins.settings.bufferline")
 		end,
 	},
+	-- Navigation
 	{
 		"nvim-telescope/telescope.nvim",
 		lazy = true,
