@@ -29,6 +29,10 @@ return {
 		'folke/trouble.nvim',
 		cmd = "Trouble",
 		opts = {},
+		keys = {
+			{ "<leader>t", "<cmd>Trouble<CR>", mode = "n", noremap = true, silent = true, desc = "Trouble selector" },
+		},
+		dependencies = "nvim-telescope/telescope.nvim",
 	},
 	{
 		"mbbill/undotree",
@@ -43,7 +47,19 @@ return {
 			fast_wrap = {},
 		},
 	},
-	{ "danymat/neogen", opts = {}, keys = "<leader>ng" },
+	{
+		'nmac427/guess-indent.nvim',
+		lazy = false,
+		config = function()
+			require('guess-indent').setup{}
+		end,
+	},
+	{
+		"danymat/neogen",
+		lazy = true,
+		cmd = "Neogen",
+		opts = {},
+	},
 	-- Navigation
 	{
 		"farmergreg/vim-lastplace",

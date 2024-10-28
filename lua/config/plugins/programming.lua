@@ -21,7 +21,7 @@ return {
 			require "config.plugins.settings.lsp"
 		end,
 	},
-	-- highlighting
+	-- Treesitter stuff 
 	{
 		"nvim-treesitter/nvim-treesitter",
 		lazy = true,
