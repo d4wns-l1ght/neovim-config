@@ -49,7 +49,7 @@ return {
   },
   {
     'nmac427/guess-indent.nvim',
-    lazy = true,
+    lazy = false,
     config = function()
       require('guess-indent').setup{}
     end,
@@ -132,7 +132,7 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     lazy = true,
-    event = "InsertEnter",
+    event = "BufEnter",
     main = "ibl",
     opts = {}
   },

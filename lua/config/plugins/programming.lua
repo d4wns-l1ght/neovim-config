@@ -3,9 +3,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     lazy = true,
-    event = "BufRead",
-    dependencies = {
-    },
+    event = "VeryLazy",
     config = function()
       require "config.plugins.settings.lsp"
     end,
