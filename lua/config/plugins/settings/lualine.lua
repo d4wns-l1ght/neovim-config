@@ -19,7 +19,7 @@ return {
 	sections = {
 		lualine_a = { 'mode' },
 		lualine_b = {
-			{ 'filename', path = 1, shorting_target = 120 },
+			'filename',
 			'branch',
 			{'diff', source = diff_source }
 		},
@@ -31,4 +31,12 @@ return {
 	extensions = {
 		'neo-tree', 'fugitive', 'lazy', 'oil', 'trouble',
 	},
+	inactive_sections = {
+		lualine_a = { "filename" },
+		lualine_b = { { "diff", source = diff_source } },
+		lualine_c = { "diagnostics" },
+		lualine_x = { { "filetype", icons_enabled = false } },
+		lualine_y = { "progress" },
+		lualine_z = { "location" },
+	}
 }
