@@ -36,3 +36,4 @@ vim.o.cursorlineopt = "both"
 vim.opt.laststatus = 3
 -- Don't need to show mode with lualine :)
 vim.o.showmode = false
+vim.diagnostic.config({update_in_insert = true})
