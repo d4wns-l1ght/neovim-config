@@ -81,7 +81,8 @@ return {
     event = "BufRead",
     opts = {
       signcolumn = true,
-      current_line_blame = true
+      current_line_blame = true,
+      numhl = true,
     }
   },
   {

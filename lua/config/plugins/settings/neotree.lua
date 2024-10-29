@@ -6,7 +6,10 @@ return {
       hide_gitignored = true,
     },
     follow_current_file = { enabled = true },
+    never_show = { ".DStore" },
   },
   close_if_last_window = true,
-  use_libuv_file_watcher = true,
+  window = {
+    width = 35,
+  }
 }

@@ -8,7 +8,7 @@ return {
   -- theme	
   {
     'EdenEast/nightfox.nvim',
-    lazy = true,
+    lazy = false,
     priority = 1000,
     opts = function()
       return {
@@ -19,6 +19,7 @@ return {
   {
     "catppuccin/nvim",
     lazy = true,
+    event = "VeryLazy",
     name = "catppuccin",
     opts = function()
       return {
@@ -29,6 +30,7 @@ return {
   {
     "navarasu/onedark.nvim",
     lazy = true,
+    event = "VeryLazy",
     opts = 	function ()
       return {
         transparent = is_transparent or false,
