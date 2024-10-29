@@ -57,7 +57,16 @@ return {
   {
     'mrcjkb/rustaceanvim',
     version = '^5',
-    lazy = false -- it's already lazy
+    lazy = false, -- it's already lazy
+    init = function()
+      vim.g.rustaceanvim = {
+        server = {
+          on_attach = function(client, bufnr)
+            vim.cmd("COQnow --shut-up")
+          end,
+        }
+      }
+    end,
   },
   {
     'saecki/crates.nvim',

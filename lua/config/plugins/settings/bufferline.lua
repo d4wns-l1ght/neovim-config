@@ -7,11 +7,8 @@ bufferline.setup {
     diagnostics = 'nvim_lsp',
     diagnostics_indicator = function(count, level, diagnostics_dict, context)
       -- only show icons if not the current buf
-      if context.buffer:current() then
-        return ''
-      end
       local icon = level:match("error") and " " or ""
-      return " " .. icon .. count
+      return " " .. icon .. " " .. count
     end,
     groups = {
       toggle_hidden_on_enter = true,
