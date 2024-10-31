@@ -12,9 +12,6 @@ local function diff_source()
 end
 
 return {
-  options = {
-    global_status = true,
-  },
   extensions = {
     'neo-tree', 'fugitive', 'lazy', 'oil', 'trouble',
   },
