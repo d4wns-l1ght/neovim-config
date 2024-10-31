@@ -11,6 +11,7 @@ return {
   {
     "ms-jpq/coq_nvim",
     lazy = true,
+    cmd = "COQnow",
     event = "InsertEnter",
     branch = "coq",
     dependencies = { "ms-jpq/coq.artifacts", branch = "artifacts" },

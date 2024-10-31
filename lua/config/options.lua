@@ -27,6 +27,11 @@ vim.diagnostic.config({
   virtual_text = true,
   virtual_lines = false,
 })
+-- toggle inline hints,
+Toggle_inlay = function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })
+end
+vim.keymap.set('n', '<leader>ti', Toggle_inlay, { silent = true, desc = "Toggle LSP inlay hints"})
 -- Make mousescrolling work properly with fugitive-vim blame
 vim.o.mouse="a"
 -- Split settings

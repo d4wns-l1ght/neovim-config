@@ -1,6 +1,11 @@
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
+autocmd("LspAttach", {
+  callback = function()
+    vim.lsp.inlay_hint.enable()
+  end,
+})
 -- {{{ Terminals
 -- Stolen :)
 -- Automatically go into insert mode and remove line numbers

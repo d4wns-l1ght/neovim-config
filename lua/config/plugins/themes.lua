@@ -13,7 +13,12 @@ return {
     name = "catppuccin",
     opts = function()
       return {
-        transparent = is_transparent or false
+        transparent = is_transparent or false,
+        custom_highlights = function(colors)
+          return {
+            LspInlayHint = { bg = colors.none },
+          }
+        end,
       }
     end,
   },
