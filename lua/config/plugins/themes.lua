@@ -7,23 +7,23 @@ return {
   },
   -- theme	
   {
-    'EdenEast/nightfox.nvim',
+    "catppuccin/nvim",
     lazy = false,
     priority = 1000,
-    opts = function()
-      return {
-        transparent = is_transparent or false,
-      }
-    end,
-  },
-  {
-    "catppuccin/nvim",
-    lazy = true,
-    event = "VeryLazy",
     name = "catppuccin",
     opts = function()
       return {
         transparent = is_transparent or false
+      }
+    end,
+  },
+  {
+    'EdenEast/nightfox.nvim',
+    lazy = true,
+    event = "VeryLazy",
+    opts = function()
+      return {
+        transparent = is_transparent or false,
       }
     end,
   },

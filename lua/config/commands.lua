@@ -3,7 +3,7 @@
 local cmd = vim.api.nvim_create_user_command
 
 
-local lightdark = { "dawnfox", "duskfox" }
+local lightdark = { "catppuccin-latte", "catppuccin-mocha" }
 
 local toggletheme = function()
   if vim.g.colors_name == lightdark[1] then
