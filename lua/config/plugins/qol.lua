@@ -43,9 +43,9 @@ return {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     lazy = true,
-    opts = {
-      fast_wrap = {},
-    },
+    config = function()
+      require "config.plugins.settings.autopairs"
+    end,
   },
   {
     'nmac427/guess-indent.nvim',
