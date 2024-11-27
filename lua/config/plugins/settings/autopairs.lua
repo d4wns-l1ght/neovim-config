@@ -1,7 +1,12 @@
 local remap = vim.api.nvim_set_keymap
 local npairs = require('nvim-autopairs')
 
-npairs.setup({ map_bs = false, map_cr = false })
+npairs.setup({
+  map_bs = false,
+  map_cr = false,
+  enable_check_bracket_line = true,
+  ignored_next_char = "[%w%.]",
+})
 
 -- skip it, if you use another global object
 _G.MUtils= {}
@@ -27,5 +32,3 @@ MUtils.BS = function()
   end
 end
 remap('i', '<bs>', 'v:lua.MUtils.BS()', { expr = true, noremap = true })
-
-
