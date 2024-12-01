@@ -7,7 +7,7 @@ elixir.setup {
     cmd = "elixir-ls",
     enable = true,
     settings = elixirls.settings {
-      dialyzerEnabled = false,
+      dialyzerEnabled = true,
       enableTestLenses = false,
     },
   },

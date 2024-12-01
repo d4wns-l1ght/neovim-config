@@ -1,3 +1,4 @@
 .reference/
 lazy-lock.json
 spell/
+.DS_Store

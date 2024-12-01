@@ -12,3 +12,5 @@ lspconfig.lua_ls.setup(
     }
   }
 )
+
+lspconfig.gopls.setup{}
