@@ -72,7 +72,9 @@ return {
     event = "BufRead",
     dependencies = { "tpope/vim-repeat"},
     config = function()
-      require("leap").add_default_mappings()
+      vim.keymap.set({'n', 'x', 'o'}, 'f',  '<Plug>(leap-forward)')
+      vim.keymap.set({'n', 'x', 'o'}, 'F',  '<Plug>(leap-backward)')
+      vim.keymap.set({'n', 'x', 'o'}, 'gf', '<Plug>(leap-from-window)')
     end,
   },
   {
