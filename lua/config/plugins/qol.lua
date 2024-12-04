@@ -48,13 +48,6 @@ return {
     end,
   },
   {
-    'nmac427/guess-indent.nvim',
-    lazy = false,
-    config = function()
-      require('guess-indent').setup{}
-    end,
-  },
-  {
     "danymat/neogen",
     lazy = true,
     cmd = "Neogen",
@@ -149,6 +142,12 @@ return {
     lazy = true,
     event = "BufRead",
     main = "ibl",
+    opts = {}
+  },
+  {
+    "nvimdev/hlsearch.nvim",
+    lazy = true,
+    event = "BufRead",
     opts = {}
   },
   { "eandrju/cellular-automaton.nvim", cmd = "CellularAutomaton" },
