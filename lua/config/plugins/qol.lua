@@ -53,6 +53,11 @@ return {
     cmd = "Neogen",
     opts = {},
   },
+  {
+    "numToStr/Comment.nvim",
+    lazy = true, -- adds keybinds that load itself somehow?
+    opts = {},
+  },
   -- Navigation
   {
     "farmergreg/vim-lastplace",
