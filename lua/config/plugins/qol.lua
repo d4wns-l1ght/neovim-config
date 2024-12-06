@@ -88,6 +88,18 @@ return {
   },
   -- Misc
   {
+    "m4xshen/hardtime.nvim",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim"
+    },
+    opts = {
+      disabled_filetypes = {
+        "netrw", "neo-tree", "lazy", "oil", "mason", "fugitive"
+      },
+    },
+  },
+  {
     "brenton-leighton/multiple-cursors.nvim",
     version = "*",  -- Use the latest tagged version
     lazy = true,
