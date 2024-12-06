@@ -17,6 +17,8 @@ return {
         custom_highlights = function(colors)
           return {
             LspInlayHint = { bg = colors.none },
+            LineNr = { bg=colors.bg, fg=colors.overlay0 },
+            GitSignsCurrentLineBlame = { bg=colors.bg, fg=colors.overlay0 },
           }
         end,
       }
