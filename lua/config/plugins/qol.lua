@@ -26,6 +26,12 @@ return {
     },
   },
   {
+    "tpope/vim-surround",
+    lazy = true,
+    event = "InsertEnter",
+    dependencies = { "tpope/vim-repeat" },
+  },
+  {
     'folke/trouble.nvim',
     cmd = "Trouble",
     opts = {},
@@ -94,13 +100,15 @@ return {
   -- Misc
   {
     "m4xshen/hardtime.nvim",
+    lazy = true,
+    event = "BufEnter",
     dependencies = {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim"
     },
     opts = {
       disabled_filetypes = {
-        "netrw", "neo-tree", "lazy", "oil", "mason", "fugitive"
+        "qf", "netrw", "neo-tree", "lazy", "oil", "mason", "fugitive", "help", "git"
       },
     },
   },
@@ -152,7 +160,7 @@ return {
   {
     "rainbowhxch/beacon.nvim",
     lazy = true,
-    event = "VeryLazy",
+    event = "BufRead",
     opts = {},
   },
   {
