@@ -150,6 +150,12 @@ return {
     },
   },
   {
+    "rainbowhxch/beacon.nvim",
+    lazy = true,
+    event = "VeryLazy",
+    opts = {},
+  },
+  {
     "HiPhish/rainbow-delimiters.nvim",
     lazy = true,
     event = "BufRead"
