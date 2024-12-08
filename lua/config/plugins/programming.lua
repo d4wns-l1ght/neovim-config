@@ -3,7 +3,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     lazy = true,
-    event = "VeryLazy",
+    event = "BufRead",
     config = function()
       require "config.plugins.settings.lsp"
     end,
@@ -18,7 +18,10 @@ return {
     init = function()
       vim.g.coq_settings = {
         auto_start = 'shut-up',
-        keymap = { recommended = false },
+        keymap = {
+          recommended = true,
+          jump_to_mark = "<C-R>"
+        },
       }
       -- dot not working workaround
       -- ref https://github.com/ms-jpq/coq_nvim/issues/464#issuecomment-1250233282

@@ -3,7 +3,8 @@ return {
   -- transparency
   {
     "xiyaowong/transparent.nvim",
-    lazy = false,
+    lazy = true,
+    cmd = "TransparentToggle",
   },
   -- theme	
   {
@@ -27,7 +28,7 @@ return {
   {
     'EdenEast/nightfox.nvim',
     lazy = true,
-    event = "VeryLazy",
+    event = "BufRead",
     opts = function()
       return {
         transparent = is_transparent or false,
@@ -37,7 +38,7 @@ return {
   {
     "navarasu/onedark.nvim",
     lazy = true,
-    event = "VeryLazy",
+    event = "BufRead",
     opts = 	function ()
       return {
         transparent = is_transparent or false,

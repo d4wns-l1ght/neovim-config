@@ -151,7 +151,7 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = require "config.plugins.settings.lualine", -- TODO: customise lualine
+    opts = require "config.plugins.settings.lualine",
     lazy = false,
   },
   {
@@ -176,6 +176,7 @@ return {
   },
   {
     "lukas-reineke/virt-column.nvim",
+    lazy = true,
     opts = {}
   },
   {
