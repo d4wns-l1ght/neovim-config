@@ -18,6 +18,12 @@ return {
   },
   -- Functional
   {
+    "stevearc/conform.nvim",
+    lazy = true,
+    event = "BufWritePre",
+    opts = require "config.plugins.settings.conform"
+  },
+  {
     "famiu/bufdelete.nvim",
     lazy = true,
     cmd = { "Bdelete", "Bwipeout" },
