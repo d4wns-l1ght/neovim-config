@@ -73,7 +73,7 @@ return {
   },
   {
     "wincent/scalpel",
-    lazy = false,
+    lazy = true,
     event = "BufRead"
   },
   -- Navigation
@@ -95,6 +95,8 @@ return {
   },
   {
     "kwkarlwang/bufresize.nvim",
+    lazy = true,
+    keys = { { "<C-W><C-M>"} },
     opts = {},
   },
   {

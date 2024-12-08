@@ -64,9 +64,14 @@ return {
   },
   {
     "stevearc/oil.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
     lazy = true,
     cmd = "Oil",
+    keys = {
+      { "<leader>ol", "<cmd>Oil --float<CR>", mode = "n", noremap = true, silent = true, desc = "Floating Oil" },
+    },
     opts = require "config.plugins.settings.oil",
   },
   -- git stuff

@@ -6,7 +6,7 @@ return {
       hide_gitignored = true,
     },
     follow_current_file = { enabled = true },
-    never_show = { ".DStore" },
+    never_show = { ".DS_Store" },
   },
   close_if_last_window = true,
   window = {
