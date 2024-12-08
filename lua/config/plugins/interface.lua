@@ -79,11 +79,14 @@ return {
     "lewis6991/gitsigns.nvim",
     lazy = true,
     event = "BufRead",
-    opts = {
-      signcolumn = true,
-      current_line_blame = true,
-      numhl = true,
-    }
+    config = function()
+      require("gitsigns").setup({
+        signcolumn = true,
+        current_line_blame = true,
+        numhl = true,
+      })
+      require("scrollbar.handlers.gitsigns").setup()
+    end
   },
   {
     'sindrets/diffview.nvim',

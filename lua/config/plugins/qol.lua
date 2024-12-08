@@ -112,7 +112,7 @@ return {
   {
     "m4xshen/hardtime.nvim",
     lazy = true,
-    event = "BufEnter",
+    event = "BufRead",
     dependencies = {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim"
@@ -140,6 +140,12 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = require "config.plugins.settings.lualine", -- TODO: customise lualine
     lazy = false,
+  },
+  {
+    "petertriho/nvim-scrollbar",
+    lazy = true,
+    event = "BufRead",
+    opts = {},
   },
   {
     "akho/numbers.vim",
