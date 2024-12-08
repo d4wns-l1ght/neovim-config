@@ -64,6 +64,13 @@ return {
     lazy = true, -- adds keybinds that load itself somehow?
     opts = {},
   },
+  {
+    "sindrets/winshift.nvim",
+    lazy = true,
+    keys = {
+      { "<C-W><C-M>", "<cmd>WinShift<CR>", mode = "n", noremap = true, silent = true, desc = "Start WinShift"}
+    }
+  },
   -- Navigation
   {
     "farmergreg/vim-lastplace",
@@ -80,6 +87,10 @@ return {
       vim.keymap.set({'n', 'x', 'o'}, 'F',  '<Plug>(leap-backward)')
       vim.keymap.set({'n', 'x', 'o'}, 'gf', '<Plug>(leap-from-window)')
     end,
+  },
+  {
+    "kwkarlwang/bufresize.nvim",
+    opts = {},
   },
   {
     "christoomey/vim-tmux-navigator",
