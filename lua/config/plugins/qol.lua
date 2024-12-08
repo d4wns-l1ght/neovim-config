@@ -71,6 +71,11 @@ return {
       { "<C-W><C-M>", "<cmd>WinShift<CR>", mode = "n", noremap = true, silent = true, desc = "Start WinShift"}
     }
   },
+  {
+    "wincent/scalpel",
+    lazy = false,
+    event = "BufRead"
+  },
   -- Navigation
   {
     "farmergreg/vim-lastplace",
