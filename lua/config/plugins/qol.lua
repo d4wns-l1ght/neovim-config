@@ -156,6 +156,10 @@ return {
     end,
   },
   {
+    "lukas-reineke/virt-column.nvim",
+    opts = {}
+  },
+  {
     'MeanderingProgrammer/render-markdown.nvim',
     lazy = true,
     ft = { "markdown", "quarto", "org" },
