@@ -3,14 +3,14 @@ return {
   {
     "neovim/nvim-lspconfig",
     lazy = true,
-    event = "BufRead",
+    event = "VeryLazy",
     config = function()
       require "config.plugins.settings.lsp"
     end,
   },
   {
     "ms-jpq/coq_nvim",
-    lazy = true,
+    lazy = true, -- loaded in lsp.lua file apparently
     cmd = "COQnow",
     event = "InsertEnter",
     branch = "coq",

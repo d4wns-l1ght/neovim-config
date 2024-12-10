@@ -140,7 +140,7 @@ return {
     },
     opts = {
       disabled_filetypes = {
-        "qf", "netrw", "neo-tree", "lazy", "oil", "mason", "fugitive", "help", "git", "trouble"
+        "qf", "netrw", "neo-tree", "lazy", "oil", "mason", "fugitive", "help", "git", "undotree", "trouble"
       },
     },
   },
