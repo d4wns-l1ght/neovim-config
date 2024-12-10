@@ -157,23 +157,35 @@ return {
   },
   -- Visual
   {
-    "lukas-reineke/virt-column.nvim",
-    lazy = true,
-    opts = {}
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = require "config.plugins.settings.lualine", -- TODO: customise lualine
+    lazy = false,
   },
   {
-    'MeanderingProgrammer/render-markdown.nvim',
+    "petertriho/nvim-scrollbar",
     lazy = true,
-    ft = { "markdown", "quarto", "org" },
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons'
-    },
-    opts = {
-      render_modes = true,
-      heading = {	backgrounds = {} },
-      latex = { enabled = false },
-    },
+    event = "BufRead",
+    opts = {},
   },
+  {
+    "akho/numbers.vim",
+    lazy = true,
+    event = "BufRead",
+    config = function()
+      vim.g.numbers_exclude = {
+        'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', --superset
+        "neo-tree","lazy", "oil"
+      }
+      vim.g.numbers_exclude_buffers = {
+        'acwrite', 'help', 'nofile', 'nowrite', 'quickfix', 'terminal'
+      }
+    end,
+  },
+  -- {
+  --   "lukas-reineke/virt-column.nvim",
+  --   opts = {}
+  -- },
   {
     "rainbowhxch/beacon.nvim",
     lazy = true,
