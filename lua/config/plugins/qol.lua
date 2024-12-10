@@ -16,6 +16,12 @@ return {
       },
     },
   },
+  {
+    "j-hui/fidget.nvim",
+    opts = {
+      -- options
+    },
+  },
   -- Functional
   {
     "stevearc/conform.nvim",
