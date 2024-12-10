@@ -76,6 +76,9 @@ return {
     config = function()
       require("config.plugins.settings.treesitter")
     end,
+    dependencies = {
+      {'m-demare/hlargs.nvim',},
+    },
   },
   {
     "folke/todo-comments.nvim",
