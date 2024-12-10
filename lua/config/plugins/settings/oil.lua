@@ -12,6 +12,9 @@ return {
     max_width = 90,
     max_height = 30,
   },
+  keymaps = {
+    ["<BS>"] = { "actions.parent", mode = "n" },
+  },
   git = {
     add = function(path)
       return true

@@ -132,7 +132,7 @@ return {
     },
     opts = {
       disabled_filetypes = {
-        "qf", "netrw", "neo-tree", "lazy", "oil", "mason", "fugitive", "help", "git"
+        "qf", "netrw", "neo-tree", "lazy", "oil", "mason", "fugitive", "help", "git", "trouble"
       },
     },
   },
@@ -148,32 +148,6 @@ return {
     },
   },
   -- Visual
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = require "config.plugins.settings.lualine",
-    lazy = false,
-  },
-  {
-    "petertriho/nvim-scrollbar",
-    lazy = true,
-    event = "BufRead",
-    opts = {},
-  },
-  {
-    "akho/numbers.vim",
-    lazy = true,
-    event = "BufRead",
-    config = function()
-      vim.g.numbers_exclude = {
-        'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', --superset
-        "neo-tree","lazy", "oil"
-      }
-      vim.g.numbers_exclude_buffers = {
-        'acwrite', 'help', 'nofile', 'nowrite', 'quickfix', 'terminal'
-      }
-    end,
-  },
   {
     "lukas-reineke/virt-column.nvim",
     lazy = true,

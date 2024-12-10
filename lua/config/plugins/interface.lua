@@ -1,12 +1,30 @@
 return {
   -- main interface stuff
   {
-    'akinsho/bufferline.nvim',
+    "nvim-lualine/lualine.nvim",
     lazy = true,
     event = "UiEnter",
-    dependencies = 'nvim-tree/nvim-web-devicons',
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = require "config.plugins.settings.lualine",
+  },
+  {
+    "petertriho/nvim-scrollbar",
+    lazy = true,
+    event = "BufRead",
+    opts = {},
+  },
+  {
+    "akho/numbers.vim",
+    lazy = true,
+    event = "BufRead",
     config = function()
-      require("config.plugins.settings.bufferline")
+      vim.g.numbers_exclude = {
+        'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', --superset
+        "neo-tree","lazy", "oil"
+      }
+      vim.g.numbers_exclude_buffers = {
+        'acwrite', 'help', 'nofile', 'nowrite', 'quickfix', 'terminal'
+      }
     end,
   },
   -- Navigation

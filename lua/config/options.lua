@@ -19,9 +19,6 @@ end
 vim.keymap.set("n", "<leader>l", ":lua ToggleLspLines()<CR>", { noremap = true, silent = true, desc = "Toggle lsp_lines" })
 -- redo remap
 vim.keymap.set('n', 'U', '<C-r>', { noremap = true, silent = true, desc = "Redo" })
--- buf navigation
-vim.keymap.set('n', '<leader>bp', '<cmd>BufferLinePick<CR>', { noremap = false, silent = true, desc = "Pick buffer"})
-vim.keymap.set('n', '<leader>bd', '<cmd>BufferLinePickClose<CR>', { noremap = false, silent = true, desc = "Close buffer"})
 -- hide virtual text re lsp_lines
 vim.diagnostic.config({
   virtual_text = true,
