@@ -235,12 +235,6 @@ return {
     main = "ibl",
     opts = {},
   },
-  {
-    "nvimdev/hlsearch.nvim",
-    lazy = true,
-    event = "BufRead",
-    opts = {},
-  },
   { "eandrju/cellular-automaton.nvim", cmd = "CellularAutomaton" },
   -- }}}
 }

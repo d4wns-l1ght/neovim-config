@@ -24,7 +24,7 @@ return {
         "startify",
         "gundo",
         "vimshell",
-        "w3m", --superset
+        "w3m",
         "neo-tree",
         "lazy",
         "oil",
@@ -176,5 +176,23 @@ return {
     "sindrets/diffview.nvim",
     lazy = true,
     cmd = { "DiffviewOpen", "DiffviewFileHistory" },
+  },
+  -- search stuff
+  {
+    "kevinhwang91/nvim-hlslens",
+    lazy = true,
+    event = "BufRead",
+    config = function()
+      -- require('hlslens').setup() is not required
+      require("scrollbar.handlers.search").setup({
+        -- hlslens config overrides
+      })
+    end,
+  },
+  {
+    "nvimdev/hlsearch.nvim",
+    lazy = true,
+    event = "BufRead",
+    opts = {},
   },
 }
