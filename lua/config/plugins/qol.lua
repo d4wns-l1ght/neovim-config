@@ -26,6 +26,10 @@ return {
   },
   -- Functional
   {
+    "tpope/vim-obsession",
+    lazy = false,
+  },
+  {
     "stevearc/conform.nvim",
     lazy = true,
     event = "BufWritePre",

@@ -24,7 +24,16 @@ return {
       {'diff', source = diff_source }
     },
     lualine_c = { {'diagnostics', update_in_insert = true} },
-    lualine_x = { 'encoding', 'filesize', 'fileformat', 'filetype'},
+    lualine_x = { 
+      'encoding', 
+      'filesize', 
+      'fileformat', 
+      'filetype',
+      function()
+        local obsession_status = vim.fn["ObsessionStatus"]()
+        return obsession_status or ""
+      end,
+    },
     lualine_y = { {'datetime', style="%H:%M %d"}, 'progress' },
     lualine_z = {'location'},
   },
