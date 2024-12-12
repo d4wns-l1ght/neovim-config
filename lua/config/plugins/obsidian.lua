@@ -20,15 +20,16 @@ return {
   --   }
   -- },
   {
-    'MeanderingProgrammer/render-markdown.nvim',
+    "MeanderingProgrammer/render-markdown.nvim",
     lazy = true,
     ft = { "markdown", "quarto", "org" },
     dependencies = {
-      'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons'
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
     },
     opts = {
       render_modes = true,
-      heading = {	backgrounds = {} },
+      heading = { backgrounds = {} },
       latex = { enabled = false },
     },
   },

@@ -6,7 +6,7 @@ return {
     lazy = true,
     cmd = "TransparentToggle",
   },
-  -- theme	
+  -- theme
   {
     "catppuccin/nvim",
     lazy = false,
@@ -18,15 +18,15 @@ return {
         custom_highlights = function(colors)
           return {
             LspInlayHint = { bg = colors.none },
-            LineNr = { bg=colors.bg, fg=colors.overlay0 },
-            GitSignsCurrentLineBlame = { bg=colors.bg, fg=colors.overlay0 },
+            LineNr = { bg = colors.bg, fg = colors.overlay0 },
+            GitSignsCurrentLineBlame = { bg = colors.bg, fg = colors.overlay0 },
           }
         end,
       }
     end,
   },
   {
-    'EdenEast/nightfox.nvim',
+    "EdenEast/nightfox.nvim",
     lazy = true,
     event = "BufRead",
     opts = function()
@@ -39,10 +39,10 @@ return {
     "navarasu/onedark.nvim",
     lazy = true,
     event = "BufRead",
-    opts = 	function ()
+    opts = function()
       return {
         transparent = is_transparent or false,
-        style = 'darker',
+        style = "darker",
         term_colors = true,
         colors = {
           light_red = "#d17277",
@@ -59,7 +59,6 @@ return {
           ["@lsp.type.parameter.java"] = { fg = "$orange" },
           ["@variable.member.java"] = { fg = "$red" },
           ["@lsp.typemod.property.private.java"] = { fg = "$red" },
-
 
           ["@lsp.type.variable.java"] = { fg = "$none" },
           ["@lsp.type.property.java"] = { fg = "$none" },

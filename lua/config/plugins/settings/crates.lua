@@ -10,6 +10,6 @@ return {
       enabled = true,
       max_results = 8,
       min_chars = 3,
-    }
-  }
+    },
+  },
 }

@@ -18,8 +18,8 @@ vim.opt.rtp:prepend(lazypath)
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
-require "config.options"
-local theme = 'catppuccin-mocha'
+require("config.options")
+local theme = "catppuccin-mocha"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
@@ -32,4 +32,4 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = false },
 })
-vim.cmd("colorscheme "..theme)
+vim.cmd("colorscheme " .. theme)

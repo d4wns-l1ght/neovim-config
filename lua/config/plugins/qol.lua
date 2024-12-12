@@ -10,7 +10,7 @@ return {
       {
         "<leader>?",
         function()
-          require("which-key").show({global = false})
+          require("which-key").show({ global = false })
         end,
         desc = "Buffer local keymaps (which-key)",
       },
@@ -33,7 +33,7 @@ return {
     "stevearc/conform.nvim",
     lazy = true,
     event = "BufWritePre",
-    opts = require "config.plugins.settings.conform"
+    opts = require("config.plugins.settings.conform"),
   },
   {
     "famiu/bufdelete.nvim",
@@ -50,7 +50,7 @@ return {
     dependencies = { "tpope/vim-repeat" },
   },
   {
-    'folke/trouble.nvim',
+    "folke/trouble.nvim",
     cmd = "Trouble",
     opts = {},
     keys = {
@@ -61,14 +61,14 @@ return {
   {
     "mbbill/undotree",
     lazy = true,
-    event = "BufRead"
+    event = "BufRead",
   },
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     lazy = true,
     config = function()
-      require "config.plugins.settings.autopairs"
+      require("config.plugins.settings.autopairs")
     end,
   },
   {
@@ -86,35 +86,35 @@ return {
     "sindrets/winshift.nvim",
     lazy = true,
     keys = {
-      { "<C-W><C-M>", "<cmd>WinShift<CR>", mode = "n", noremap = true, silent = true, desc = "Start WinShift"}
-    }
+      { "<C-W><C-M>", "<cmd>WinShift<CR>", mode = "n", noremap = true, silent = true, desc = "Start WinShift" },
+    },
   },
   {
     "wincent/scalpel",
     lazy = true,
-    event = "BufRead"
+    event = "BufRead",
   },
   -- Navigation
   {
     "farmergreg/vim-lastplace",
     lazy = true,
-    event = "VeryLazy"
+    event = "VeryLazy",
   },
   {
     "ggandor/leap.nvim",
     lazy = true,
     event = "BufRead",
-    dependencies = { "tpope/vim-repeat"},
+    dependencies = { "tpope/vim-repeat" },
     config = function()
-      vim.keymap.set({'n', 'x', 'o'}, 'f',  '<Plug>(leap-forward)')
-      vim.keymap.set({'n', 'x', 'o'}, 'F',  '<Plug>(leap-backward)')
-      vim.keymap.set({'n', 'x', 'o'}, 'gf', '<Plug>(leap-from-window)')
+      vim.keymap.set({ "n", "x", "o" }, "f", "<Plug>(leap-forward)")
+      vim.keymap.set({ "n", "x", "o" }, "F", "<Plug>(leap-backward)")
+      vim.keymap.set({ "n", "x", "o" }, "gf", "<Plug>(leap-from-window)")
     end,
   },
   {
     "kwkarlwang/bufresize.nvim",
     lazy = true,
-    keys = { { "<C-W><C-M>"} },
+    keys = { { "<C-W><C-M>" } },
     opts = {},
   },
   {
@@ -140,30 +140,45 @@ return {
     event = "BufRead",
     dependencies = {
       "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim"
+      "nvim-lua/plenary.nvim",
     },
     opts = {
       disabled_filetypes = {
-        "qf", "netrw", "neo-tree", "lazy", "oil", "mason", "fugitive", "help", "git", "undotree", "trouble"
+        "qf",
+        "netrw",
+        "neo-tree",
+        "lazy",
+        "oil",
+        "mason",
+        "fugitive",
+        "help",
+        "git",
+        "undotree",
+        "trouble",
       },
     },
   },
   {
     "brenton-leighton/multiple-cursors.nvim",
-    version = "*",  -- Use the latest tagged version
+    version = "*", -- Use the latest tagged version
     lazy = true,
     keys = {
-      {"<leader>a", "<Cmd>MultipleCursorsAddMatches<CR>", mode = {"n", "x"}, desc = "Add cursors to cword"},
-      {"<leader>A", "<Cmd>MultipleCursorsAddMatchesV<CR>", mode = {"n", "x"}, desc = "Add cursors to cword in previous area"},
+      { "<leader>a", "<Cmd>MultipleCursorsAddMatches<CR>", mode = { "n", "x" }, desc = "Add cursors to cword" },
+      {
+        "<leader>A",
+        "<Cmd>MultipleCursorsAddMatchesV<CR>",
+        mode = { "n", "x" },
+        desc = "Add cursors to cword in previous area",
+      },
 
-      {"<leader>cl", "<Cmd>MultipleCursorsLock<CR>", mode = {"n", "x"}, desc = "Lock virtual cursors"},
+      { "<leader>cl", "<Cmd>MultipleCursorsLock<CR>", mode = { "n", "x" }, desc = "Lock virtual cursors" },
     },
   },
   -- Visual
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = require "config.plugins.settings.lualine", -- TODO: customise lualine
+    opts = require("config.plugins.settings.lualine"), -- TODO: customise lualine
     lazy = false,
   },
   {
@@ -178,11 +193,23 @@ return {
     event = "BufRead",
     config = function()
       vim.g.numbers_exclude = {
-        'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', --superset
-        "neo-tree","lazy", "oil"
+        "unite",
+        "tagbar",
+        "startify",
+        "gundo",
+        "vimshell",
+        "w3m", --superset
+        "neo-tree",
+        "lazy",
+        "oil",
       }
       vim.g.numbers_exclude_buffers = {
-        'acwrite', 'help', 'nofile', 'nowrite', 'quickfix', 'terminal'
+        "acwrite",
+        "help",
+        "nofile",
+        "nowrite",
+        "quickfix",
+        "terminal",
       }
     end,
   },
@@ -199,20 +226,20 @@ return {
   {
     "HiPhish/rainbow-delimiters.nvim",
     lazy = true,
-    event = "BufRead"
+    event = "BufRead",
   },
   {
     "lukas-reineke/indent-blankline.nvim",
     lazy = true,
     event = "BufRead",
     main = "ibl",
-    opts = {}
+    opts = {},
   },
   {
     "nvimdev/hlsearch.nvim",
     lazy = true,
     event = "BufRead",
-    opts = {}
+    opts = {},
   },
   { "eandrju/cellular-automaton.nvim", cmd = "CellularAutomaton" },
   -- }}}
