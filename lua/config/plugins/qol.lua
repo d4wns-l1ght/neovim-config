@@ -94,6 +94,12 @@ return {
     lazy = true,
     event = "BufRead",
   },
+  {
+    "nvim-zh/better-escape.vim",
+    lazy = true,
+    event = "InsertEnter",
+    config = function() end,
+  },
   -- Navigation
   {
     "farmergreg/vim-lastplace",
