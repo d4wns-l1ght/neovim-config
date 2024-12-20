@@ -139,6 +139,14 @@ return {
       { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
     },
   },
+  {
+    "aaronik/treewalker.nvim",
+    lazy = true,
+    cmd = "Treewalker",
+    opts = {
+      highlight = false, -- Whether to briefly highlight the node after jumping to it
+    },
+  },
   -- Misc
   {
     "m4xshen/hardtime.nvim",
