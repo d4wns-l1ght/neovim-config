@@ -26,8 +26,53 @@ return {
   },
   -- Functional
   {
-    "tpope/vim-obsession",
-    lazy = false,
+    "nvimtools/hydra.nvim",
+    lazy = true,
+    keys = { "<leader>tw" },
+    config = function()
+      local Hydra = require("hydra")
+      Hydra({
+        name = "Treewalk",
+        mode = { "n", "v" },
+        body = "<leader>tw",
+        config = {},
+        hint = false,
+        heads = {
+          {
+            "h",
+            function()
+              vim.cmd(":Treewalker Left")
+            end,
+          },
+          {
+            "j",
+            function()
+              vim.cmd(":Treewalker Down")
+            end,
+          },
+          {
+            "k",
+            function()
+              vim.cmd(":Treewalker Up")
+            end,
+          },
+          {
+            "l",
+            function()
+              vim.cmd(":Treewalker Right")
+            end,
+          },
+
+          -- exit this hydra
+          { "q", nil, { exit = true, nowait = true } },
+          { "<esc>", nil, { exit = true, nowait = true } },
+        },
+
+        -- hint = {
+        --   type = "statuslinemanual"
+        -- }
+      })
+    end,
   },
   {
     "stevearc/conform.nvim",
@@ -99,6 +144,10 @@ return {
     lazy = true,
     event = "InsertEnter",
     config = function() end,
+  },
+  {
+    "tpope/vim-obsession",
+    lazy = false,
   },
   -- Navigation
   {
