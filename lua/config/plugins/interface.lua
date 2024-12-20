@@ -195,4 +195,29 @@ return {
     event = "BufRead",
     opts = {},
   },
+  -- misc
+  {
+    "m4xshen/hardtime.nvim",
+    lazy = true,
+    event = "BufRead",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+    opts = {
+      disabled_filetypes = {
+        "qf",
+        "netrw",
+        "neo-tree",
+        "lazy",
+        "oil",
+        "mason",
+        "fugitive",
+        "help",
+        "git",
+        "undotree",
+        "trouble",
+      },
+    },
+  },
 }
