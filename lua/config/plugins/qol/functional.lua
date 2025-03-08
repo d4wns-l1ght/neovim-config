@@ -105,20 +105,4 @@ return {
     "tpope/vim-obsession",
     lazy = false,
   },
-  {
-    "brenton-leighton/multiple-cursors.nvim",
-    version = "*", -- Use the latest tagged version
-    lazy = true,
-    keys = {
-      { "<leader>a", "<Cmd>MultipleCursorsAddMatches<CR>", mode = { "n", "x" }, desc = "Add cursors to cword" },
-      {
-        "<leader>A",
-        "<Cmd>MultipleCursorsAddMatchesV<CR>",
-        mode = { "n", "x" },
-        desc = "Add cursors to cword in previous area",
-      },
-
-      { "<leader>cl", "<Cmd>MultipleCursorsLock<CR>", mode = { "n", "x" }, desc = "Lock virtual cursors" },
-    },
-  },
 }
