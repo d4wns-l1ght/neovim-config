@@ -14,6 +14,7 @@ return {
       },
     },
   },
+  -- Notification engine
   {
     "j-hui/fidget.nvim",
     lazy = true,
@@ -22,6 +23,8 @@ return {
       -- options
     },
   },
+  -- Allows to enter "submodes" to use commands more smoothly
+  -- TODO: use more or remove
   {
     "nvimtools/hydra.nvim",
     lazy = true,
@@ -30,12 +33,15 @@ return {
       require("config.plugins.settings.hydra")
     end,
   },
+  -- Automatic formatting
   {
     "stevearc/conform.nvim",
     lazy = true,
     event = "BufWritePre",
     opts = require("config.plugins.settings.conform"),
   },
+  -- quit buffers without quitting the window
+  -- useful for clearing splits
   {
     "famiu/bufdelete.nvim",
     lazy = true,
@@ -44,12 +50,15 @@ return {
       { "<leader>q", "<cmd>Bdelete<CR>", mode = "n", noremap = true, silent = true, desc = "Clear buffer" },
     },
   },
+  -- Surround things with symbols
   {
     "tpope/vim-surround",
     lazy = true,
     event = "InsertEnter",
     dependencies = { "tpope/vim-repeat" },
   },
+  -- tree for branching undo history (!!)
+  -- dont use it much BUT its cool
   {
     "mbbill/undotree",
     lazy = true,
@@ -63,12 +72,7 @@ return {
       require("config.plugins.settings.autopairs")
     end,
   },
-  {
-    "danymat/neogen",
-    lazy = true,
-    cmd = "Neogen",
-    opts = {},
-  },
+  -- gcc binding does comments
   {
     "numToStr/Comment.nvim",
     lazy = true, -- adds keybinds that load itself somehow?
@@ -81,17 +85,20 @@ return {
       { "<C-W><C-M>", "<cmd>WinShift<CR>", mode = "n", noremap = true, silent = true, desc = "Start WinShift" },
     },
   },
+  -- wrapper for :substitute <leader>e
   {
     "wincent/scalpel",
     lazy = true,
     event = "BufRead",
   },
+  -- lagless 'jk'->esc mapping
   {
     "nvim-zh/better-escape.vim",
     lazy = true,
     event = "InsertEnter",
     config = function() end,
   },
+  -- Very nice wrapper for vim sessions - use more
   {
     "tpope/vim-obsession",
     lazy = false,

@@ -13,6 +13,7 @@ return {
     event = "BufRead",
     opts = {},
   },
+  -- For combined relative & absolute line numbers
   {
     "akho/numbers.vim",
     lazy = true,
@@ -159,6 +160,7 @@ return {
     lazy = true,
     cmd = "G",
   },
+  -- Better git history
   {
     "rbong/vim-flog",
     lazy = true,
@@ -167,6 +169,7 @@ return {
       "tpope/vim-fugitive",
     },
   },
+  -- Extra git info
   {
     "lewis6991/gitsigns.nvim",
     lazy = true,
@@ -186,6 +189,7 @@ return {
     cmd = { "DiffviewOpen", "DiffviewFileHistory" },
   },
   -- search stuff
+  -- Gives more info when searching
   {
     "kevinhwang91/nvim-hlslens",
     lazy = true,
@@ -197,6 +201,7 @@ return {
       })
     end,
   },
+  -- Removes search highlights once done
   {
     "nvimdev/hlsearch.nvim",
     lazy = true,

@@ -15,12 +15,13 @@ return {
       vim.keymap.set({ "n", "x", "o" }, "gf", "<Plug>(leap-from-window)")
     end,
   },
+  -- keeps windows proportional when creating
   {
     "kwkarlwang/bufresize.nvim",
-    lazy = true,
-    keys = { { "<C-W><C-M>" } },
+    lazy = false,
     opts = {},
   },
+  -- my beloved...
   {
     "christoomey/vim-tmux-navigator",
     lazy = true,
@@ -37,6 +38,7 @@ return {
       { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
     },
   },
+  -- Navigate along treesitter nodes
   {
     "aaronik/treewalker.nvim",
     lazy = true,

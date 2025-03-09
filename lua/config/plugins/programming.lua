@@ -111,6 +111,7 @@ return {
     },
   },
   -- languages {{{
+  -- Java
   {
     "mfussenegger/nvim-jdtls",
     lazy = true,
@@ -131,6 +132,7 @@ return {
       }
     end,
   },
+  -- helps with adding crates to projects
   {
     "saecki/crates.nvim",
     lazy = true,
@@ -153,6 +155,7 @@ return {
     },
   },
   -- HTTP
+  -- nvim HTTP client
   {
     "rest-nvim/rest.nvim",
     lazy = true,
