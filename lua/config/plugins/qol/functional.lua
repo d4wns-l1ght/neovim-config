@@ -51,15 +51,6 @@ return {
     dependencies = { "tpope/vim-repeat" },
   },
   {
-    "folke/trouble.nvim",
-    cmd = "Trouble",
-    opts = {},
-    keys = {
-      { "<leader>t", "<cmd>Trouble<CR>", mode = "n", noremap = true, silent = true, desc = "Trouble selector" },
-    },
-    dependencies = "nvim-telescope/telescope.nvim",
-  },
-  {
     "mbbill/undotree",
     lazy = true,
     event = "BufRead",
