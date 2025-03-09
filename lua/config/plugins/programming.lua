@@ -9,6 +9,20 @@ return {
     end,
   },
   {
+    "nvim-neotest/neotest",
+    lazy = true,
+    event = "BufRead",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("config.plugins.settings.neotest")
+    end,
+  },
+  {
     "ms-jpq/coq_nvim",
     lazy = true, -- loaded in lsp.lua file apparently
     cmd = "COQnow",
