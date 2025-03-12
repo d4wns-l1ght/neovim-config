@@ -50,6 +50,18 @@ return {
     event = "BufRead",
     opts = {},
   },
+  -- Tests
+  {
+    "andythigpen/nvim-coverage",
+    version = "*",
+    lazy = true,
+    event = "BufRead",
+    config = function()
+      require("coverage").setup({
+        auto_reload = true,
+      })
+    end,
+  },
   -- Debugging
   {
     "mfussenegger/nvim-dap",

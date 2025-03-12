@@ -1,7 +1,11 @@
 -- Indentation settings
+-- The amount of "spaces" indented automatically
 vim.o.shiftwidth = 2
+-- the amount of spaces a tab takes up
 vim.o.tabstop = 4
-vim.o.softtabstop = 2
+-- unclear
+vim.o.softtabstop = 4
+-- whether tabs are replaced with spaces
 vim.o.expandtab = true
 -- vim.opt.colorcolumn = "80"
 -- Leader
