@@ -13,8 +13,6 @@ vim.g.mapleader = " "
 -- TODO: Code actions
 
 -- File system keybinds
--- floating window
-vim.keymap.set("n", "<leader>fl", "<cmd>Oil --float<CR><cmd>Bdelete<CR>", { noremap = true, silent = true })
 -- lsp_lines toggle
 function ToggleLspLines()
   require("lsp_lines").toggle()

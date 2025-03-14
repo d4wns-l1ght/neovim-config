@@ -44,25 +44,8 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     lazy = true,
-    cmd = "Telescope",
     keys = {
-      { "<C-o>", "<esc>:Telescope fd<CR>", mode = { "n", "i" }, noremap = true, silent = true, desc = "Fzf filenames" },
-      {
-        "<C-f>",
-        "<esc>:Telescope current_buffer_fuzzy_find<CR>",
-        mode = { "n", "i" },
-        noremap = true,
-        silent = true,
-        desc = "Buffer fzf",
-      },
-      {
-        "<leader>ff",
-        "<cmd>Telescope live_grep<CR>",
-        mode = "n",
-        noremap = true,
-        silent = true,
-        desc = "All files grep",
-      },
+      { "<leader>f" },
       {
         "<M-CR>",
         "<cmd>lua vim.lsp.buf.code_action()<CR>",
