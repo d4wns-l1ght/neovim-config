@@ -28,7 +28,6 @@ return {
   {
     "EdenEast/nightfox.nvim",
     lazy = true,
-    event = "BufRead",
     opts = function()
       return {
         transparent = is_transparent or false,
@@ -38,7 +37,6 @@ return {
   {
     "navarasu/onedark.nvim",
     lazy = true,
-    event = "BufRead",
     opts = function()
       return {
         transparent = is_transparent or false,

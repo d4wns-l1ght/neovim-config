@@ -62,7 +62,16 @@ return {
   {
     "mbbill/undotree",
     lazy = true,
-    event = "BufRead",
+    keys = {
+      {
+        "<leader>u",
+        "<cmd>UndotreeToggle<CR><cmd><UndotreeFocus><CR>",
+        mode = "n",
+        noremap = true,
+        silent = true,
+        desc = "Show Undotree",
+      },
+    },
   },
   {
     "windwp/nvim-autopairs",
@@ -75,7 +84,8 @@ return {
   -- gcc binding does comments
   {
     "numToStr/Comment.nvim",
-    lazy = true, -- adds keybinds that load itself somehow?
+    lazy = true,
+    keys = { "gc", "gb" },
     opts = {},
   },
   {

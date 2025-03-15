@@ -6,13 +6,15 @@ return {
   },
   {
     "ggandor/leap.nvim",
-    lazy = true,
-    event = "BufRead",
+    lazy = false, -- lazy loads itself
     dependencies = { "tpope/vim-repeat" },
     config = function()
       vim.keymap.set({ "n", "x", "o" }, "f", "<Plug>(leap-forward)")
       vim.keymap.set({ "n", "x", "o" }, "F", "<Plug>(leap-backward)")
       vim.keymap.set({ "n", "x", "o" }, "gf", "<Plug>(leap-from-window)")
+      vim.keymap.set({ "n", "x", "o" }, "gF", function()
+        require("leap.remote").action()
+      end)
     end,
   },
   -- keeps windows proportional when creating
