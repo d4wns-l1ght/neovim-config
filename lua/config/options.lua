@@ -26,6 +26,13 @@ vim.keymap.set(
 )
 -- redo remap
 vim.keymap.set("n", "U", "<C-r>", { noremap = true, silent = true, desc = "Redo" })
+-- source default session
+vim.keymap.set(
+  "n",
+  "<leader>ss",
+  ":source Session.vim<CR>",
+  { noremap = true, silent = true, desc = "Source default session" }
+)
 -- hide virtual text re lsp_lines
 vim.diagnostic.config({
   virtual_text = true,
