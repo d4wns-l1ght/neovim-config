@@ -112,10 +112,10 @@ return {
     },
     lazy = true,
     cmd = "Oil",
-    keys = {
-      { "<leader>ol", "<cmd>Oil --float<CR>", mode = "n", noremap = true, silent = true, desc = "Floating Oil" },
-    },
-    opts = require("config.plugins.settings.oil"),
+    keys = { "<leader>o" },
+    config = function()
+      require("config.plugins.settings.oil")
+    end,
   },
   -- git stuff
   {
