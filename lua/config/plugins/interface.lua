@@ -65,26 +65,6 @@ return {
       { "nvim-telescope/telescope-ui-select.nvim" },
     },
   },
-  {
-    "stevearc/overseer.nvim",
-    lazy = true,
-    cmd = "OverseerRun",
-    keys = {
-      { "<leader>or", "<cmd>OverseerRun<CR>", mode = "n", noremap = true, silent = true, desc = "Open Overseer menu" },
-      {
-        "<leader>ot",
-        "<cmd>OverseerToggle right<CR>",
-        mode = "n",
-        noremap = true,
-        silent = true,
-        desc = "Show Overseer reports",
-      },
-    },
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-    },
-    opts = {},
-  },
   -- file system stuff
   {
     "nvim-neo-tree/neo-tree.nvim",
