@@ -2,7 +2,6 @@ return {
   -- programming stuff
   {
     "neovim/nvim-lspconfig",
-    lazy = true,
     event = "VeryLazy",
     config = function()
       require("config.plugins.settings.lsp")
@@ -10,8 +9,7 @@ return {
   },
   {
     "nvim-neotest/neotest",
-    lazy = true,
-    event = "BufRead",
+    keys = "<leader>r",
     dependencies = {
       "nvim-neotest/nvim-nio",
       "nvim-lua/plenary.nvim",
@@ -24,7 +22,7 @@ return {
   },
   {
     "ms-jpq/coq_nvim",
-    lazy = true, -- loaded in lsp.lua file apparently
+    -- loaded in lsp.lua file apparently
     cmd = "COQnow",
     event = "InsertEnter",
     branch = "coq",
@@ -60,7 +58,6 @@ return {
   },
   {
     "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-    lazy = true,
     event = "BufRead",
     opts = {},
   },
@@ -68,18 +65,12 @@ return {
   {
     "andythigpen/nvim-coverage",
     version = "*",
-    lazy = true,
     event = "BufRead",
-    config = function()
-      require("coverage").setup({
-        auto_reload = true,
-      })
-    end,
+    opts = { auto_reload = true },
   },
   -- Debugging
   {
     "mfussenegger/nvim-dap",
-    lazy = true,
     -- TODO: Add more keys ref https://codeberg.org/babalark/nvim-config/src/branch/main/lua/myconfig/mappings.lua:157
     keys = { "<leader>d" },
     dependencies = {
@@ -109,7 +100,6 @@ return {
   },
   {
     "folke/todo-comments.nvim",
-    lazy = true,
     event = "BufRead",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
@@ -143,16 +133,14 @@ return {
   -- helps with adding crates to projects
   {
     "saecki/crates.nvim",
-    lazy = true,
     tag = "stable",
-    event = { "BufRead Cargo.toml" },
+    event = "BufRead Cargo.toml",
     opts = require("config.plugins.settings.crates"),
   },
   -- Elixir
   {
     "elixir-tools/elixir-tools.nvim",
     version = "*",
-    lazy = true,
     ft = "elixir",
     cmd = { "Mix" },
     config = function()
@@ -166,7 +154,6 @@ return {
   -- nvim HTTP client
   {
     "rest-nvim/rest.nvim",
-    lazy = true,
     cmd = "Rest",
   },
   -- }}}

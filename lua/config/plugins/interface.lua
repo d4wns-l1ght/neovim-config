@@ -2,21 +2,18 @@ return {
   -- main interface stuff
   {
     "nvim-lualine/lualine.nvim",
-    lazy = true,
     event = "UiEnter",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = require("config.plugins.settings.lualine"),
   },
   {
     "petertriho/nvim-scrollbar",
-    lazy = true,
     event = "BufRead",
     opts = {},
   },
   -- For combined relative & absolute line numbers
   {
     "akho/numbers.vim",
-    lazy = true,
     event = "BufRead",
     config = function()
       vim.g.numbers_exclude = {
@@ -43,7 +40,6 @@ return {
   -- Navigation
   {
     "nvim-telescope/telescope.nvim",
-    lazy = true,
     keys = {
       { "<leader>f" },
       {
@@ -68,7 +64,6 @@ return {
   -- file system stuff
   {
     "nvim-neo-tree/neo-tree.nvim",
-    lazy = true,
     cmd = "Neotree",
     keys = {
       {
@@ -117,23 +112,19 @@ return {
   },
   {
     "refractalize/oil-git-status.nvim",
-
     dependencies = {
       "stevearc/oil.nvim",
     },
-
     config = true,
   },
   -- git stuff
   {
     "tpope/vim-fugitive",
-    lazy = true,
     cmd = "G",
   },
   -- Better git history
   {
     "rbong/vim-flog",
-    lazy = true,
     cmd = { "Flog", "Flogsplit", "Floggit" },
     dependencies = {
       "tpope/vim-fugitive",
@@ -142,7 +133,6 @@ return {
   -- Extra git info
   {
     "lewis6991/gitsigns.nvim",
-    lazy = true,
     event = "BufRead",
     config = function()
       require("gitsigns").setup({
@@ -155,14 +145,12 @@ return {
   },
   {
     "sindrets/diffview.nvim",
-    lazy = true,
     cmd = { "DiffviewOpen", "DiffviewFileHistory" },
   },
   -- search stuff
   -- Gives more info when searching
   {
     "kevinhwang91/nvim-hlslens",
-    lazy = true,
     event = "BufRead",
     config = function()
       -- require('hlslens').setup() is not required
@@ -174,14 +162,12 @@ return {
   -- Removes search highlights once done
   {
     "nvimdev/hlsearch.nvim",
-    lazy = true,
     event = "BufRead",
     opts = {},
   },
   -- misc
   {
     "m4xshen/hardtime.nvim",
-    lazy = true,
     event = "BufRead",
     dependencies = {
       "MunifTanjim/nui.nvim",

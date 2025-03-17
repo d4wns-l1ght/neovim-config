@@ -12,18 +12,16 @@ return {
     lazy = false,
     priority = 1000,
     name = "catppuccin",
-    opts = function()
-      return {
-        transparent = is_transparent or false,
-        custom_highlights = function(colors)
-          return {
-            LspInlayHint = { bg = colors.none },
-            LineNr = { bg = colors.bg, fg = colors.overlay0 },
-            GitSignsCurrentLineBlame = { bg = colors.bg, fg = colors.overlay0 },
-          }
-        end,
-      }
-    end,
+    opts = {
+      transparent = is_transparent or false,
+      custom_highlights = function(colors)
+        return {
+          LspInlayHint = { bg = colors.none },
+          LineNr = { bg = colors.bg, fg = colors.overlay0 },
+          GitSignsCurrentLineBlame = { bg = colors.bg, fg = colors.overlay0 },
+        }
+      end,
+    },
   },
   {
     "EdenEast/nightfox.nvim",
