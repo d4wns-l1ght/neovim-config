@@ -81,25 +81,7 @@ return {
     "mfussenegger/nvim-dap",
     lazy = true,
     -- TODO: Add more keys ref https://codeberg.org/babalark/nvim-config/src/branch/main/lua/myconfig/mappings.lua:157
-    keys = {
-      "<leader>d",
-      {
-        "<leader>db",
-        ":lua require'dap'.toggle_breakpoint()<CR>",
-        mode = "n",
-        noremap = true,
-        silent = true,
-        desc = "Toggle breakpoint",
-      },
-      {
-        "<leader>du",
-        ":lua require'dapui'.toggle()<CR>",
-        mode = "n",
-        noremap = true,
-        silent = true,
-        desc = "Show DAP UI",
-      },
-    },
+    keys = { "<leader>d" },
     dependencies = {
       {
         "rcarriga/nvim-dap-ui",

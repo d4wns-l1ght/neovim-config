@@ -1,4 +1,6 @@
 local dap = require("dap")
+local keymap = require("util").set_keymaps
+local dapui = require("dapui")
 
 dap.adapters.mix_task = {
   type = "executable",
@@ -21,3 +23,31 @@ dap.configurations.elixir = {
     },
   },
 }
+
+keymap({
+  b = { dap.toggle_breakpoint, "Toggle breakpoint" },
+  B = {
+    function()
+      dap.list_breakpoints(true)
+    end,
+    "List breakpoints",
+  },
+  u = { dapui.toggle, "Toggle UI" },
+  e = { dap.set_exception_breakpoints, "Set exception breakpoints" },
+  D = { dap.clear_breakpoints, "Clear breakpoints" },
+  c = { dap.continue, "Continue" },
+  s = { dap.step_over, "Step" },
+  i = { dap.step_into, "Step in" },
+  o = { dap.step_out, "Step out" },
+  r = { dap.repl.toggle, "Toggle REPL" },
+  h = { dap.run_to_cursor, "Run to cursor" },
+  ["<Up>"] = { dap.up, "Stacktrace up" },
+  ["<Down>"] = { dap.down, "Stacktrace down" },
+  k = {
+    function()
+      dap.disconnect()
+      dap.close()
+    end,
+    "Stop debugging",
+  },
+}, { prefix = "<leader>d", group_name = "DAP" })
