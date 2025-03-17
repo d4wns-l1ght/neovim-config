@@ -118,18 +118,11 @@ return {
   },
   -- Rust
   {
+    -- TODO: add keymaps
     "mrcjkb/rustaceanvim",
-    version = "^5",
+    version = "*",
     lazy = false, -- it's already lazy
-    init = function()
-      vim.g.rustaceanvim = {
-        server = {
-          on_attach = function(client, bufnr)
-            vim.cmd("COQnow --shut-up")
-          end,
-        },
-      }
-    end,
+    init = require("config.plugins.settings.rustaceanvim"),
   },
   -- helps with adding crates to projects
   {

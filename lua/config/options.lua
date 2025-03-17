@@ -18,12 +18,9 @@ function ToggleLspLines()
   require("lsp_lines").toggle()
   vim.diagnostic.config({ virtual_text = not vim.diagnostic.config().virtual_text })
 end
-vim.keymap.set(
-  "n",
-  "<leader>l",
-  ":lua ToggleLspLines()<CR>",
-  { noremap = true, silent = true, desc = "Toggle lsp_lines" }
-)
+require("util").set_keymaps({
+  t = { ToggleLspLines, "Toggle LSP Lines" },
+}, { prefix = "<leader>l", group_name = "LSP" })
 -- redo remap
 vim.keymap.set("n", "U", "<C-r>", { noremap = true, silent = true, desc = "Redo" })
 -- source default session
