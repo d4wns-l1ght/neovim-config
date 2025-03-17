@@ -110,9 +110,7 @@ return {
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
-    lazy = true,
-    cmd = "Oil",
-    keys = { "<leader>o" },
+    lazy = false,
     config = function()
       require("config.plugins.settings.oil")
     end,

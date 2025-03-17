@@ -23,7 +23,6 @@ keymaps({
 oil.setup({
   default_file_explorer = true,
   watch_for_changes = true,
-  view_options = { show_hidden = true },
   skip_confirm_for_simple_edits = true,
   win_options = {
     signcolumn = "yes:2",

@@ -31,5 +31,12 @@ require("lazy").setup({
   install = { colorscheme = { theme } },
   -- automatically check for plugin updates
   checker = { enabled = false },
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        "netrwPlugin",
+      },
+    },
+  },
 })
 vim.cmd("colorscheme " .. theme)
