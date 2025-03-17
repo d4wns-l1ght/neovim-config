@@ -115,6 +115,15 @@ return {
       require("config.plugins.settings.oil")
     end,
   },
+  {
+    "refractalize/oil-git-status.nvim",
+
+    dependencies = {
+      "stevearc/oil.nvim",
+    },
+
+    config = true,
+  },
   -- git stuff
   {
     "tpope/vim-fugitive",
