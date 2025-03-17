@@ -1,5 +1,6 @@
 return {
   -- programming stuff
+  { "williamboman/mason.nvim", config = true },
   {
     "neovim/nvim-lspconfig",
     event = "VeryLazy",
@@ -32,7 +33,7 @@ return {
         auto_start = "shut-up",
         keymap = {
           recommended = true,
-          jump_to_mark = "<C-R>",
+          jump_to_mark = "<C-N>",
         },
       }
       -- dot not working workaround
