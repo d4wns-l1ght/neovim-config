@@ -1,4 +1,5 @@
 return {
+  { "LintaoAmons/cd-project.nvim", version = "*", cmd = "CdProject" },
   {
     "folke/which-key.nvim",
     opts = {},

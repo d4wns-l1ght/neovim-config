@@ -47,8 +47,7 @@ set_keymaps({
   j = { telebuilt.jumplist, "Jump list" },
   l = { telebuilt.loclist, "Location list" },
   m = { telebuilt.man_pages, "Man pages" },
-  -- TODO: cd_project
-  -- o = { require("cd-project.adapter").cd_project, "Search projects" },
+  o = { require("cd-project.adapter").cd_project, "Search projects" },
   p = { telebuilt.oldfiles, "Previous files" },
   q = { telebuilt.quickfix, "Quickfix" },
   r = { telebuilt.registers, "Registers" },
