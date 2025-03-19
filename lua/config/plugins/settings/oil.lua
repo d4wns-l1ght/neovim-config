@@ -13,8 +13,16 @@ function _G.get_oil_winbar()
 end
 
 keymaps({
-  o = { oil.open, "Open oil" },
-  c = { oil.close, "Close oil" },
+  o = {
+    function()
+      if vim.bo.filetype == "oil" then
+        oil.close()
+      else
+        oil.open()
+      end
+    end,
+    "Toggle oil",
+  },
   f = { oil.toggle_float, "Toggle floating oil" },
   h = { oil.toggle_hidden, "Toggle hidden files" },
   d = { oil.discard_all_changes, "Discard all changes" },

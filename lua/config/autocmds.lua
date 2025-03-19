@@ -12,19 +12,6 @@ autocmd("LspAttach", {
     vim.lsp.inlay_hint.enable()
   end,
 })
--- {{{ Terminals
--- Stolen :)
--- Automatically go into insert mode and remove line numbers
-autocmd("TermOpen", {
-  callback = function()
-    vim.o.number = false
-    vim.o.relativenumber = false
-    vim.cmd("startinsert")
-  end,
-})
--- }}}
--- {{{ Neotree with nvim .
--- }}}
 -- {{{ Format on save
 autocmd("BufWritePre", {
   pattern = "*",

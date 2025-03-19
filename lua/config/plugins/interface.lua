@@ -174,18 +174,14 @@ return {
       "nvim-lua/plenary.nvim",
     },
     opts = {
-      disabled_filetypes = {
-        "qf",
-        "netrw",
-        "neo-tree",
-        "lazy",
-        "oil",
-        "mason",
-        "fugitive",
-        "help",
-        "git",
-        "undotree",
-        "trouble",
+      disabled_keys = {
+        ["<Up>"] = { "n" },
+        ["<Down>"] = { "n" },
+        ["<Left>"] = { "n" },
+        ["<Right>"] = { "n" },
+      },
+      restricted_keys = {
+        ["<C-N>"] = {},
       },
     },
   },
