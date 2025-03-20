@@ -6,11 +6,6 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = require("config.plugins.settings.lualine"),
   },
-  {
-    "petertriho/nvim-scrollbar",
-    event = "BufRead",
-    opts = {},
-  },
   -- For combined relative & absolute line numbers
   {
     "akho/numbers.vim",
@@ -167,9 +162,6 @@ return {
     event = "BufRead",
     config = function()
       -- require('hlslens').setup() is not required
-      require("scrollbar.handlers.search").setup({
-        -- hlslens config overrides
-      })
     end,
   },
   -- Removes search highlights once done

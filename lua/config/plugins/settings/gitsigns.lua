@@ -3,8 +3,6 @@ require("gitsigns").setup({
   current_line_blame = true,
   numhl = true,
 })
-require("scrollbar.handlers.gitsigns").setup()
-
 local set_keymaps = require("util").set_keymaps
 local gs = require("gitsigns")
 
