@@ -14,13 +14,6 @@ vim.g.mapleader = " "
 
 -- File system keybinds
 -- lsp_lines toggle
-function ToggleLspLines()
-  require("lsp_lines").toggle()
-  vim.diagnostic.config({ virtual_text = not vim.diagnostic.config().virtual_text })
-end
-require("util").set_keymaps({
-  t = { ToggleLspLines, "Toggle LSP Lines" },
-}, { prefix = "<leader>l", group_name = "LSP" })
 -- redo remap
 vim.keymap.set("n", "U", "<C-r>", { noremap = true, silent = true, desc = "Redo" })
 -- source default session

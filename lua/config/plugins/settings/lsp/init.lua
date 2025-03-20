@@ -1,3 +1,4 @@
+require("config.plugins.settings.lsp.autocmds")
 local lspconfig = require("lspconfig")
 local coq = require("coq")
 
