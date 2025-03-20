@@ -19,7 +19,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
       a = { vim.lsp.buf.code_action, "Code action", opts },
       R = { vim.lsp.buf.rename, "Rename", opts },
       r = { "<cmd>Telescope lsp_references<cr>", "References", opts },
-      l = {
+      T = {
         function()
           require("lsp_lines").toggle()
           vim.diagnostic.config({ virtual_text = not vim.diagnostic.config().virtual_text })
@@ -44,7 +44,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         function()
           vim.cmd("Telescope lsp_workspace_symbols")
         end,
-        "Signature help",
+        "Signature help (Telescope)",
         opts,
       },
       ["?"] = { vim.lsp.buf.signature_help, "Signature help", opts },

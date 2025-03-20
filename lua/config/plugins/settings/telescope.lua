@@ -27,6 +27,7 @@ telescope.setup({
 
 telescope.load_extension("fzf")
 telescope.load_extension("ui-select")
+telescope.load_extension("cmdline")
 
 local telebuilt = require("telescope.builtin")
 local set_keymaps = require("util").set_keymaps
@@ -52,4 +53,10 @@ set_keymaps({
   q = { telebuilt.quickfix, "Quickfix" },
   r = { telebuilt.registers, "Registers" },
   s = { telebuilt.treesitter, "Treesitter symbols" },
+  c = {
+    function()
+      vim.cmd("Telescope cmdline")
+    end,
+    "Command line",
+  },
 }, { prefix = "<leader>f", group_name = "Telescope" })

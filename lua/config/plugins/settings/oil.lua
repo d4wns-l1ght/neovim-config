@@ -24,7 +24,6 @@ keymaps({
     "Toggle oil",
   },
   f = { oil.toggle_float, "Toggle floating oil" },
-  h = { oil.toggle_hidden, "Toggle hidden files" },
   d = { oil.discard_all_changes, "Discard all changes" },
 }, { prefix = "<leader>o", group_name = "Oil" })
 
