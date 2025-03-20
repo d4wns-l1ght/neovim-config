@@ -135,12 +135,7 @@ return {
     "lewis6991/gitsigns.nvim",
     event = "BufRead",
     config = function()
-      require("gitsigns").setup({
-        signcolumn = true,
-        current_line_blame = true,
-        numhl = true,
-      })
-      require("scrollbar.handlers.gitsigns").setup()
+      require("config.plugins.settings.gitsigns")
     end,
   },
   {
