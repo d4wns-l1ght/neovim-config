@@ -85,7 +85,7 @@ return {
   -- wrapper for :substitute <leader>e
   {
     "wincent/scalpel",
-    keys = { "<leader>e" },
+    lazy = false,
   },
   -- lagless 'jk'->esc mapping
   {
