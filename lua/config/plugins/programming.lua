@@ -9,6 +9,13 @@ return {
     end,
   },
   {
+    "nvimtools/none-ls.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("config.plugins.settings.none-ls")
+    end,
+  },
+  {
     "nvim-neotest/neotest",
     keys = "<leader>r",
     dependencies = {
@@ -33,7 +40,7 @@ return {
         auto_start = "shut-up",
         keymap = {
           recommended = true,
-          jump_to_mark = "<C-N>",
+          jump_to_mark = "<C-R>",
         },
       }
       -- dot not working workaround

@@ -1,6 +1,6 @@
 -- Indentation settings
 -- The amount of "spaces" indented automatically
-vim.o.shiftwidth = 2
+vim.o.shiftwidth = 4
 -- the amount of spaces a tab takes up
 vim.o.tabstop = 4
 -- unclear
@@ -13,7 +13,6 @@ vim.g.mapleader = " "
 -- TODO: Code actions
 
 -- File system keybinds
--- lsp_lines toggle
 -- redo remap
 vim.keymap.set("n", "U", "<C-r>", { noremap = true, silent = true, desc = "Redo" })
 -- source default session

@@ -46,7 +46,7 @@ return function()
           },
           s = {
             function()
-              vim.cmd.RustLsp("renderDiagnostic")
+              vim.cmd("RustLsp renderDiagnostic current")
             end,
             "Render diagnostic",
           },
