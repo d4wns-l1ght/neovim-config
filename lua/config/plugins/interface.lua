@@ -174,7 +174,7 @@ return {
   -- misc
   {
     "m4xshen/hardtime.nvim",
-    event = "BufRead",
+    lazy = true,
     dependencies = {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
