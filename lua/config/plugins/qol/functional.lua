@@ -31,12 +31,6 @@ return {
       require("config.plugins.settings.hydra")
     end,
   },
-  -- Automatic formatting
-  {
-    "stevearc/conform.nvim",
-    event = "BufWritePre",
-    opts = require("config.plugins.settings.conform"),
-  },
   -- quit buffers without quitting the window
   -- useful for clearing splits
   {
