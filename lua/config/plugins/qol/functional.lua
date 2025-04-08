@@ -91,4 +91,15 @@ return {
     "tpope/vim-obsession",
     lazy = false,
   },
+  {
+    "jaimecgomezz/here.term",
+    lazy = false,
+    opts = {
+      mappings = {
+        enable = true,
+        toggle = "<M-;>",
+        kill = "<M-S-;>",
+      },
+    },
+  },
 }
