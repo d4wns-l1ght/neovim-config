@@ -38,5 +38,6 @@ return {
     main = "ibl",
     opts = {},
   },
+  { "RRethy/vim-illuminate", event = "BufRead" },
   { "eandrju/cellular-automaton.nvim", cmd = "CellularAutomaton" },
 }

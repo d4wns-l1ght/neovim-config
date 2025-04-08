@@ -37,3 +37,5 @@ vim.o.cursorline = true
 vim.o.cursorlineopt = "both"
 -- Don't need to show mode with lualine :)
 vim.o.showmode = false
+-- retain terminal even when not visible
+vim.o.hidden = true
