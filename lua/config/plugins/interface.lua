@@ -32,31 +32,6 @@ return {
       }
     end,
   },
-  -- Navigation
-  {
-    "nvim-telescope/telescope.nvim",
-    keys = {
-      { "<leader>f" },
-      {
-        "<M-CR>",
-        "<cmd>lua vim.lsp.buf.code_action()<CR>",
-        mode = { "n", "i" },
-        noremap = true,
-        silent = true,
-        desc = "Code action",
-      },
-    },
-    config = function()
-      require("config.plugins.settings.telescope")
-    end,
-    branch = "0.1.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-      "nvim-telescope/telescope-ui-select.nvim",
-      "jonarrien/telescope-cmdline.nvim",
-    },
-  },
   -- file system stuff
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -112,49 +87,6 @@ return {
       "stevearc/oil.nvim",
     },
     config = true,
-  },
-  -- git stuff
-  {
-    "tpope/vim-fugitive",
-    cmd = "G",
-  },
-  {
-    "https://github.com/harrisoncramer/gitlab.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "sindrets/diffview.nvim",
-      "stevearc/dressing.nvim", -- Recommended but not required. Better UI for pickers.
-      "nvim-tree/nvim-web-devicons", -- Recommended but not required. Icons in discussion tree.
-    },
-    enabled = true,
-    build = function()
-      require("gitlab.server").build(true)
-    end, -- Builds the Go binary
-    keys = "<leader>gl",
-    config = function()
-      require("config.plugins.settings.gitlab")
-    end,
-  },
-  -- Better git history
-  {
-    "rbong/vim-flog",
-    cmd = { "Flog", "Flogsplit", "Floggit" },
-    dependencies = {
-      "tpope/vim-fugitive",
-    },
-  },
-  -- Extra git info
-  {
-    "lewis6991/gitsigns.nvim",
-    event = "BufRead",
-    config = function()
-      require("config.plugins.settings.gitsigns")
-    end,
-  },
-  {
-    "sindrets/diffview.nvim",
-    cmd = { "DiffviewOpen", "DiffviewFileHistory" },
   },
   -- search stuff
   -- Gives more info when searching
