@@ -16,19 +16,6 @@ return {
     end,
   },
   {
-    "nvim-neotest/neotest",
-    keys = "<leader>r",
-    dependencies = {
-      "nvim-neotest/nvim-nio",
-      "nvim-lua/plenary.nvim",
-      "antoinemadec/FixCursorHold.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    config = function()
-      require("config.plugins.settings.neotest")
-    end,
-  },
-  {
     "ms-jpq/coq_nvim",
     -- loaded in lsp.lua file apparently
     cmd = "COQnow",
@@ -45,6 +32,19 @@ return {
     opts = {},
   },
   -- Tests
+  {
+    "nvim-neotest/neotest",
+    keys = "<leader>r",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("config.plugins.settings.neotest")
+    end,
+  },
   {
     "andythigpen/nvim-coverage",
     version = "*",
@@ -67,29 +67,6 @@ return {
     config = function()
       require("config.plugins.settings.nvim-dap")
     end,
-  },
-  -- Treesitter stuff
-  {
-    "nvim-treesitter/nvim-treesitter",
-    lazy = true,
-    event = "BufRead",
-    build = ":TSUpdate",
-    config = function()
-      require("config.plugins.settings.treesitter")
-    end,
-    dependencies = {
-      { "m-demare/hlargs.nvim" },
-    },
-  },
-  {
-    "folke/todo-comments.nvim",
-    event = "BufRead",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-      highlight = {
-        keyword = "fg",
-      },
-    },
   },
   -- languages {{{
   -- Java

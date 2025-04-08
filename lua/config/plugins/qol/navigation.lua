@@ -1,4 +1,21 @@
 return {
+  -- Navigation
+  {
+    "nvim-telescope/telescope.nvim",
+    keys = {
+      { "<leader>f" },
+    },
+    config = function()
+      require("config.plugins.settings.telescope")
+    end,
+    branch = "0.1.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+      "nvim-telescope/telescope-ui-select.nvim",
+      "jonarrien/telescope-cmdline.nvim",
+    },
+  },
   {
     "farmergreg/vim-lastplace",
     event = "VeryLazy",
