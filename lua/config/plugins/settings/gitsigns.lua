@@ -7,7 +7,7 @@ local set_keymaps = require("util").set_keymaps
 local gs = require("gitsigns")
 
 set_keymaps({
-  r = { gs.reset_hunk, "Reset hunk" },
+  X = { gs.reset_hunk, "Reset hunk" },
   s = { gs.stage_hunk, "Stage hunk" },
   b = { gs.blame_line, "Blame line" },
   B = { gs.blame, "Blame file" },
