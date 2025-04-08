@@ -8,6 +8,9 @@ lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({
       diagnostics = {
         globals = { "vim" },
       },
+      format = {
+        enable = false,
+      },
     },
   },
 }))
