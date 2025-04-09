@@ -127,5 +127,7 @@ return {
     "rest-nvim/rest.nvim",
     cmd = "Rest",
   },
+  -- Lua
+  { "folke/lazydev.nvim", ft = "lua" },
   -- }}}
 }
