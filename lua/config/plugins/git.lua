@@ -5,7 +5,7 @@ return {
     cmd = "G",
   },
   {
-    "https://github.com/harrisoncramer/gitlab.nvim",
+    "harrisoncramer/gitlab.nvim",
     dependencies = {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
