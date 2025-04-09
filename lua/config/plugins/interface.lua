@@ -93,9 +93,7 @@ return {
   {
     "kevinhwang91/nvim-hlslens",
     event = "BufRead",
-    config = function()
-      -- require('hlslens').setup() is not required
-    end,
+    opts = {},
   },
   -- Removes search highlights once done
   {
