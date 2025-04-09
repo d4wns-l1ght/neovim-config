@@ -26,7 +26,7 @@ return {
   -- TODO: use more or remove
   {
     "nvimtools/hydra.nvim",
-    keys = { "<leader>tw", "<C-W>" },
+    keys = { "<leader>tw" },
     config = function()
       require("config.plugins.settings.hydra")
     end,
