@@ -1,6 +1,6 @@
 return {
   -- programming stuff
-  { "williamboman/mason.nvim", config = true },
+  { "williamboman/mason.nvim", event = "VeryLazy", config = true },
   {
     "neovim/nvim-lspconfig",
     event = "VeryLazy",

@@ -17,8 +17,8 @@ return {
     },
   },
   {
+    lazy = false,
     "farmergreg/vim-lastplace",
-    event = "VeryLazy",
   },
   {
     "ggandor/leap.nvim",
