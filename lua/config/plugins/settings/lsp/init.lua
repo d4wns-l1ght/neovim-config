@@ -1,8 +1,7 @@
 require("config.plugins.settings.lsp.autocmds")
 local lspconfig = require("lspconfig")
-local coq = require("coq")
 
-lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({
+lspconfig.lua_ls.setup({
   settings = {
     Lua = {
       diagnostics = {
@@ -13,6 +12,6 @@ lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({
       },
     },
   },
-}))
+})
 
 lspconfig.gopls.setup({})

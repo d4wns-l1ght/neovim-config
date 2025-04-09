@@ -2,7 +2,6 @@ return function()
   vim.g.rustaceanvim = {
     server = {
       on_attach = function(client, bufnr)
-        vim.cmd("COQnow --shut-up")
         local set_keymaps = require("util").set_keymaps
 
         set_keymaps({

@@ -16,16 +16,33 @@ return {
     end,
   },
   {
-    "ms-jpq/coq_nvim",
-    -- loaded in lsp.lua file apparently
-    cmd = "COQnow",
-    event = "InsertEnter",
-    branch = "coq",
-    dependencies = { "ms-jpq/coq.artifacts", branch = "artifacts" },
-    init = function()
-      require("config.plugins.settings.coq")
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline",
+      "onsails/lspkind.nvim",
+      {
+        "saadparwaiz1/cmp_luasnip",
+        dependencies = {
+          {
+            "L3MON4D3/LuaSnip",
+            dependencies = { "rafamadriz/friendly-snippets" },
+            version = "v2.*",
+            config = function()
+              require("luasnip.loaders.from_vscode").lazy_load()
+            end,
+          },
+        },
+      },
+    },
+    config = function()
+      require("config.plugins.settings.cmp")
     end,
+    event = "InsertEnter",
   },
+
   {
     "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     event = "BufRead",
