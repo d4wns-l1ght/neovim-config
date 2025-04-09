@@ -11,6 +11,31 @@ local function diff_source()
   end
 end
 
+-- This and fmt function from https://github.com/rachartier/dotfiles/blob/main/.config%2Fnvim%2Flua%2Fplugins%2Fui%2Flualine.lua#L159
+local kirby_default = "(>*-*)>"
+local mode_kirby = {
+  n = "<(•ᴗ•)>",
+  i = "<(•o•)>",
+  v = "(v•-•)v",
+  [""] = "(v•-•)>",
+  V = "(>•-•)>",
+  c = kirby_default,
+  no = "<(•ᴗ•)>",
+  s = kirby_default,
+  S = kirby_default,
+  [""] = kirby_default,
+  ic = kirby_default,
+  R = kirby_default,
+  Rv = kirby_default,
+  cv = "<(•ᴗ•)>",
+  ce = "<(•ᴗ•)>",
+  r = kirby_default,
+  rm = kirby_default,
+  ["r?"] = kirby_default,
+  ["!"] = "<(•ᴗ•)>",
+  t = "<(•ᴗ•)>",
+}
+
 return {
   extensions = {
     "neo-tree",
@@ -21,7 +46,14 @@ return {
   },
   -- Statusline
   sections = {
-    lualine_a = { "mode" },
+    lualine_a = {
+      {
+        "mode",
+        fmt = function()
+          return mode_kirby[vim.fn.mode()] or vim.api.nvim_get_mode().mode
+        end,
+      },
+    },
     lualine_b = {
       "filename",
       "branch",
