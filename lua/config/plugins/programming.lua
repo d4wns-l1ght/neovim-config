@@ -125,6 +125,7 @@ return {
   -- nvim HTTP client
   {
     "rest-nvim/rest.nvim",
+    enabled = false,
     cmd = "Rest",
   },
   -- Lua
