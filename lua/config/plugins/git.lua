@@ -10,6 +10,7 @@ return {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
       "sindrets/diffview.nvim",
+      "nvim-telescope/telescope.nvim",
     },
     enabled = true,
     build = function()
