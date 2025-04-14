@@ -64,6 +64,7 @@ return {
       require("config.plugins.settings.autopairs")
     end,
   },
+  { "windwp/nvim-ts-autotag", event = "InsertEnter", opts = {} },
   -- gcc binding does comments
   {
     "numToStr/Comment.nvim",
