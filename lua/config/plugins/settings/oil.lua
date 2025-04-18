@@ -91,8 +91,8 @@ oil.setup({
       if is_dotfile then
         return not git_status[dir].tracked[name]
       else
-        -- Check if file is gitignored
-        return git_status[dir].ignored[name]
+        -- I want to see gitignored files
+        return false
       end
     end,
   },
