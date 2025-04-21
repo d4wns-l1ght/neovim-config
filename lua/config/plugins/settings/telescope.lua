@@ -44,6 +44,7 @@ set_keymaps({
   a = { telebuilt.builtin, "Telescope builtins" },
   t = { vim.cmd.TodoTelescope, "Find TODOs" },
   g = { telebuilt.live_grep, "Live grep" },
+  w = { telebuilt.grep_string, "Find word" },
   h = { telebuilt.help_tags, "Help tags" },
   j = { telebuilt.jumplist, "Jump list" },
   l = { telebuilt.loclist, "Location list" },

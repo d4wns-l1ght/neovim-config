@@ -42,7 +42,6 @@ return {
     "fugitive",
     "lazy",
     "oil",
-    "trouble",
   },
   -- Statusline
   sections = {

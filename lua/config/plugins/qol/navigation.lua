@@ -2,13 +2,14 @@ return {
   -- Navigation
   {
     "nvim-telescope/telescope.nvim",
+    cmd = "Telescope",
     keys = {
       { "<leader>f" },
     },
     config = function()
       require("config.plugins.settings.telescope")
     end,
-    branch = "0.1.x",
+    version = "*",
     dependencies = {
       "nvim-lua/plenary.nvim",
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
