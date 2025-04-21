@@ -20,7 +20,6 @@ return {
         "w3m",
         "neo-tree",
         "lazy",
-        "oil",
       }
       vim.g.numbers_exclude_buffers = {
         "acwrite",
@@ -29,6 +28,7 @@ return {
         "nowrite",
         "quickfix",
         "terminal",
+        "oil",
       }
     end,
   },
@@ -83,10 +83,16 @@ return {
   },
   {
     "refractalize/oil-git-status.nvim",
+    lazy = false,
     dependencies = {
       "stevearc/oil.nvim",
     },
-    config = true,
+    opts = {
+      symbols = {
+        index = { ["!"] = "~" },
+        working_tree = { ["!"] = "~" },
+      },
+    },
   },
   -- search stuff
   -- Gives more info when searching
