@@ -109,13 +109,16 @@ return {
   },
   -- misc
   {
-    "m4xshen/hardtime.nvim",
-    lazy = true,
+    -- "m4xshen/hardtime.nvim",
+    -- dir = "~/Programming/Projects/hardtime.nvim",
+    "d4wns-l1ght/hardtime.nvim",
+    lazy = false,
     dependencies = {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
     },
     opts = {
+      disabled_filetypes = { "markdown" },
       disabled_keys = {
         ["<Up>"] = { "n" },
         ["<Down>"] = { "n" },
