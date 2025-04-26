@@ -73,26 +73,14 @@ return {
   },
   {
     "stevearc/oil.nvim",
+    keys = "<leader>o",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
+      "refractalize/oil-git-status.nvim",
     },
-    lazy = false,
     config = function()
       require("config.plugins.settings.oil")
     end,
-  },
-  {
-    "refractalize/oil-git-status.nvim",
-    lazy = false,
-    dependencies = {
-      "stevearc/oil.nvim",
-    },
-    opts = {
-      symbols = {
-        index = { ["!"] = "~" },
-        working_tree = { ["!"] = "~" },
-      },
-    },
   },
   -- search stuff
   -- Gives more info when searching

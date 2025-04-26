@@ -125,3 +125,10 @@ oil.setup({
     end,
   },
 })
+
+require("oil-git-status").setup({
+  symbols = {
+    index = { ["!"] = "~" },
+    working_tree = { ["!"] = "~" },
+  },
+})
