@@ -98,7 +98,7 @@ return {
   },
   {
     "jaimecgomezz/here.term",
-    lazy = false,
+    keys = "<M-;>",
     opts = {
       mappings = {
         enable = true,

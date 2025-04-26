@@ -93,12 +93,13 @@ return {
   {
     "kevinhwang91/nvim-hlslens",
     event = "BufRead",
+    keys = { "/", "*" },
     opts = {},
   },
   -- Removes search highlights once done
   {
     "nvimdev/hlsearch.nvim",
-    event = "BufRead",
+    lazy = false,
     opts = {},
   },
   -- misc
@@ -106,7 +107,7 @@ return {
     -- "m4xshen/hardtime.nvim",
     -- dir = "~/Programming/Projects/hardtime.nvim",
     "d4wns-l1ght/hardtime.nvim",
-    lazy = false,
+    event = "VeryLazy",
     dependencies = {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
