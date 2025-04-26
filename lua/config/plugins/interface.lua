@@ -78,6 +78,12 @@ return {
       "nvim-tree/nvim-web-devicons",
       "refractalize/oil-git-status.nvim",
     },
+    init = function()
+      local oil_open_folder = function(path)
+        require("oil").open(path)
+      end
+      require("util").attach_file_browser("oil", oil_open_folder)
+    end,
     config = function()
       require("config.plugins.settings.oil")
     end,
