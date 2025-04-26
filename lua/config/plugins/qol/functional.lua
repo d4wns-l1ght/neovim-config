@@ -93,6 +93,10 @@ return {
     lazy = false,
   },
   {
+    "tpope/vim-eunuch",
+    lazy = false,
+  },
+  {
     "jaimecgomezz/here.term",
     lazy = false,
     opts = {
