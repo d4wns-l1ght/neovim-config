@@ -24,7 +24,7 @@ keymaps({
     "Toggle oil",
   },
   f = { oil.toggle_float, "Toggle floating oil" },
-  d = { oil.discard_all_changes, "Discard all changes" },
+  D = { oil.discard_all_changes, "Discard all changes" },
 }, { prefix = "<leader>o", group_name = "Oil" })
 
 -- helper function to parse output
@@ -111,8 +111,25 @@ oil.setup({
     max_height = 30,
   },
   keymaps = {
+    ["g?"] = { "actions.show_help", mode = "n" },
+    ["<CR>"] = "actions.select",
+    ["<C-v>"] = { "actions.select", opts = { vertical = true } },
+    ["<C-s>"] = { "actions.select", opts = { horizontal = true } },
+    ["<C-t>"] = { "actions.select", opts = { tab = true } },
+    ["<C-p>"] = "actions.preview",
+    ["<C-c>"] = { "actions.close", mode = "n" },
+    ["<C-r>"] = "actions.refresh",
+    ["-"] = { "actions.parent", mode = "n" },
+    ["_"] = { "actions.open_cwd", mode = "n" },
+    ["`"] = { "actions.cd", mode = "n" },
+    ["~"] = { "actions.cd", opts = { scope = "tab" }, mode = "n" },
+    ["gs"] = { "actions.change_sort", mode = "n" },
+    ["gx"] = "actions.open_external",
+    ["g."] = { "actions.toggle_hidden", mode = "n" },
+    ["g\\"] = { "actions.toggle_trash", mode = "n" },
     ["<BS>"] = { "actions.parent", mode = "n" },
   },
+  use_default_keymaps = false,
   git = {
     add = function(_)
       return true
