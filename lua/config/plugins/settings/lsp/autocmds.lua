@@ -54,7 +54,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         function()
           vim.cmd("Telescope lsp_workspace_symbols")
         end,
-        "Signature help (Telescope)",
+        "Workspace Symbols",
         opts,
       },
       ["?"] = { vim.lsp.buf.signature_help, "Signature help", opts },
