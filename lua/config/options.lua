@@ -39,3 +39,4 @@ vim.o.cursorlineopt = "both"
 vim.o.showmode = false
 -- retain terminal even when not visible
 vim.o.hidden = true
+vim.o.scrolloff = 4
