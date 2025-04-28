@@ -31,6 +31,9 @@ return {
         "oil",
       }
     end,
+    dependencies = {
+      { "mawkler/hml.nvim", event = "BufRead", opts = {} },
+    },
   },
   -- file system stuff
   {
