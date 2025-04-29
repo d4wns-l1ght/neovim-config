@@ -29,7 +29,7 @@ set_keymaps({
   },
   g = {
     function()
-      gs.nav_hunk("First")
+      gs.nav_hunk("first")
     end,
     "First hunk",
   },

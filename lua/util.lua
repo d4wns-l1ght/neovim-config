@@ -20,7 +20,7 @@ function M.set_keymaps(maps, opts)
   local ok, wk = pcall(require, "which-key")
   for k, v in pairs(maps) do
     if type(v) == "string" and ok then
-      wk.add({ { opts.prefix .. k, desc = v } })
+      wk.add({ { prefix .. k, desc = v } })
     else
       local o = vim.tbl_extend("force", { desc = v[2], hidden = opts.hidden, buffer = opts.buffer }, v[3] or {})
 
