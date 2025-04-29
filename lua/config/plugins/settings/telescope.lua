@@ -32,7 +32,6 @@ telescope.load_extension("cmdline")
 local telebuilt = require("telescope.builtin")
 local set_keymaps = require("util").set_keymaps
 set_keymaps({
-  f = { telebuilt.buffers, "Find buffers" },
   ["."] = { telebuilt.find_files, "Find files" },
   [","] = {
     function()
@@ -42,9 +41,15 @@ set_keymaps({
   },
   ["/"] = { telebuilt.current_buffer_fuzzy_find, "Fuzzy find" },
   a = { telebuilt.builtin, "Telescope builtins" },
-  t = { vim.cmd.TodoTelescope, "Find TODOs" },
-  g = { telebuilt.live_grep, "Live grep" },
-  w = { telebuilt.grep_string, "Find word" },
+  b = { telebuilt.buffers, "Find buffers" },
+  c = {
+    function()
+      vim.cmd("Telescope cmdline")
+    end,
+    "Command line",
+  },
+  d = { telebuilt.diagnostics, "Diagnostics" },
+  f = { telebuilt.live_grep, "Live grep" },
   h = { telebuilt.help_tags, "Help tags" },
   j = { telebuilt.jumplist, "Jump list" },
   l = { telebuilt.loclist, "Location list" },
@@ -52,15 +57,19 @@ set_keymaps({
   o = { require("cd-project.adapter").cd_project, "Search projects" },
   p = { telebuilt.oldfiles, "Previous files" },
   q = { telebuilt.quickfix, "Quickfix" },
+  Q = { telebuilt.quickfixhistory, "Quickfix History" },
   r = { telebuilt.registers, "Registers" },
   s = { telebuilt.treesitter, "Treesitter symbols" },
-  c = {
-    function()
-      vim.cmd("Telescope cmdline")
-    end,
-    "Command line",
-  },
+  t = { vim.cmd.TodoTelescope, "Find TODOs" },
+  w = { telebuilt.grep_string, "Find word" },
 }, { prefix = "<leader>f", group_name = "Telescope" })
+
+set_keymaps({
+  b = { telebuilt.git_branches, "Branches" },
+  c = { telebuilt.git_commits, "Commits" },
+  s = { telebuilt.git_commits, "Stashes" },
+  C = { telebuilt.git_bcommits, "Current buffer commits" },
+}, { prefix = "<leader>fg", group_name = "Telescope Git" })
 
 local easypick = require("easypick")
 local get_default_branch = "git remote show -n origin | rg 'HEAD branch' | cut -d' ' -f5"
