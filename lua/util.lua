@@ -2,6 +2,23 @@ local M = {}
 
 -- stolen from https://codeberg.org/babalark/nvim-config/src/branch/main/lua/myconfig/util.lua
 -- ty sofa :)
+
+---Returns a function that runs the function, then presses the keys again.
+---Useful for lazy loading on keybinds
+---@param keys string
+---@param func function
+function M.key_load(keys, func)
+    return function ()
+        func()
+
+        local term_keys = vim.api.nvim_replace_termcodes(keys, true, false, true)
+        vim.schedule(function()
+            vim.api.nvim_feedkeys(term_keys, "mt", false)
+        end)
+    end
+end
+
+
 ---@param maps { name: string?, [string]: [string|function, string, vim.keymap.set.Opts?]}
 ---@param opts { prefix: string?, group_name: string?, mode: string|string[]|nil, hidden: boolean?, buffer: integer?}|nil
 function M.set_keymaps(maps, opts)
