@@ -10,8 +10,6 @@ vim.o.expandtab = true
 -- vim.opt.colorcolumn = "80"
 -- Leader
 vim.g.mapleader = " "
--- TODO: Code actions
-
 -- File system keybinds
 -- redo remap
 vim.keymap.set("n", "U", "<C-r>", { noremap = true, silent = true, desc = "Redo" })

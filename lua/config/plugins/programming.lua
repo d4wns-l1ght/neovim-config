@@ -72,7 +72,6 @@ return {
   -- Debugging
   {
     "mfussenegger/nvim-dap",
-    -- TODO: Add more keys ref https://codeberg.org/babalark/nvim-config/src/branch/main/lua/myconfig/mappings.lua:157
     keys = { "<leader>d" },
     dependencies = {
       {
@@ -95,7 +94,6 @@ return {
   },
   -- Rust
   {
-    -- TODO: add keymaps
     "mrcjkb/rustaceanvim",
     version = "*",
     lazy = false, -- it's already lazy
