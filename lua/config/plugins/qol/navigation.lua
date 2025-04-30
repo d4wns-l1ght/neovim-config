@@ -44,14 +44,14 @@ return {
     lazy = false,
     opts = {},
   },
-  -- my beloved...
   {
-    "christoomey/vim-tmux-navigator",
+    "dynamotn/Navigator.nvim",
+    opts = {},
     keys = {
-      { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-      { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-      { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-      { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+      { "<c-h>", "<cmd>NavigatorLeft<cr>" },
+      { "<c-j>", "<cmd>NavigatorDown<cr>" },
+      { "<c-k>", "<cmd>NavigatorUp<cr>" },
+      { "<c-l>", "<cmd>NavigatorRight<cr>" },
     },
   },
   -- Navigate along treesitter nodes
