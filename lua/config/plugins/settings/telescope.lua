@@ -28,6 +28,10 @@ telescope.setup({
 telescope.load_extension("fzf")
 telescope.load_extension("ui-select")
 telescope.load_extension("cmdline")
+telescope.load_extension("conflicts")
+telescope.load_extension("git_diffs")
+telescope.load_extension("helpgrep")
+telescope.load_extension("lazy")
 
 local telebuilt = require("telescope.builtin")
 local set_keymaps = require("util").set_keymaps
@@ -42,20 +46,17 @@ set_keymaps({
   ["/"] = { telebuilt.current_buffer_fuzzy_find, "Fuzzy find" },
   a = { telebuilt.builtin, "Telescope builtins" },
   b = { telebuilt.buffers, "Find buffers" },
-  c = {
-    function()
-      vim.cmd("Telescope cmdline")
-    end,
-    "Command line",
-  },
+  c = { telescope.extensions.cmdline.cmdline, "Command line" },
   d = { telebuilt.diagnostics, "Diagnostics" },
   f = { telebuilt.live_grep, "Live grep" },
   h = { telebuilt.help_tags, "Help tags" },
+  H = { telescope.extensions.helpgrep.helpgrep, "Grep help pages" },
   j = { telebuilt.jumplist, "Jump list" },
   l = { telebuilt.loclist, "Location list" },
   m = { telebuilt.man_pages, "Man pages" },
   o = { require("cd-project.adapter").cd_project, "Search projects" },
   p = { telebuilt.oldfiles, "Previous files" },
+  P = { telescope.extensions.lazy.lazy, "Lazy plugins" },
   q = { telebuilt.quickfix, "Quickfix" },
   Q = { telebuilt.quickfixhistory, "Quickfix History" },
   r = { telebuilt.registers, "Registers" },
@@ -65,8 +66,31 @@ set_keymaps({
 }, { prefix = "<leader>f", group_name = "Telescope" })
 
 set_keymaps({
+  e = {
+    function()
+      telebuilt.symbols({ sources = { "emoji" } })
+    end,
+    "Emojis",
+  },
+  k = {
+    function()
+      telebuilt.symbols({ sources = { "kaomoji" } })
+    end,
+    "Kaomoji",
+  },
+  m = {
+    function()
+      telebuilt.symbols({ sources = { "latex" } })
+    end,
+    "Math/Latex",
+  },
+}, { prefix = "<leader>fe", group_name = "Symbols" })
+
+set_keymaps({
   b = { telebuilt.git_branches, "Branches" },
   c = { telebuilt.git_commits, "Commits" },
-  s = { telebuilt.git_commits, "Stashes" },
   C = { telebuilt.git_bcommits, "Current buffer commits" },
+  d = { telescope.extensions.git_diffs.diff_commits, "diffs" },
+  s = { telebuilt.git_commits, "Stashes" },
+  x = { telescope.extensions.conflicts.conflicts, "Conflicts" },
 }, { prefix = "<leader>fg", group_name = "Telescope Git" })

@@ -15,6 +15,11 @@ return {
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       "nvim-telescope/telescope-ui-select.nvim",
       "jonarrien/telescope-cmdline.nvim",
+      "nvim-telescope/telescope-symbols.nvim",
+      "d4wns-l1ght/telescope-git-conflicts.nvim",
+      "paopaol/telescope-git-diffs.nvim",
+      "catgoose/telescope-helpgrep.nvim",
+      "tsakirist/telescope-lazy.nvim",
     },
   },
   {
