@@ -10,18 +10,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     }, { prefix = "<leader>" })
 
     set_keymaps({
-      ["]d"] = {
-        function()
-          vim.diagnostic.jump({ count = 1, float = true })
-        end,
-        "Next diagnostic",
-      },
-      ["[d"] = {
-        function()
-          vim.diagnostic.jump({ count = -1, float = true })
-        end,
-        "Prev diagnostic",
-      },
       K = { vim.lsp.buf.hover, "LSP Hover", opts },
     })
 
