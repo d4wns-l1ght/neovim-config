@@ -69,13 +69,7 @@ return {
     },
   },
   -- Notification engine
-  {
-    "j-hui/fidget.nvim",
-    event = "BufRead",
-    opts = {
-      -- options
-    },
-  },
+  { "j-hui/fidget.nvim", event = "BufRead", opts = {} },
   -- Allows to enter "submodes" to use commands more smoothly
   -- TODO: use more or remove
   {

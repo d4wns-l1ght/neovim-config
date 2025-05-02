@@ -81,11 +81,7 @@ return {
   },
   -- languages {{{
   -- Java
-  {
-    "mfussenegger/nvim-jdtls",
-    lazy = true,
-    ft = "java",
-  },
+  { "mfussenegger/nvim-jdtls", lazy = true, ft = "java" },
   -- Rust
   {
     "mrcjkb/rustaceanvim",
@@ -115,11 +111,7 @@ return {
   },
   -- HTTP
   -- nvim HTTP client
-  {
-    "rest-nvim/rest.nvim",
-    enabled = false,
-    cmd = "Rest",
-  },
+  { "rest-nvim/rest.nvim", enabled = false, cmd = "Rest" },
   -- Lua
   { "folke/lazydev.nvim", ft = "lua", opts = {} },
   -- }}}

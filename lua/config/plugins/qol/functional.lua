@@ -81,11 +81,7 @@ return {
   },
   { "windwp/nvim-ts-autotag", event = "InsertEnter", opts = {} },
   -- gcc binding does comments
-  {
-    "numToStr/Comment.nvim",
-    keys = { "gc", "gb" },
-    opts = {},
-  },
+  { "numToStr/Comment.nvim", keys = { "gc", "gb" }, opts = {} },
   {
     "sindrets/winshift.nvim",
     keys = {
@@ -93,24 +89,12 @@ return {
     },
   },
   -- wrapper for :substitute <leader>e
-  {
-    "wincent/scalpel",
-    lazy = false,
-  },
+  { "wincent/scalpel", lazy = false },
   -- lagless 'jk'->esc mapping
-  {
-    "nvim-zh/better-escape.vim",
-    event = "InsertEnter",
-  },
+  { "nvim-zh/better-escape.vim", event = "InsertEnter" },
   -- Very nice wrapper for vim sessions - use more
-  {
-    "tpope/vim-obsession",
-    lazy = false,
-  },
-  {
-    "tpope/vim-eunuch",
-    lazy = false,
-  },
+  { "tpope/vim-obsession", lazy = false },
+  { "tpope/vim-eunuch", lazy = false },
   {
     "jaimecgomezz/here.term",
     keys = "<M-;>",

@@ -22,10 +22,7 @@ return {
       "tsakirist/telescope-lazy.nvim",
     },
   },
-  {
-    lazy = false,
-    "farmergreg/vim-lastplace",
-  },
+  { "farmergreg/vim-lastplace", lazy = false },
   {
     "ggandor/leap.nvim",
     lazy = false, -- lazy loads itself
@@ -40,11 +37,7 @@ return {
     end,
   },
   -- keeps windows proportional when creating
-  {
-    "kwkarlwang/bufresize.nvim",
-    lazy = false,
-    opts = {},
-  },
+  { "kwkarlwang/bufresize.nvim", lazy = false, opts = {} },
   {
     "dynamotn/Navigator.nvim",
     opts = {},

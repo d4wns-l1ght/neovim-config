@@ -59,32 +59,14 @@ return {
   },
   -- search stuff
   -- Gives more info when searching
-  {
-    "kevinhwang91/nvim-hlslens",
-    event = "BufRead",
-    keys = { "/", "*" },
-    opts = {},
-  },
+  { "kevinhwang91/nvim-hlslens", event = "BufRead", keys = { "/", "*" }, opts = {} },
   -- Removes search highlights once done
-  {
-    "nvimdev/hlsearch.nvim",
-    lazy = false,
-    opts = {},
-  },
+  { "nvimdev/hlsearch.nvim", lazy = false, opts = {} },
   -- makes a little flash whenever the cursor moves
   { "DanilaMihailov/beacon.nvim", event = "BufRead", opts = {} },
   { "HiPhish/rainbow-delimiters.nvim", event = "BufRead" },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    event = "BufRead",
-    main = "ibl",
-    opts = {},
-  },
+  { "lukas-reineke/indent-blankline.nvim", event = "BufRead", main = "ibl", opts = {} },
   { "RRethy/vim-illuminate", event = "BufRead" },
-  {
-    "NStefan002/screenkey.nvim",
-    lazy = false,
-    version = "*", -- or branch = "dev", to use the latest commit
-  },
+  { "NStefan002/screenkey.nvim", lazy = false, version = "*" },
   { "eandrju/cellular-automaton.nvim", cmd = "CellularAutomaton" },
 }

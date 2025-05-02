@@ -1,9 +1,6 @@
 return {
   -- git stuff
-  {
-    "tpope/vim-fugitive",
-    cmd = "G",
-  },
+  { "tpope/vim-fugitive", cmd = "G" },
   {
     "harrisoncramer/gitlab.nvim",
     dependencies = {
@@ -37,8 +34,5 @@ return {
       require("config.plugins.settings.gitsigns")
     end,
   },
-  {
-    "sindrets/diffview.nvim",
-    cmd = { "DiffviewOpen", "DiffviewFileHistory" },
-  },
+  { "sindrets/diffview.nvim", cmd = { "DiffviewOpen", "DiffviewFileHistory" } },
 }

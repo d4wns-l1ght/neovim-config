@@ -1,11 +1,7 @@
 local is_transparent = vim.g.transparent_enabled
 return {
   -- transparency
-  {
-    "xiyaowong/transparent.nvim",
-    lazy = true,
-    cmd = "TransparentToggle",
-  },
+  { "xiyaowong/transparent.nvim", lazy = true, cmd = "TransparentToggle" },
   -- theme
   {
     "catppuccin/nvim",
