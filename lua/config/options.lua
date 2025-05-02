@@ -38,3 +38,8 @@ vim.o.showmode = false
 -- retain terminal even when not visible
 vim.o.hidden = true
 vim.o.scrolloff = 4
+-- show dots for trailing spaces
+-- from https://codeberg.org/babalark/nvim-config/commit/64b30f99cd9023486430da94cae8c4df29c1c7ce
+-- Show dots for trailing spaces
+vim.o.list = true
+vim.opt.listchars:append({ trail = '•' })
