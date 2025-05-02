@@ -43,12 +43,6 @@ return {
       require("config.plugins.settings.cmp")
     end,
   },
-
-  {
-    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-    event = "BufRead",
-    opts = {},
-  },
   -- Tests
   {
     "nvim-neotest/neotest",

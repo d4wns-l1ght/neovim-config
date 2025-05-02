@@ -25,7 +25,29 @@ vim.api.nvim_create_autocmd("LspAttach", {
       K = { vim.lsp.buf.hover, "LSP Hover", opts },
     })
 
+    local default_virtual_text = vim.diagnostic.config().virtual_text or true
+    local default_virtual_lines = vim.diagnostic.config().virtual_lines or true
+
     set_keymaps({
+      -- https://codeberg.org/babalark/nvim-config/commit/68dff9b70285447a5ebb301289106245ee922018
+      [";"] = {
+        function()
+          local inline = vim.diagnostic.config().virtual_text
+          if inline then
+            vim.diagnostic.config({
+              virtual_text = false,
+              virtual_lines = default_virtual_lines,
+            })
+          else
+            vim.diagnostic.config({
+              virtual_text = default_virtual_text,
+              virtual_lines = false,
+            })
+          end
+        end,
+        "Toggle line diagnostics",
+        opts,
+      },
       a = { vim.lsp.buf.code_action, "Code action", opts },
       R = { vim.lsp.buf.rename, "Rename", opts },
       r = { "<cmd>Telescope lsp_references<cr>", "References", opts },
