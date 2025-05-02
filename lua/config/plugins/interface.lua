@@ -1,41 +1,22 @@
 return {
-  -- main interface stuff
-  {
-    "nvim-lualine/lualine.nvim",
-    event = "UiEnter",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = require("config.plugins.settings.lualine"),
-  },
-  -- For combined relative & absolute line numbers
-  {
-    "akho/numbers.vim",
-    event = "BufRead",
-    config = function()
-      vim.g.numbers_exclude = {
-        "unite",
-        "tagbar",
-        "startify",
-        "gundo",
-        "vimshell",
-        "w3m",
-        "neo-tree",
-        "lazy",
-      }
-      vim.g.numbers_exclude_buffers = {
-        "acwrite",
-        "help",
-        "nofile",
-        "nowrite",
-        "quickfix",
-        "terminal",
-        "oil",
-      }
-    end,
-    dependencies = {
-      { "mawkler/hml.nvim", event = "BufRead", opts = {} },
-    },
-  },
   -- file system stuff
+  {
+    "stevearc/oil.nvim",
+    keys = "<leader>o",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      "refractalize/oil-git-status.nvim",
+    },
+    init = function()
+      local oil_open_folder = function(path)
+        require("oil").open(path)
+      end
+      require("util").attach_file_browser("oil", oil_open_folder)
+    end,
+    config = function()
+      require("config.plugins.settings.oil")
+    end,
+  },
   {
     "nvim-neo-tree/neo-tree.nvim",
     cmd = "Neotree",
@@ -75,57 +56,34 @@ return {
     opts = require("config.plugins.settings.neotree"),
   },
   {
-    "stevearc/oil.nvim",
-    keys = "<leader>o",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-      "refractalize/oil-git-status.nvim",
+    "mbbill/undotree",
+    keys = {
+      {
+        "<leader>u",
+        "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>",
+        mode = "n",
+        noremap = true,
+        silent = true,
+        desc = "Show Undotree",
+      },
     },
-    init = function()
-      local oil_open_folder = function(path)
-        require("oil").open(path)
-      end
-      require("util").attach_file_browser("oil", oil_open_folder)
-    end,
-    config = function()
-      require("config.plugins.settings.oil")
-    end,
   },
-  -- search stuff
-  -- Gives more info when searching
+  -- Notification engine
   {
-    "kevinhwang91/nvim-hlslens",
+    "j-hui/fidget.nvim",
     event = "BufRead",
-    keys = { "/", "*" },
-    opts = {},
+    opts = {
+      -- options
+    },
   },
-  -- Removes search highlights once done
+  -- Allows to enter "submodes" to use commands more smoothly
+  -- TODO: use more or remove
   {
-    "nvimdev/hlsearch.nvim",
-    lazy = false,
-    opts = {},
+    "nvimtools/hydra.nvim",
+    keys = { "<leader>tw" },
+    config = function()
+      require("config.plugins.settings.hydra")
+    end,
   },
   -- misc
-  {
-    -- "m4xshen/hardtime.nvim",
-    -- dir = "~/Programming/Projects/hardtime.nvim",
-    "d4wns-l1ght/hardtime.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-    },
-    opts = {
-      disabled_filetypes = { "markdown", "gitsigns-blame" },
-      disabled_keys = {
-        ["<Up>"] = { "n" },
-        ["<Down>"] = { "n" },
-        ["<Left>"] = { "n" },
-        ["<Right>"] = { "n" },
-      },
-      restricted_keys = {
-        ["<C-N>"] = {},
-      },
-    },
-  },
 }

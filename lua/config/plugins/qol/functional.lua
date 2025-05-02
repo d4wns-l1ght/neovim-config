@@ -1,5 +1,17 @@
 return {
-  { "LintaoAmons/cd-project.nvim", version = "*", cmd = "CdProject" },
+  {
+    "LintaoAmons/cd-project.nvim",
+    version = "*",
+    cmd = { "CdProject", "CdProjectAdd" },
+    -- opts = {
+    --   hooks = {
+    --     {
+    --       trigger_point = "BEFORE_CD",
+    --       callback = function(o) end,
+    --     },
+    --   },
+    -- },
+  },
   {
     "folke/which-key.nvim",
     ---@class wk.Opts
@@ -47,23 +59,6 @@ return {
       },
     },
   },
-  -- Notification engine
-  {
-    "j-hui/fidget.nvim",
-    event = "BufRead",
-    opts = {
-      -- options
-    },
-  },
-  -- Allows to enter "submodes" to use commands more smoothly
-  -- TODO: use more or remove
-  {
-    "nvimtools/hydra.nvim",
-    keys = { "<leader>tw" },
-    config = function()
-      require("config.plugins.settings.hydra")
-    end,
-  },
   -- quit buffers without quitting the window
   -- useful for clearing splits
   {
@@ -77,19 +72,6 @@ return {
   { "tpope/vim-surround", dependencies = { "tpope/vim-repeat" } },
   -- tree for branching undo history (!!)
   -- dont use it much BUT its cool
-  {
-    "mbbill/undotree",
-    keys = {
-      {
-        "<leader>u",
-        "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>",
-        mode = "n",
-        noremap = true,
-        silent = true,
-        desc = "Show Undotree",
-      },
-    },
-  },
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",

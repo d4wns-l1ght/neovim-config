@@ -1,4 +1,10 @@
 return {
+  {
+    "nvim-lualine/lualine.nvim",
+    event = "UiEnter",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = require("config.plugins.settings.lualine"),
+  },
   -- Treesitter stuff
   {
     "nvim-treesitter/nvim-treesitter",
@@ -22,16 +28,52 @@ return {
       },
     },
   },
-  -- makes a little flash whenever the cursor moves
+  -- For combined relative & absolute line numbers
   {
-    "DanilaMihailov/beacon.nvim",
+    "akho/numbers.vim",
     event = "BufRead",
+    config = function()
+      vim.g.numbers_exclude = {
+        "unite",
+        "tagbar",
+        "startify",
+        "gundo",
+        "vimshell",
+        "w3m",
+        "neo-tree",
+        "lazy",
+      }
+      vim.g.numbers_exclude_buffers = {
+        "acwrite",
+        "help",
+        "nofile",
+        "nowrite",
+        "quickfix",
+        "terminal",
+        "oil",
+      }
+    end,
+    dependencies = {
+      { "mawkler/hml.nvim", event = "BufRead", opts = {} },
+    },
+  },
+  -- search stuff
+  -- Gives more info when searching
+  {
+    "kevinhwang91/nvim-hlslens",
+    event = "BufRead",
+    keys = { "/", "*" },
     opts = {},
   },
+  -- Removes search highlights once done
   {
-    "HiPhish/rainbow-delimiters.nvim",
-    event = "BufRead",
+    "nvimdev/hlsearch.nvim",
+    lazy = false,
+    opts = {},
   },
+  -- makes a little flash whenever the cursor moves
+  { "DanilaMihailov/beacon.nvim", event = "BufRead", opts = {} },
+  { "HiPhish/rainbow-delimiters.nvim", event = "BufRead" },
   {
     "lukas-reineke/indent-blankline.nvim",
     event = "BufRead",
