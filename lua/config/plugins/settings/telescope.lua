@@ -70,34 +70,3 @@ set_keymaps({
   s = { telebuilt.git_commits, "Stashes" },
   C = { telebuilt.git_bcommits, "Current buffer commits" },
 }, { prefix = "<leader>fg", group_name = "Telescope Git" })
-
-local easypick = require("easypick")
-local get_default_branch = "git remote show -n origin | rg 'HEAD branch' | cut -d' ' -f5"
-local base_branch = vim.fn.system(get_default_branch) or "main"
-local pickers = {
-  {
-    name = "conflicts",
-    command = "git diff --name-only --diff-filter=U --relative",
-    previewer = easypick.previewers.file_diff(),
-  },
-  {
-    name = "changed_files",
-    command = "git diff --name-only $(git merge-base HEAD " .. base_branch .. " )",
-    previewer = easypick.previewers.branch_diff({ base_branch = base_branch }),
-  },
-}
-
-easypick.setup({
-  pickers = pickers,
-})
-
-set_keymaps({
-  c = {
-    easypick.conflicts,
-    "Git conflicts",
-  },
-  d = {
-    easypick.changed_files,
-    "Base branch diffs",
-  },
-}, { prefix = "<leader>fe", group_name = "Easypick" })
