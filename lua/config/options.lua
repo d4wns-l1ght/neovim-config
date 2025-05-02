@@ -3,6 +3,8 @@
 vim.o.shiftwidth = 4
 -- the amount of spaces a tab takes up
 vim.o.tabstop = 4
+-- makes sure all indents are either 4,8,12, etc (or variable depending on shiftwidth)
+vim.o.shiftround = true
 -- unclear
 vim.o.softtabstop = 4
 -- whether tabs are replaced with spaces
