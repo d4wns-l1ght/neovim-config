@@ -32,6 +32,7 @@ telescope.load_extension("conflicts")
 telescope.load_extension("git_diffs")
 telescope.load_extension("helpgrep")
 telescope.load_extension("lazy")
+telescope.load_extension("messages")
 
 local telebuilt = require("telescope.builtin")
 local set_keymaps = require("util").set_keymaps
@@ -54,6 +55,7 @@ set_keymaps({
   j = { telebuilt.jumplist, "Jump list" },
   l = { telebuilt.loclist, "Location list" },
   m = { telebuilt.man_pages, "Man pages" },
+  M = { telescope.extensions.messages.messages, "Messages" },
   o = { require("cd-project.adapter").cd_project, "Search projects" },
   p = { telebuilt.oldfiles, "Previous files" },
   P = { telescope.extensions.lazy.lazy, "Lazy plugins" },
