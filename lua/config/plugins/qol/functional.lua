@@ -17,6 +17,7 @@ return {
     ---@class wk.Opts
     opts = {
       preset = "modern",
+      delay = 0,
       keys = {
         Up = "<Up>",
         Down = "<Down>",
