@@ -69,4 +69,19 @@ return {
   { "RRethy/vim-illuminate", event = "BufRead" },
   { "NStefan002/screenkey.nvim", lazy = false, version = "*" },
   { "eandrju/cellular-automaton.nvim", cmd = "CellularAutomaton" },
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    lazy = true,
+    ft = { "markdown", "quarto", "org" },
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+    opts = {
+      render_modes = true,
+      heading = { backgrounds = {} },
+      latex = { enabled = false },
+      completions = { lsp = { enabled = true } },
+    },
+  },
 }
