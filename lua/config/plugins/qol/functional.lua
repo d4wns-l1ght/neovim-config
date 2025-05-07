@@ -108,4 +108,6 @@ return {
     },
   },
   { "AndrewRadev/bufferize.vim", cmd = "Bufferize" },
+  -- TODO: configure (i don't know how rn)
+  { url = "https://codeberg.org/babalark/trans-pose.nvim" },
 }
