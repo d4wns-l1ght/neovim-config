@@ -45,3 +45,4 @@ vim.o.scrolloff = 4
 -- Show dots for trailing spaces
 vim.o.list = true
 vim.opt.listchars:append({ trail = '•' })
+vim.o.undofile = true
