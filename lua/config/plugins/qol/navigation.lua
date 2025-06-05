@@ -50,9 +50,8 @@ return {
     },
   },
   {
-    -- "m4xshen/hardtime.nvim",
-    -- dir = "~/Programming/Projects/hardtime.nvim",
-    "d4wns-l1ght/hardtime.nvim",
+    "m4xshen/hardtime.nvim",
+    -- "d4wns-l1ght/hardtime.nvim",
     event = "VeryLazy",
     dependencies = {
       "MunifTanjim/nui.nvim",
