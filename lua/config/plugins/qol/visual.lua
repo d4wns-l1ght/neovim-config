@@ -9,7 +9,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     lazy = true,
-    event = "BufRead",
+    event = { "BufReadPost", "BufWritePost", "BufNewfile", "Filetype" },
     build = ":TSUpdate",
     config = function()
       require("config.plugins.settings.treesitter")
