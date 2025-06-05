@@ -21,6 +21,7 @@ return {
       "catgoose/telescope-helpgrep.nvim",
       "tsakirist/telescope-lazy.nvim",
       "d4wns-l1ght/telescope-messages.nvim",
+      "debugloop/telescope-undo.nvim",
     },
   },
   { "farmergreg/vim-lastplace", lazy = false },

@@ -33,6 +33,7 @@ telescope.load_extension("git_diffs")
 telescope.load_extension("helpgrep")
 telescope.load_extension("lazy")
 telescope.load_extension("messages")
+telescope.load_extension("undo")
 
 local telebuilt = require("telescope.builtin")
 local set_keymaps = require("util").set_keymaps
@@ -64,6 +65,7 @@ set_keymaps({
   r = { telebuilt.registers, "Registers" },
   s = { telebuilt.treesitter, "Treesitter symbols" },
   t = { vim.cmd.TodoTelescope, "Find TODOs" },
+  u = { telescope.extensions.undo.undo, "Undotree" },
   w = { telebuilt.grep_string, "Find word" },
 }, { prefix = "<leader>f", group_name = "Telescope" })
 
