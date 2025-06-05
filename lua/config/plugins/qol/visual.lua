@@ -54,7 +54,7 @@ return {
       }
     end,
     dependencies = {
-      { "mawkler/hml.nvim", event = "BufRead", opts = {} },
+      { "mawkler/hml.nvim", event = "BufRead", opts = {}, enabled = false },
     },
   },
   -- search stuff
