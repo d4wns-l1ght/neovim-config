@@ -54,6 +54,7 @@ set_keymaps({
   h = { telebuilt.help_tags, "Help tags" },
   H = { telescope.extensions.helpgrep.helpgrep, "Grep help pages" },
   j = { telebuilt.jumplist, "Jump list" },
+  k = { telebuilt.keymaps, "Keymaps" },
   l = { telebuilt.loclist, "Location list" },
   m = { telebuilt.man_pages, "Man pages" },
   M = { telescope.extensions.messages.messages, "Messages" },
