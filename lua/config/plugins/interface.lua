@@ -5,7 +5,6 @@ return {
     keys = "<leader>o",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
-      "refractalize/oil-git-status.nvim",
     },
     init = function()
       local oil_open_folder = function(path)

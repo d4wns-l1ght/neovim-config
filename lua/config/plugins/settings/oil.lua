@@ -29,6 +29,9 @@ keymaps({
   t = { otree.toggle_tree, "Toggle tree view" },
 }, { prefix = "<leader>o", group_name = "Oil" })
 
+--- {{{
+--- Hide gitignored files and show git tracked hidden files
+--- https://github.com/stevearc/oil.nvim/blob/master/doc/recipes.md#hide-gitignored-files-and-show-git-tracked-hidden-files
 -- helper function to parse output
 local function parse_output(proc)
   local result = proc:wait()
@@ -70,12 +73,14 @@ local function new_git_status()
 end
 local git_status = new_git_status()
 
+-- Clear git status cache on refresh
 local refresh = require("oil.actions").refresh
 local orig_refresh = refresh.callback
 refresh.callback = function(...)
   git_status = new_git_status()
   orig_refresh(...)
 end
+--- }}}
 
 oil.setup({
   default_file_explorer = true,
@@ -93,19 +98,16 @@ oil.setup({
       if is_dotfile then
         return not git_status[dir].tracked[name]
       else
-        -- I want to see gitignored files
-        return false
+        -- Check if file is gitignored
+        return git_status[dir].ignored[name]
       end
     end,
   },
   win_options = {
-    signcolumn = "yes:2",
     winbar = "%!v:lua.get_oil_winbar()",
   },
   columns = {
     "icon",
-    "git",
-    "size",
   },
   float = {
     padding = 2,
@@ -142,12 +144,5 @@ oil.setup({
     mv = function(_, _)
       return true
     end,
-  },
-})
-
-require("oil-git-status").setup({
-  symbols = {
-    index = { ["!"] = "~" },
-    working_tree = { ["!"] = "~" },
   },
 })
