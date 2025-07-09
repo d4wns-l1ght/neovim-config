@@ -18,6 +18,20 @@ return {
     end,
   },
   {
+    -- "Eutrius/Otree.nvim",
+    "d4wns-l1ght/Otree.nvim",
+    lazy = true,
+    dependencies = {
+      "stevearc/oil.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
+    opts = {
+      keymaps = {
+        ["`"] = "actions.change_home_dir",
+      },
+    },
+  },
+  {
     "nvim-neo-tree/neo-tree.nvim",
     cmd = "Neotree",
     keys = {

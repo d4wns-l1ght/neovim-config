@@ -1,4 +1,5 @@
 local oil = require("oil")
+local otree = require("Otree")
 local keymaps = require("util").set_keymaps
 
 function _G.get_oil_winbar()
@@ -25,6 +26,7 @@ keymaps({
   },
   f = { oil.toggle_float, "Toggle floating oil" },
   D = { oil.discard_all_changes, "Discard all changes" },
+  t = { otree.toggle_tree, "Toggle tree view" },
 }, { prefix = "<leader>o", group_name = "Oil" })
 
 -- helper function to parse output
