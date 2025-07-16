@@ -1,5 +1,5 @@
 local oil = require("oil")
-local otree = require("Otree")
+local otree = require("Otree.actions")
 local keymaps = require("util").set_keymaps
 
 function _G.get_oil_winbar()
