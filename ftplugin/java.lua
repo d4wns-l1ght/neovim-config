@@ -1,6 +1,6 @@
 local config = {
   cmd = { "jdtls" },
-  root_dir = vim.fs.dirname(vim.fs.find({ "gradle", ".git", "mvnw" }, { upward = true })[1]),
+  root_dir = vim.fs.dirname(vim.fs.find({ "gradle", ".git", "mvnw", ".mvn", "pom.xml", "src" }, { upward = true })[1]),
   settings = {
     java = {
       configuration = {
