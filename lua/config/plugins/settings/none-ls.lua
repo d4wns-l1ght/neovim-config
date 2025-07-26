@@ -15,5 +15,7 @@ null_ls.setup({
     null_ls.builtins.formatting.sqlfluff.with({
       extra_args = { "--dialect", "ansi" }, -- change to your dialect
     }),
+    null_ls.builtins.formatting.black,
+    null_ls.builtins.formatting.xmllint,
   },
 })
