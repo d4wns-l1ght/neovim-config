@@ -59,7 +59,7 @@ return {
       "nvim-lua/plenary.nvim",
     },
     opts = {
-      disabled_filetypes = { "markdown", "gitsigns-blame", "Otree" },
+      disabled_filetypes = { "markdown", "gitsigns-blame" },
       disabled_keys = {
         ["<Up>"] = { "n" },
         ["<Down>"] = { "n" },

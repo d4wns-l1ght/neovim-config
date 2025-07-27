@@ -36,25 +36,12 @@ local mode_kirby = {
   t = "<(•ᴗ•)>",
 }
 
-local function get_short_cwd()
-  return vim.fn.fnamemodify(vim.fn.getcwd(), ":~")
-end
-
-local Otree = {}
-
-Otree.sections = {
-  lualine_a = { get_short_cwd },
-}
-
-Otree.filetypes = { "Otree" }
-
 return {
   extensions = {
     "neo-tree",
     "fugitive",
     "lazy",
     "oil",
-    Otree,
   },
   -- Statusline
   sections = {
