@@ -10,8 +10,8 @@ return {
   -- theme
   {
     "catppuccin/nvim",
-    lazy = false,
-    priority = 1000,
+    -- lazy = false,
+    -- priority = 1000,
     name = "catppuccin",
     opts = {
       transparent = is_transparent or false,
@@ -32,7 +32,7 @@ return {
       transparent = is_transparent or false,
     },
   },
-  { "fynnfluegge/monet.nvim" },
+  { "fynnfluegge/monet.nvim", lazy = false, priority = 1000 },
   { "folke/tokyonight.nvim" }, -- tokyonight-moon
   { "ray-x/aurora" },
   { "olimorris/onedarkpro.nvim" },
