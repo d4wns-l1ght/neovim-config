@@ -83,4 +83,5 @@ return {
       completions = { lsp = { enabled = true } },
     },
   },
+  { "norcalli/nvim-colorizer.lua", opts = {} },
 }

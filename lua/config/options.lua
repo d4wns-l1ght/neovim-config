@@ -47,3 +47,5 @@ vim.o.list = true
 vim.opt.listchars:append({ trail = '•' })
 vim.o.undofile = true
 vim.o.signcolumn="yes:1"
+
+vim.opt.termguicolors = true
