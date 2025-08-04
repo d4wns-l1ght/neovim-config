@@ -109,6 +109,8 @@ return {
       "nvim-lua/plenary.nvim",
     },
   },
+  -- TODO: Set up
+  { "Hoffs/omnisharp-extended-lsp.nvim", ft = "cs" },
   -- HTTP
   -- nvim HTTP client
   { "rest-nvim/rest.nvim", enabled = false, cmd = "Rest" },
