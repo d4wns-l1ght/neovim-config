@@ -24,6 +24,19 @@ return {
       "debugloop/telescope-undo.nvim",
     },
   },
+  {
+    "dmtrKovalenko/fff.nvim",
+    -- Until it's in a more polished state
+    lazy = true,
+    build = "cargo build --release",
+    opts = {
+      prompt = "> ",
+      keymaps = {
+        move_up = "<C-k>",
+        move_down = "<C-j>",
+      },
+    },
+  },
   { "farmergreg/vim-lastplace", lazy = false },
   {
     "ggandor/leap.nvim",
