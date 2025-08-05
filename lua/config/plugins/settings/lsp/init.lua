@@ -1,5 +1,9 @@
 require("config.plugins.settings.lsp.autocmds")
 
+vim.diagnostic.config({
+  severity_sort = true
+})
+
 vim.lsp.enable("lua_ls")
 vim.lsp.config("lua_ls", {
   settings = {
