@@ -2,6 +2,9 @@ local neotest = require("neotest")
 neotest.setup({
   adapters = {
     require("rustaceanvim.neotest"),
+    require("neotest-python"),
+    require("neotest-elixir"),
+    require("neotest-java"),
   },
 })
 

@@ -52,6 +52,10 @@ return {
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
+      "mrcjkb/rustaceanvim",
+      "nvim-neotest/neotest-python",
+      "jfpedroza/neotest-elixir",
+      "rcasia/neotest-java",
     },
     config = function()
       require("config.plugins.settings.neotest")
@@ -63,6 +67,9 @@ return {
     event = "BufRead",
     opts = { auto_reload = true },
   },
+  { "nvim-neotest/neotest-python", ft = "python" },
+  { "jfpedroza/neotest-elixir", ft = "elixir" },
+  { "rcasia/neotest-java", ft = "java" },
   -- Debugging
   {
     "mfussenegger/nvim-dap",
