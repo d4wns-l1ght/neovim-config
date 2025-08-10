@@ -27,8 +27,6 @@ vim.diagnostic.config({
   virtual_text = true,
   virtual_lines = false,
 })
--- Make mousescrolling work properly with fugitive-vim blame
-vim.o.mouse = "a"
 -- Split settings
 vim.o.splitright = true
 vim.o.splitbelow = true
