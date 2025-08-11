@@ -54,29 +54,33 @@ return {
 			},
 		},
 		lualine_b = {
-			"filename",
+			{ "filename", path = 1, shorting_target = 200 },
 			"branch",
 			{ "diff", source = diff_source },
 		},
 		lualine_c = { { "diagnostics", update_in_insert = true } },
 		lualine_x = {
-			"encoding",
-			"filesize",
-			"fileformat",
 			"filetype",
 			function()
 				local obsession_status = vim.fn["ObsessionStatus"]()
 				return obsession_status or ""
 			end,
+			{ "fileformat", symbols = {
+				unix = " LF",
+				dos = " CRLF",
+				mac = " CR",
+			} },
+			"encoding",
+			"filesize",
 		},
-		lualine_y = { { "datetime", style = "%H:%M %d" }, "progress" },
+		lualine_y = { "progress" },
 		lualine_z = { "location" },
 	},
 	inactive_sections = {
 		lualine_a = { "filename" },
 		lualine_b = { { "diff", source = diff_source } },
 		lualine_c = { "diagnostics" },
-		lualine_x = { { "filetype", icons_enabled = false } },
+		lualine_x = { { "filetype", icons_enabled = false }, "filesize" },
 		lualine_y = { "progress" },
 		lualine_z = { "location" },
 	},
