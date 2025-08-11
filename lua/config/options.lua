@@ -13,15 +13,15 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "U", "<C-r>", { noremap = true, silent = true, desc = "Redo" })
 -- source default session
 vim.keymap.set(
-  "n",
-  "<leader>ss",
-  ":source Session.vim<CR>",
-  { noremap = true, silent = true, desc = "Source default session" }
+	"n",
+	"<leader>ss",
+	":source Session.vim<CR>",
+	{ noremap = true, silent = true, desc = "Source default session" }
 )
 -- hide virtual text re lsp_lines
 vim.diagnostic.config({
-  virtual_text = true,
-  virtual_lines = false,
+	virtual_text = true,
+	virtual_lines = false,
 })
 -- Split settings
 vim.o.splitright = true
@@ -37,9 +37,9 @@ vim.o.scrolloff = 4
 -- from https://codeberg.org/babalark/nvim-config/commit/64b30f99cd9023486430da94cae8c4df29c1c7ce
 -- Show dots for trailing spaces and bar for tabs
 vim.o.list = true
-vim.opt.listchars:append({ trail = '•' })
-vim.opt.listchars:append({tab="┃ "})
+vim.opt.listchars:append({ trail = "•" })
+vim.opt.listchars:append({ tab = "┃ " })
 vim.o.undofile = true
-vim.o.signcolumn="yes:1"
+vim.o.signcolumn = "yes:1"
 
 vim.opt.termguicolors = true
