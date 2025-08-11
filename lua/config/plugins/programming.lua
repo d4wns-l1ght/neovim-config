@@ -43,6 +43,30 @@ return {
 			require("config.plugins.settings.cmp")
 		end,
 	},
+	{
+		"stevearc/aerial.nvim",
+		event = "BufRead",
+		-- Optional dependencies
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = function()
+			local aerial = require("aerial")
+			local set_keymaps = require("util").set_keymaps
+			local opts = { layout = { min_width = 30, default_direction = "prefer_left" } }
+
+			set_keymaps({
+				t = { aerial.toggle, "Aerial Toggle" },
+				j = { aerial.next, "Aerial Next Symbol" },
+				k = { aerial.prev, "Aerial Previous Symbol" },
+				n = { aerial.nav_toggle, "Aerial Nav Toggle" },
+				i = { aerial.info, "Aerial Debug Info" },
+			}, { prefix = "<leader>a", group_name = "Aerial" })
+
+			aerial.setup(opts)
+		end,
+	},
 	-- Tests
 	{
 		"nvim-neotest/neotest",
