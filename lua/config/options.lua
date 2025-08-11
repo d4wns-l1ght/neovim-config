@@ -1,14 +1,10 @@
 -- Indentation settings
--- The amount of "spaces" indented automatically
-vim.o.shiftwidth = 4
+-- The amount of "spaces" indented automatically (e.g. with > = <). Set to 0 to default to tabstop value
+vim.o.shiftwidth = 0
 -- the amount of spaces a tab takes up
 vim.o.tabstop = 4
--- makes sure all indents are either 4,8,12, etc (or variable depending on shiftwidth)
-vim.o.shiftround = true
--- unclear
-vim.o.softtabstop = 4
 -- whether tabs are replaced with spaces
-vim.o.expandtab = true
+vim.o.expandtab = false
 -- vim.opt.colorcolumn = "80"
 -- Leader
 vim.g.mapleader = " "
@@ -38,11 +34,11 @@ vim.o.showmode = false
 -- retain terminal even when not visible
 vim.o.hidden = true
 vim.o.scrolloff = 4
--- show dots for trailing spaces
 -- from https://codeberg.org/babalark/nvim-config/commit/64b30f99cd9023486430da94cae8c4df29c1c7ce
--- Show dots for trailing spaces
+-- Show dots for trailing spaces and bar for tabs
 vim.o.list = true
 vim.opt.listchars:append({ trail = '•' })
+vim.opt.listchars:append({tab="┃ "})
 vim.o.undofile = true
 vim.o.signcolumn="yes:1"
 
