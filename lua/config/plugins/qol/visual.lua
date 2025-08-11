@@ -64,7 +64,25 @@ return {
 	{ "nvimdev/hlsearch.nvim", lazy = false, opts = {} },
 	-- makes a little flash whenever the cursor moves
 	{ "HiPhish/rainbow-delimiters.nvim", event = "BufRead" },
-	{ "lukas-reineke/indent-blankline.nvim", event = "BufRead", main = "ibl", opts = {} },
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		event = "BufRead",
+		main = "ibl",
+		config = function()
+			local ibl = require("ibl")
+			vim.api.nvim_set_hl(0, "IblScope", {
+				fg = vim.api.nvim_get_hl(0, { name = "Normal" }).fg,
+			})
+
+			local opts = {
+				scope = { enabled = true, show_start = false, show_end = false },
+				exclude = {
+					filetypes = { "fugitive" },
+				},
+			}
+			ibl.setup(opts)
+		end,
+	},
 	{ "RRethy/vim-illuminate", event = "BufRead" },
 	{ "NStefan002/screenkey.nvim", lazy = false, version = "*" },
 	{ "eandrju/cellular-automaton.nvim", cmd = "CellularAutomaton" },
