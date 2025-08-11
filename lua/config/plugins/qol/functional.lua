@@ -70,9 +70,13 @@ return {
 		},
 	},
 	-- Surround things with symbols
-	{ "tpope/vim-surround", dependencies = { "tpope/vim-repeat" } },
-	-- tree for branching undo history (!!)
-	-- dont use it much BUT its cool
+	{
+		"kylechui/nvim-surround",
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		event = "BufRead",
+		opts = {},
+	},
+
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
