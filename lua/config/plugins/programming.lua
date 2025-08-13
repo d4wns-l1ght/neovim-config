@@ -54,7 +54,7 @@ return {
 		config = function()
 			local aerial = require("aerial")
 			local set_keymaps = require("util").set_keymaps
-			local opts = { layout = { min_width = 30, default_direction = "prefer_left" } }
+			local opts = { layout = { min_width = 30, default_direction = "prefer_right" } }
 
 			set_keymaps({
 				t = { aerial.toggle, "Aerial Toggle" },
