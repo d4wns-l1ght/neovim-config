@@ -41,6 +41,7 @@ return {
 	-- Warm-toned
 	{ "rebelot/kanagawa.nvim", lazy = true },
 	{ "vague2k/vague.nvim", lazy = true },
+	{ "rose-pine/neovim", lazy = true, name = "rose-pine" }, --rose-pine-moon
 	-- less liked/incomplete
 	{ "mcauley-penney/techbase.nvim", lazy = true },
 	{ "kaplanz/deku.nvim", lazy = true, dependencies = "rktjmp/lush.nvim" },
