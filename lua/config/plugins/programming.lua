@@ -127,6 +127,12 @@ return {
 		event = "BufRead Cargo.toml",
 		opts = require("config.plugins.settings.crates"),
 	},
+	{
+		"nwiizo/cargo.nvim",
+		build = "cargo build --release",
+		opts = {},
+		ft = { "rust" },
+	},
 	-- Elixir
 	{
 		"elixir-tools/elixir-tools.nvim",
