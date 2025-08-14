@@ -11,6 +11,12 @@ local function diff_source()
 	end
 end
 
+local function virt_location()
+	local r = vim.fn.line(".")
+	local c = vim.fn.virtcol(".")
+	return string.format("%d:%d", r, c)
+end
+
 -- This and fmt function from https://github.com/rachartier/dotfiles/blob/main/.config%2Fnvim%2Flua%2Fplugins%2Fui%2Flualine.lua#L159
 local kirby_default = "(>*-*)>"
 local mode_kirby = {
@@ -74,7 +80,7 @@ return {
 			"filesize",
 		},
 		lualine_y = { "progress" },
-		lualine_z = { "location" },
+		lualine_z = { virt_location },
 	},
 	inactive_sections = {
 		lualine_a = { "filename" },
@@ -82,6 +88,6 @@ return {
 		lualine_c = { "diagnostics" },
 		lualine_x = { { "filetype", icons_enabled = false }, "filesize" },
 		lualine_y = { "progress" },
-		lualine_z = { "location" },
+		lualine_z = { virt_location },
 	},
 }
