@@ -1,3 +1,5 @@
+-- for group_import rustfmt setting
+vim.env.RUSTUP_TOOLCHAIN = "nightly"
 return function()
 	vim.g.rustaceanvim = {
 		server = {
