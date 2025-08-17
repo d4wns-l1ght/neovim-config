@@ -54,7 +54,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			t = { vim.lsp.buf.type_definition, "Type definition", opts },
 			h = {
 				function()
-					vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = 0 }), { bufnr = 0 })
+					vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = nil }), { bufnr = nil })
 				end,
 				"Toggle inlay hints",
 				opts,
