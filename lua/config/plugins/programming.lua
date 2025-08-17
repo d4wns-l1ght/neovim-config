@@ -93,7 +93,17 @@ return {
 	},
 	{ "nvim-neotest/neotest-python", ft = "python" },
 	{ "jfpedroza/neotest-elixir", ft = "elixir" },
-	{ "rcasia/neotest-java", ft = "java" },
+	{
+		"rcasia/neotest-java",
+		ft = "java",
+		pin = true, -- because of the pattern thing sofa sent
+		dependencies = {
+			"mfussenegger/nvim-jdtls",
+			"mfussenegger/nvim-dap", -- for the debugger
+			-- "rcarriga/nvim-dap-ui", -- recommended
+			-- "theHamsta/nvim-dap-virtual-text", -- recommended
+		},
+	},
 	-- Debugging
 	{
 		"mfussenegger/nvim-dap",
