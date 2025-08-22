@@ -87,9 +87,28 @@ return {
 	},
 	{
 		"andythigpen/nvim-coverage",
-		version = "*",
-		event = "BufRead",
-		opts = { auto_reload = true },
+		dependencies = {
+			{ "nvim-lua/plenary.nvim" },
+		},
+		opts = {
+			auto_reload = true,
+			lang = {
+				java = {
+					coverage_file = vim.fn.filereadable("build.gradle") == 1 and "build/reports/jacoco/test/jacocoTestReport.xml"
+						or "target/site/jacoco/jacoco.xml",
+				},
+			},
+		},
+		cmd = {
+			"Coverage",
+			"CoverageLoad",
+			"CoverageLoadLcov",
+			"CoverageShow",
+			"CoverageHide",
+			"CoverageToggle",
+			"CoverageClear",
+			"CoverageSummary",
+		},
 	},
 	{ "nvim-neotest/neotest-python", ft = "python" },
 	{ "jfpedroza/neotest-elixir", ft = "elixir" },
