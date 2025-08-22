@@ -28,14 +28,23 @@ return {
 		"dmtrKovalenko/fff.nvim",
 		-- Until it's in a more polished state
 		lazy = true,
+		-- keys = "<leader>f.",
 		build = "cargo build --release",
-		opts = {
-			prompt = "> ",
-			keymaps = {
-				move_up = "<C-k>",
-				move_down = "<C-j>",
-			},
-		},
+		config = function()
+			local fff = require("fff")
+			local opts = {
+				prompt = "> ",
+				keymaps = {
+					move_up = "<C-k>",
+					move_down = "<C-j>",
+				},
+			}
+			-- require("util").set_keymaps({
+			-- 	["."] = { fff.find_in_git_root, "Find files" },
+			-- }, { prefix = "<leader>f" })
+
+			fff.setup(opts)
+		end,
 	},
 	{ "farmergreg/vim-lastplace", lazy = false },
 	{
