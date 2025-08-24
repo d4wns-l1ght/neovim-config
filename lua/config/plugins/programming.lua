@@ -87,6 +87,7 @@ return {
 	},
 	{
 		"andythigpen/nvim-coverage",
+		commit = "84b5648",
 		dependencies = {
 			{ "nvim-lua/plenary.nvim" },
 		},
