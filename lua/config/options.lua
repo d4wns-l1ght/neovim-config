@@ -33,7 +33,6 @@ vim.o.cursorlineopt = "both"
 vim.o.showmode = false
 -- retain terminal even when not visible
 vim.o.hidden = true
-vim.o.scrolloff = 4
 -- from https://codeberg.org/babalark/nvim-config/commit/64b30f99cd9023486430da94cae8c4df29c1c7ce
 -- Show dots for trailing spaces and bar for tabs
 vim.o.list = true
