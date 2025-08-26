@@ -83,7 +83,15 @@ return {
 			ibl.setup(opts)
 		end,
 	},
-	{ "RRethy/vim-illuminate", event = "BufRead" },
+	{
+		"RRethy/vim-illuminate",
+		event = "BufRead",
+		config = function()
+			require("illuminate").configure({
+				filetypes_denylist = { "fugitive", "markdown", "oil", "git", "gitcommit", "gitsigns-blame" },
+			})
+		end,
+	},
 	{ "NStefan002/screenkey.nvim", lazy = false, version = "*" },
 	{ "eandrju/cellular-automaton.nvim", cmd = "CellularAutomaton" },
 	{
