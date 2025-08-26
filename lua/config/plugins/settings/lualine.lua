@@ -66,15 +66,15 @@ return {
 		},
 		lualine_c = { { "diagnostics", update_in_insert = true } },
 		lualine_x = {
-			"filetype",
+			{ "filetype", icon = { align = "right" } },
 			function()
 				local obsession_status = vim.fn["ObsessionStatus"]()
 				return obsession_status or ""
 			end,
 			{ "fileformat", symbols = {
-				unix = " LF",
-				dos = " CRLF",
-				mac = " CR",
+				unix = "LF ",
+				dos = "CRLF ",
+				mac = "CR ",
 			} },
 			"encoding",
 			"filesize",
