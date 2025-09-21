@@ -27,8 +27,7 @@ return {
 	{
 		"dmtrKovalenko/fff.nvim",
 		-- Until it's in a more polished state
-		lazy = true,
-		-- keys = "<leader>f.",
+		lazy = false, -- lazy loads itself
 		build = "cargo build --release",
 		config = function()
 			local fff = require("fff")
