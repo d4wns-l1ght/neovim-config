@@ -20,8 +20,10 @@ return {
 		"A7Lavinraj/fyler.nvim",
 		cmd = "Fyler",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
+		---@module 'fyler'
+  	---@type FylerSetupOptions
 		opts = { -- check the default options in the README.md
-			icon_provider = "nvim-web-devicons",
+			icon_provider = "nvim_web_devicons",
 		},
 	},
 	{
